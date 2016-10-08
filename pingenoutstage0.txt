@@ -1,0 +1,3449 @@
+Script started on Sat 08 Oct 2016 15:10:46 BST
+]0;adampie@Gates: ~/pi-genadampie@Gates:~/pi-gen$ ls
+adamtest.txt  [0m[01;32mbuild.sh[0m  config  depends  License.md  pigenout.txt  README.md  [01;34mscripts[0m  [01;34mstage0[0m  [01;34mstage1[0m  [01;34mstage2[0m  [01;34mstage3[0m  [01;34mstage4[0m
+]0;adampie@Gates: ~/pi-genadampie@Gates:~/pi-gen$ sudo bash -x build.sh 
+[sudo] password for adampie: 
++ START_TIME=2
+++ id -u
++ '[' 0 '!=' 0 ']'
++ '[' -f config ']'
++ source config
+++ IMG_NAME=Raspbian
+++ MAX_STAGE=4
++ '[' -z Raspbian ']'
++ '[' -n '' ']'
++ '[' -n 4 ']'
++ echo 'Running stage4 build'
+Running stage4 build
+++ date -u +%Y-%m-%d
++ export IMG_DATE=2016-10-08
++ IMG_DATE=2016-10-08
++++ dirname build.sh
+++ cd .
+++ pwd
++ export BASE_DIR=/home/adampie/pi-gen
++ BASE_DIR=/home/adampie/pi-gen
++ export SCRIPT_DIR=/home/adampie/pi-gen/scripts
++ SCRIPT_DIR=/home/adampie/pi-gen/scripts
++ export WORK_DIR=/home/adampie/pi-gen/work/2016-10-08-Raspbian
++ WORK_DIR=/home/adampie/pi-gen/work/2016-10-08-Raspbian
++ export DEPLOY_DIR=/home/adampie/pi-gen/deploy
++ DEPLOY_DIR=/home/adampie/pi-gen/deploy
++ export LOG_FILE=/home/adampie/pi-gen/work/2016-10-08-Raspbian/build.log
++ LOG_FILE=/home/adampie/pi-gen/work/2016-10-08-Raspbian/build.log
++ export CLEAN
++ export IMG_NAME
++ export APT_PROXY
++ export STAGE
++ export STAGE_DIR
++ export STAGE_WORK_DIR
++ export PREV_STAGE
++ export PREV_STAGE_DIR
++ export ROOTFS_DIR
++ export PREV_ROOTFS_DIR
++ export IMG_SUFFIX
++ export EXPORT_DIR
++ export EXPORT_ROOTFS_DIR
++ export QUILT_PATCHES
++ export QUILT_NO_DIFF_INDEX=1
++ QUILT_NO_DIFF_INDEX=1
++ export QUILT_NO_DIFF_TIMESTAMPS=1
++ QUILT_NO_DIFF_TIMESTAMPS=1
++ export 'QUILT_REFRESH_ARGS=-p ab'
++ QUILT_REFRESH_ARGS='-p ab'
++ source /home/adampie/pi-gen/scripts/common
+++ export -f log
+++ export -f bootstrap
+++ export -f copy_previous
+++ export -f unmount
+++ export -f unmount_image
+++ export -f on_chroot
+++ export -f update_issue
++ source /home/adampie/pi-gen/scripts/dependencies_check
++ dependencies_check /home/adampie/pi-gen/depends
++ local depfile deps missing
++ for depfile in '"$@"'
++ [[ -e /home/adampie/pi-gen/depends ]]
+++ sed -f /home/adampie/pi-gen/scripts/remove-comments.sed
++ deps='quilt qemu-arm-static:qemu-user-static debootstrap kpartx zerofree pxz zip'
++ for dep in '$deps'
++ hash quilt
++ for dep in '$deps'
++ hash qemu-arm-static
++ for dep in '$deps'
++ hash debootstrap
++ for dep in '$deps'
++ hash kpartx
++ for dep in '$deps'
++ hash zerofree
++ for dep in '$deps'
++ hash pxz
++ for dep in '$deps'
++ hash zip
++ [[ -n '' ]]
++ mkdir -p /home/adampie/pi-gen/work/2016-10-08-Raspbian
++ log 'Begin /home/adampie/pi-gen'
++ date '+[%T] Begin /home/adampie/pi-gen'
++ tee -a /home/adampie/pi-gen/work/2016-10-08-Raspbian/build.log
+[15:11:06] Begin /home/adampie/pi-gen
++ for STAGE_DIR in '${BASE_DIR}/stage*'
+++ echo /home/adampie/pi-gen/stage0
+++ grep -o -E '[0-9]+$'
++ STAGE_DIR_NUM=0
++ [[ -z '' ]]
++ [[ -z 4 ]]
++ [[ 0 -le 4 ]]
++ run_stage
++ log 'Begin /home/adampie/pi-gen/stage0'
++ date '+[%T] Begin /home/adampie/pi-gen/stage0'
++ tee -a /home/adampie/pi-gen/work/2016-10-08-Raspbian/build.log
+[15:11:06] Begin /home/adampie/pi-gen/stage0
+++ basename /home/adampie/pi-gen/stage0
++ STAGE=stage0
++ pushd /home/adampie/pi-gen/stage0
++ unmount /home/adampie/pi-gen/work/2016-10-08-Raspbian/stage0
++ '[' -z /home/adampie/pi-gen/work/2016-10-08-Raspbian/stage0 ']'
++ DIR=/home/adampie/pi-gen/work/2016-10-08-Raspbian/stage0
++ mount
++ grep -q /home/adampie/pi-gen/work/2016-10-08-Raspbian/stage0
++ STAGE_WORK_DIR=/home/adampie/pi-gen/work/2016-10-08-Raspbian/stage0
++ ROOTFS_DIR=/home/adampie/pi-gen/work/2016-10-08-Raspbian/stage0/rootfs
++ '[' -f /home/adampie/pi-gen/stage0/EXPORT_IMAGE ']'
++ '[' '' = 1 ']'
++ '[' -x prerun.sh ']'
++ log 'Begin /home/adampie/pi-gen/stage0/prerun.sh'
++ date '+[%T] Begin /home/adampie/pi-gen/stage0/prerun.sh'
++ tee -a /home/adampie/pi-gen/work/2016-10-08-Raspbian/build.log
+[15:11:06] Begin /home/adampie/pi-gen/stage0/prerun.sh
++ ./prerun.sh
+I: Running command: debootstrap --arch armhf --foreign --components=main,contrib,non-free --no-check-gpg jessie /home/adampie/pi-gen/work/2016-10-08-Raspbian/stage0/rootfs http://mirrordirector.raspbian.org/raspbian/
+I: Retrieving Release 
+I: Retrieving Packages 
+I: Validating Packages 
+I: Retrieving Packages 
+I: Validating Packages 
+I: Retrieving Packages 
+I: Validating Packages 
+I: Resolving dependencies of required packages...
+I: Resolving dependencies of base packages...
+I: Found additional required dependencies: acl adduser cpio dmsetup init-system-helpers initramfs-tools insserv klibc-utils kmod libaudit-common libaudit1 libbz2-1.0 libcap2 libcap2-bin libcryptsetup4 libdb5.3 libdbus-1-3 libdebconfclient0 libdevmapper1.02.1 libdrm2 libgcrypt20 libgpg-error0 libklibc libkmod2 libncursesw5 libnih-dbus1 libnih1 libpcre3 libpng12-0 libprocps3 libsemanage-common libsemanage1 libslang2 libsystemd0 libudev1 libustr-1.0-1 makedev plymouth procps systemd systemd-sysv udev 
+I: Found additional base dependencies: libbsd0 libcwidget3 libdns-export100 libestr0 libffi6 libgmp10 libgnutls-deb0-28 libgnutls-openssl27 libhogweed2 libicu52 libidn11 libirs-export91 libisc-export95 libisccfg-export90 libjson-c2 liblogging-stdlog0 liblognorm1 libnettle4 libnfnetlink0 libp11-kit0 libpsl0 libsigc++-2.0-0c2a libsqlite3-0 libtasn1-6 
+I: Checking component main on http://mirrordirector.raspbian.org/raspbian...
+I: Retrieving acl 2.2.52-2
+I: Validating acl 2.2.52-2
+I: Retrieving adduser 3.113+nmu3
+I: Validating adduser 3.113+nmu3
+I: Retrieving apt 1.0.9.8.3
+I: Validating apt 1.0.9.8.3
+I: Retrieving apt-utils 1.0.9.8.3
+I: Validating apt-utils 1.0.9.8.3
+I: Retrieving aptitude 0.6.11-1
+I: Validating aptitude 0.6.11-1
+I: Retrieving aptitude-common 0.6.11-1
+I: Validating aptitude-common 0.6.11-1
+I: Retrieving base-files 8+rpi1
+I: Validating base-files 8+rpi1
+I: Retrieving base-passwd 3.5.37
+I: Validating base-passwd 3.5.37
+I: Retrieving bash 4.3-11
+I: Validating bash 4.3-11
+I: Retrieving bsdmainutils 9.0.6
+I: Validating bsdmainutils 9.0.6
+I: Retrieving bsdutils 1:2.25.2-6
+I: Validating bsdutils 1:2.25.2-6
+I: Retrieving coreutils 8.23-4
+I: Validating coreutils 8.23-4
+I: Retrieving cpio 2.11+dfsg-4.1+deb8u1
+I: Validating cpio 2.11+dfsg-4.1+deb8u1
+I: Retrieving cron 3.0pl1-127+deb8u1
+I: Validating cron 3.0pl1-127+deb8u1
+I: Retrieving dash 0.5.7-4
+I: Validating dash 0.5.7-4
+I: Retrieving debconf 1.5.56
+I: Validating debconf 1.5.56
+I: Retrieving debconf-i18n 1.5.56
+I: Validating debconf-i18n 1.5.56
+I: Retrieving debianutils 4.4
+I: Validating debianutils 4.4
+I: Retrieving diffutils 1:3.3-1
+I: Validating diffutils 1:3.3-1
+I: Retrieving dmidecode 2.12-3
+I: Validating dmidecode 2.12-3
+I: Retrieving dmsetup 2:1.02.90-2.2+deb8u1
+I: Validating dmsetup 2:1.02.90-2.2+deb8u1
+I: Retrieving dpkg 1.17.27
+I: Validating dpkg 1.17.27
+I: Retrieving e2fslibs 1.42.12-2
+I: Validating e2fslibs 1.42.12-2
+I: Retrieving e2fsprogs 1.42.12-2
+I: Validating e2fsprogs 1.42.12-2
+I: Retrieving findutils 4.4.2-9
+I: Validating findutils 4.4.2-9
+I: Retrieving gcc-4.6-base 4.6.4-5+rpi1
+I: Validating gcc-4.6-base 4.6.4-5+rpi1
+I: Retrieving gcc-4.7-base 4.7.3-11+rpi1
+I: Validating gcc-4.7-base 4.7.3-11+rpi1
+I: Retrieving gcc-4.8-base 4.8.4-1
+I: Validating gcc-4.8-base 4.8.4-1
+I: Retrieving gcc-4.9-base 4.9.2-10
+I: Validating gcc-4.9-base 4.9.2-10
+I: Retrieving gnupg 1.4.18-7+deb8u3
+I: Validating gnupg 1.4.18-7+deb8u3
+I: Retrieving gpgv 1.4.18-7+deb8u3
+I: Validating gpgv 1.4.18-7+deb8u3
+I: Retrieving grep 2.20-4.1
+I: Validating grep 2.20-4.1
+I: Retrieving groff-base 1.22.2-8
+I: Validating groff-base 1.22.2-8
+I: Retrieving gzip 1.6-4
+I: Validating gzip 1.6-4
+I: Retrieving hostname 3.15
+I: Validating hostname 3.15
+I: Retrieving ifupdown 0.7.53.1
+I: Validating ifupdown 0.7.53.1
+I: Retrieving info 5.2.0.dfsg.1-6
+I: Validating info 5.2.0.dfsg.1-6
+I: Retrieving init 1.22
+I: Validating init 1.22
+I: Retrieving init-system-helpers 1.22
+I: Validating init-system-helpers 1.22
+I: Retrieving initramfs-tools 0.120+deb8u2
+I: Validating initramfs-tools 0.120+deb8u2
+I: Retrieving initscripts 2.88dsf-59
+I: Validating initscripts 2.88dsf-59
+I: Retrieving insserv 1.14.0-5
+I: Validating insserv 1.14.0-5
+I: Retrieving install-info 5.2.0.dfsg.1-6
+I: Validating install-info 5.2.0.dfsg.1-6
+I: Retrieving iproute2 3.16.0-2
+I: Validating iproute2 3.16.0-2
+I: Retrieving iptables 1.4.21-2
+I: Validating iptables 1.4.21-2
+I: Retrieving iputils-ping 3:20121221-5
+I: Validating iputils-ping 3:20121221-5
+I: Retrieving isc-dhcp-client 4.3.1-6+deb8u2
+I: Validating isc-dhcp-client 4.3.1-6+deb8u2
+I: Retrieving isc-dhcp-common 4.3.1-6+deb8u2
+I: Validating isc-dhcp-common 4.3.1-6+deb8u2
+I: Retrieving klibc-utils 2.0.4-2+rpi1
+I: Validating klibc-utils 2.0.4-2+rpi1
+I: Retrieving kmod 18-3
+I: Validating kmod 18-3
+I: Retrieving less 458-3
+I: Validating less 458-3
+I: Retrieving libacl1 2.2.52-2
+I: Validating libacl1 2.2.52-2
+I: Retrieving libapt-inst1.5 1.0.9.8.3
+I: Validating libapt-inst1.5 1.0.9.8.3
+I: Retrieving libapt-pkg4.12 1.0.9.8.3
+I: Validating libapt-pkg4.12 1.0.9.8.3
+I: Retrieving libattr1 1:2.4.47-2
+I: Validating libattr1 1:2.4.47-2
+I: Retrieving libaudit-common 1:2.4-1
+I: Validating libaudit-common 1:2.4-1
+I: Retrieving libaudit1 1:2.4-1
+I: Validating libaudit1 1:2.4-1
+I: Retrieving libblkid1 2.25.2-6
+I: Validating libblkid1 2.25.2-6
+I: Retrieving libboost-iostreams1.49.0 1.49.0-4+b2
+I: Validating libboost-iostreams1.49.0 1.49.0-4+b2
+I: Retrieving libboost-iostreams1.50.0 1.50.0-1+b2
+I: Validating libboost-iostreams1.50.0 1.50.0-1+b2
+I: Retrieving libboost-iostreams1.53.0 1.53.0-6+b2
+I: Validating libboost-iostreams1.53.0 1.53.0-6+b2
+I: Retrieving libboost-iostreams1.54.0 1.54.0-5
+I: Validating libboost-iostreams1.54.0 1.54.0-5
+I: Retrieving libboost-iostreams1.55.0 1.55.0+dfsg-3
+I: Validating libboost-iostreams1.55.0 1.55.0+dfsg-3
+I: Retrieving libbsd0 0.7.0-2
+I: Validating libbsd0 0.7.0-2
+I: Retrieving libbz2-1.0 1.0.6-7
+I: Validating libbz2-1.0 1.0.6-7
+I: Retrieving libc-bin 2.19-18+deb8u6
+I: Validating libc-bin 2.19-18+deb8u6
+I: Retrieving libc6 2.19-18+deb8u6
+I: Validating libc6 2.19-18+deb8u6
+I: Retrieving libcap2 1:2.24-8
+I: Validating libcap2 1:2.24-8
+I: Retrieving libcap2-bin 1:2.24-8
+I: Validating libcap2-bin 1:2.24-8
+I: Retrieving libcomerr2 1.42.12-2
+I: Validating libcomerr2 1.42.12-2
+I: Retrieving libcryptsetup4 2:1.6.6-5
+I: Validating libcryptsetup4 2:1.6.6-5
+I: Retrieving libcwidget3 0.5.17-2
+I: Validating libcwidget3 0.5.17-2
+I: Retrieving libdb5.3 5.3.28-9
+I: Validating libdb5.3 5.3.28-9
+I: Retrieving libdbus-1-3 1.8.20-0+deb8u1
+I: Validating libdbus-1-3 1.8.20-0+deb8u1
+I: Retrieving libdebconfclient0 0.192
+I: Validating libdebconfclient0 0.192
+I: Retrieving libdevmapper1.02.1 2:1.02.90-2.2+deb8u1
+I: Validating libdevmapper1.02.1 2:1.02.90-2.2+deb8u1
+I: Retrieving libdns-export100 1:9.9.5.dfsg-9+deb8u7
+I: Validating libdns-export100 1:9.9.5.dfsg-9+deb8u7
+I: Retrieving libdrm2 2.4.58-2
+I: Validating libdrm2 2.4.58-2
+I: Retrieving libestr0 0.1.9-1.1
+I: Validating libestr0 0.1.9-1.1
+I: Retrieving libffi6 3.1-2
+I: Validating libffi6 3.1-2
+I: Retrieving libgcc1 1:4.9.2-10
+I: Validating libgcc1 1:4.9.2-10
+I: Retrieving libgcrypt20 1.6.3-2+deb8u2
+I: Validating libgcrypt20 1.6.3-2+deb8u2
+I: Retrieving libgdbm3 1.8.3-13.1
+I: Validating libgdbm3 1.8.3-13.1
+I: Retrieving libgmp10 2:6.0.0+dfsg-6+rpi1
+I: Validating libgmp10 2:6.0.0+dfsg-6+rpi1
+I: Retrieving libgnutls-deb0-28 3.3.8-6+deb8u3
+I: Validating libgnutls-deb0-28 3.3.8-6+deb8u3
+I: Retrieving libgnutls-openssl27 3.3.8-6+deb8u3
+I: Validating libgnutls-openssl27 3.3.8-6+deb8u3
+I: Retrieving libgpg-error0 1.17-3
+I: Validating libgpg-error0 1.17-3
+I: Retrieving libhogweed2 2.7.1-5+deb8u1
+I: Validating libhogweed2 2.7.1-5+deb8u1
+I: Retrieving libicu52 52.1-8+deb8u3
+I: Validating libicu52 52.1-8+deb8u3
+I: Retrieving libident 0.22-3
+I: Validating libident 0.22-3
+I: Retrieving libidn11 1.29-1+deb8u2
+I: Validating libidn11 1.29-1+deb8u2
+I: Retrieving libirs-export91 1:9.9.5.dfsg-9+deb8u7
+I: Validating libirs-export91 1:9.9.5.dfsg-9+deb8u7
+I: Retrieving libisc-export95 1:9.9.5.dfsg-9+deb8u7
+I: Validating libisc-export95 1:9.9.5.dfsg-9+deb8u7
+I: Retrieving libisccfg-export90 1:9.9.5.dfsg-9+deb8u7
+I: Validating libisccfg-export90 1:9.9.5.dfsg-9+deb8u7
+I: Retrieving libjson-c2 0.11-4
+I: Validating libjson-c2 0.11-4
+I: Retrieving libklibc 2.0.4-2+rpi1
+I: Validating libklibc 2.0.4-2+rpi1
+I: Retrieving libkmod2 18-3
+I: Validating libkmod2 18-3
+I: Retrieving liblocale-gettext-perl 1.05-8+b1
+I: Validating liblocale-gettext-perl 1.05-8+b1
+I: Retrieving liblogging-stdlog0 1.0.4-1
+I: Validating liblogging-stdlog0 1.0.4-1
+I: Retrieving liblognorm1 1.0.1-3
+I: Validating liblognorm1 1.0.1-3
+I: Retrieving liblzma5 5.1.1alpha+20120614-2
+I: Validating liblzma5 5.1.1alpha+20120614-2
+I: Retrieving libmount1 2.25.2-6
+I: Validating libmount1 2.25.2-6
+I: Retrieving libncurses5 5.9+20140913-1
+I: Validating libncurses5 5.9+20140913-1
+I: Retrieving libncursesw5 5.9+20140913-1
+I: Validating libncursesw5 5.9+20140913-1
+I: Retrieving libnettle4 2.7.1-5+deb8u1
+I: Validating libnettle4 2.7.1-5+deb8u1
+I: Retrieving libnewt0.52 0.52.17-1
+I: Validating libnewt0.52 0.52.17-1
+I: Retrieving libnfnetlink0 1.0.1-3
+I: Validating libnfnetlink0 1.0.1-3
+I: Retrieving libnih-dbus1 1.0.3-4.3
+I: Validating libnih-dbus1 1.0.3-4.3
+I: Retrieving libnih1 1.0.3-4.3
+I: Validating libnih1 1.0.3-4.3
+I: Retrieving libp11-kit0 0.20.7-1
+I: Validating libp11-kit0 0.20.7-1
+I: Retrieving libpam-modules 1.1.8-3.1+deb8u1
+I: Validating libpam-modules 1.1.8-3.1+deb8u1
+I: Retrieving libpam-modules-bin 1.1.8-3.1+deb8u1
+I: Validating libpam-modules-bin 1.1.8-3.1+deb8u1
+I: Retrieving libpam-runtime 1.1.8-3.1+deb8u1
+I: Validating libpam-runtime 1.1.8-3.1+deb8u1
+I: Retrieving libpam0g 1.1.8-3.1+deb8u1
+I: Validating libpam0g 1.1.8-3.1+deb8u1
+I: Retrieving libpcre3 2:8.35-3.3+deb8u4
+I: Validating libpcre3 2:8.35-3.3+deb8u4
+I: Retrieving libpipeline1 1.4.0-1
+I: Validating libpipeline1 1.4.0-1
+I: Retrieving libpng12-0 1.2.50-2+deb8u2
+I: Validating libpng12-0 1.2.50-2+deb8u2
+I: Retrieving libpopt0 1.16-10
+I: Validating libpopt0 1.16-10
+I: Retrieving libprocps3 2:3.3.9-9
+I: Validating libprocps3 2:3.3.9-9
+I: Retrieving libpsl0 0.5.1-1
+I: Validating libpsl0 0.5.1-1
+I: Retrieving libreadline6 6.3-8
+I: Validating libreadline6 6.3-8
+I: Retrieving libselinux1 2.3-2
+I: Validating libselinux1 2.3-2
+I: Retrieving libsemanage-common 2.3-1
+I: Validating libsemanage-common 2.3-1
+I: Retrieving libsemanage1 2.3-1
+I: Validating libsemanage1 2.3-1
+I: Retrieving libsepol1 2.3-2
+I: Validating libsepol1 2.3-2
+I: Retrieving libsigc++-1.2-5c2 1.2.7-2+b1
+I: Validating libsigc++-1.2-5c2 1.2.7-2+b1
+I: Retrieving libsigc++-2.0-0c2a 2.4.0-1
+I: Validating libsigc++-2.0-0c2a 2.4.0-1
+I: Retrieving libslang2 2.3.0-2
+I: Validating libslang2 2.3.0-2
+I: Retrieving libsmartcols1 2.25.2-6
+I: Validating libsmartcols1 2.25.2-6
+I: Retrieving libsqlite3-0 3.8.7.1-1+deb8u2
+I: Validating libsqlite3-0 3.8.7.1-1+deb8u2
+I: Retrieving libss2 1.42.12-2
+I: Validating libss2 1.42.12-2
+I: Retrieving libssl1.0.0 1.0.1t-1+deb8u5
+I: Validating libssl1.0.0 1.0.1t-1+deb8u5
+I: Retrieving libstdc++6 4.9.2-10
+I: Validating libstdc++6 4.9.2-10
+I: Retrieving libsysfs2 2.1.0+repack-4
+I: Validating libsysfs2 2.1.0+repack-4
+I: Retrieving libsystemd0 215-17+deb8u5
+I: Validating libsystemd0 215-17+deb8u5
+I: Retrieving libtasn1-6 4.2-3+deb8u2
+I: Validating libtasn1-6 4.2-3+deb8u2
+I: Retrieving libtext-charwidth-perl 0.04-7+b4
+I: Validating libtext-charwidth-perl 0.04-7+b4
+I: Retrieving libtext-iconv-perl 1.7-5+b5
+I: Validating libtext-iconv-perl 1.7-5+b5
+I: Retrieving libtext-wrapi18n-perl 0.06-7
+I: Validating libtext-wrapi18n-perl 0.06-7
+I: Retrieving libtinfo5 5.9+20140913-1
+I: Validating libtinfo5 5.9+20140913-1
+I: Retrieving libudev0 175-7.2
+I: Validating libudev0 175-7.2
+I: Retrieving libudev1 215-17+deb8u5
+I: Validating libudev1 215-17+deb8u5
+I: Retrieving libusb-0.1-4 2:0.1.12-25
+I: Validating libusb-0.1-4 2:0.1.12-25
+I: Retrieving libustr-1.0-1 1.0.4-3
+I: Validating libustr-1.0-1 1.0.4-3
+I: Retrieving libuuid1 2.25.2-6
+I: Validating libuuid1 2.25.2-6
+I: Retrieving libxapian22 1.2.19-1+deb8u1
+I: Validating libxapian22 1.2.19-1+deb8u1
+I: Retrieving libxtables10 1.4.21-2
+I: Validating libxtables10 1.4.21-2
+I: Retrieving login 1:4.2-3+deb8u1
+I: Validating login 1:4.2-3+deb8u1
+I: Retrieving logrotate 3.8.7-1
+I: Validating logrotate 3.8.7-1
+I: Retrieving lsb-base 4.1+Debian13+rpi1+nmu1
+I: Validating lsb-base 4.1+Debian13+rpi1+nmu1
+I: Retrieving makedev 2.3.1-93
+I: Validating makedev 2.3.1-93
+I: Retrieving man-db 2.7.0.2-5
+I: Validating man-db 2.7.0.2-5
+I: Retrieving manpages 3.74-1
+I: Validating manpages 3.74-1
+I: Retrieving mawk 1.3.3-17
+I: Validating mawk 1.3.3-17
+I: Retrieving mount 2.25.2-6
+I: Validating mount 2.25.2-6
+I: Retrieving mountall 2.54
+I: Validating mountall 2.54
+I: Retrieving multiarch-support 2.19-18+deb8u6
+I: Validating multiarch-support 2.19-18+deb8u6
+I: Retrieving nano 2.2.6-3
+I: Validating nano 2.2.6-3
+I: Retrieving ncurses-base 5.9+20140913-1
+I: Validating ncurses-base 5.9+20140913-1
+I: Retrieving ncurses-bin 5.9+20140913-1
+I: Validating ncurses-bin 5.9+20140913-1
+I: Retrieving net-tools 1.60-26
+I: Validating net-tools 1.60-26
+I: Retrieving netbase 5.3
+I: Validating netbase 5.3
+I: Retrieving netcat-openbsd 1.105-7
+I: Validating netcat-openbsd 1.105-7
+I: Retrieving netcat-traditional 1.10-41
+I: Validating netcat-traditional 1.10-41
+I: Retrieving passwd 1:4.2-3+deb8u1
+I: Validating passwd 1:4.2-3+deb8u1
+I: Retrieving perl-base 5.20.2-3+deb8u6
+I: Validating perl-base 5.20.2-3+deb8u6
+I: Retrieving plymouth 0.9.0-9
+I: Validating plymouth 0.9.0-9
+I: Retrieving procps 2:3.3.9-9
+I: Validating procps 2:3.3.9-9
+I: Retrieving raspbian-archive-keyring 20120528.2
+I: Validating raspbian-archive-keyring 20120528.2
+I: Retrieving readline-common 6.3-8
+I: Validating readline-common 6.3-8
+I: Retrieving rsyslog 8.4.2-1+deb8u2
+I: Validating rsyslog 8.4.2-1+deb8u2
+I: Retrieving sed 4.2.2-4
+I: Validating sed 4.2.2-4
+I: Retrieving sensible-utils 0.0.9
+I: Validating sensible-utils 0.0.9
+I: Retrieving startpar 0.59-3
+I: Validating startpar 0.59-3
+I: Retrieving systemd 215-17+deb8u5
+I: Validating systemd 215-17+deb8u5
+I: Retrieving systemd-sysv 215-17+deb8u5
+I: Validating systemd-sysv 215-17+deb8u5
+I: Retrieving sysv-rc 2.88dsf-59
+I: Validating sysv-rc 2.88dsf-59
+I: Retrieving sysvinit-utils 2.88dsf-59
+I: Validating sysvinit-utils 2.88dsf-59
+I: Retrieving tar 1.27.1-2
+I: Validating tar 1.27.1-2
+I: Retrieving tasksel 3.31+deb8u1
+I: Validating tasksel 3.31+deb8u1
+I: Retrieving tasksel-data 3.31+deb8u1
+I: Validating tasksel-data 3.31+deb8u1
+I: Retrieving traceroute 1:2.0.20-2
+I: Validating traceroute 1:2.0.20-2
+I: Retrieving tzdata 2016f-0+deb8u1
+I: Validating tzdata 2016f-0+deb8u1
+I: Retrieving udev 215-17+deb8u5
+I: Validating udev 215-17+deb8u5
+I: Retrieving util-linux 2.25.2-6
+I: Validating util-linux 2.25.2-6
+I: Retrieving vim-common 2:7.4.488-7
+I: Validating vim-common 2:7.4.488-7
+I: Retrieving vim-tiny 2:7.4.488-7
+I: Validating vim-tiny 2:7.4.488-7
+I: Retrieving wget 1.16-1+deb8u1
+I: Validating wget 1.16-1+deb8u1
+I: Retrieving whiptail 0.52.17-1
+I: Validating whiptail 0.52.17-1
+I: Retrieving xz-utils 5.1.1alpha+20120614-2
+I: Validating xz-utils 5.1.1alpha+20120614-2
+I: Retrieving zlib1g 1:1.2.8.dfsg-2
+I: Validating zlib1g 1:1.2.8.dfsg-2
+I: Chosen extractor for .deb packages: dpkg-deb
+I: Extracting acl...
+I: Extracting adduser...
+I: Extracting base-files...
+I: Extracting base-passwd...
+I: Extracting bash...
+I: Extracting bsdutils...
+I: Extracting coreutils...
+I: Extracting cpio...
+I: Extracting dash...
+I: Extracting debconf...
+I: Extracting debconf-i18n...
+I: Extracting debianutils...
+I: Extracting diffutils...
+I: Extracting dmsetup...
+I: Extracting dpkg...
+I: Extracting e2fslibs...
+I: Extracting e2fsprogs...
+I: Extracting findutils...
+I: Extracting gcc-4.6-base...
+I: Extracting gcc-4.7-base...
+I: Extracting gcc-4.8-base...
+I: Extracting gcc-4.9-base...
+I: Extracting grep...
+I: Extracting gzip...
+I: Extracting hostname...
+I: Extracting init...
+I: Extracting init-system-helpers...
+I: Extracting initramfs-tools...
+I: Extracting initscripts...
+I: Extracting insserv...
+I: Extracting klibc-utils...
+I: Extracting kmod...
+I: Extracting libacl1...
+I: Extracting libattr1...
+I: Extracting libaudit-common...
+I: Extracting libaudit1...
+I: Extracting libblkid1...
+I: Extracting libbz2-1.0...
+I: Extracting libc-bin...
+I: Extracting libc6...
+I: Extracting libcap2...
+I: Extracting libcap2-bin...
+I: Extracting libcomerr2...
+I: Extracting libcryptsetup4...
+I: Extracting libdb5.3...
+I: Extracting libdbus-1-3...
+I: Extracting libdebconfclient0...
+I: Extracting libdevmapper1.02.1...
+I: Extracting libdrm2...
+I: Extracting libgcc1...
+I: Extracting libgcrypt20...
+I: Extracting libgpg-error0...
+I: Extracting libklibc...
+I: Extracting libkmod2...
+I: Extracting liblocale-gettext-perl...
+I: Extracting liblzma5...
+I: Extracting libmount1...
+I: Extracting libncurses5...
+I: Extracting libncursesw5...
+I: Extracting libnih-dbus1...
+I: Extracting libnih1...
+I: Extracting libpam-modules...
+I: Extracting libpam-modules-bin...
+I: Extracting libpam-runtime...
+I: Extracting libpam0g...
+I: Extracting libpcre3...
+I: Extracting libpng12-0...
+I: Extracting libprocps3...
+I: Extracting libselinux1...
+I: Extracting libsemanage-common...
+I: Extracting libsemanage1...
+I: Extracting libsepol1...
+I: Extracting libslang2...
+I: Extracting libsmartcols1...
+I: Extracting libss2...
+I: Extracting libsystemd0...
+I: Extracting libtext-charwidth-perl...
+I: Extracting libtext-iconv-perl...
+I: Extracting libtext-wrapi18n-perl...
+I: Extracting libtinfo5...
+I: Extracting libudev1...
+I: Extracting libustr-1.0-1...
+I: Extracting libuuid1...
+I: Extracting login...
+I: Extracting lsb-base...
+I: Extracting makedev...
+I: Extracting mawk...
+I: Extracting mount...
+I: Extracting mountall...
+I: Extracting multiarch-support...
+I: Extracting ncurses-base...
+I: Extracting ncurses-bin...
+I: Extracting passwd...
+I: Extracting perl-base...
+I: Extracting plymouth...
+I: Extracting procps...
+I: Extracting sed...
+I: Extracting sensible-utils...
+I: Extracting startpar...
+I: Extracting systemd...
+I: Extracting systemd-sysv...
+I: Extracting sysv-rc...
+I: Extracting sysvinit-utils...
+I: Extracting tar...
+I: Extracting tzdata...
+I: Extracting udev...
+I: Extracting util-linux...
+I: Extracting xz-utils...
+I: Extracting zlib1g...
+I: Running command: chroot /home/adampie/pi-gen/work/2016-10-08-Raspbian/stage0/rootfs /debootstrap/debootstrap --second-stage
+I: Keyring file not available at /usr/share/keyrings/debian-archive-keyring.gpg; switching to https mirror https://mirrors.kernel.org/debian
+I: Installing core packages...
+I: Unpacking required packages...
+I: Unpacking acl...
+I: Unpacking adduser...
+I: Unpacking base-files...
+I: Unpacking base-passwd...
+I: Unpacking bash...
+I: Unpacking bsdutils...
+I: Unpacking coreutils...
+I: Unpacking cpio...
+I: Unpacking dash...
+I: Unpacking debconf...
+I: Unpacking debconf-i18n...
+I: Unpacking debianutils...
+I: Unpacking diffutils...
+I: Unpacking dmsetup...
+I: Unpacking dpkg...
+I: Unpacking e2fslibs:armhf...
+I: Unpacking e2fsprogs...
+I: Unpacking findutils...
+I: Unpacking gcc-4.6-base:armhf...
+I: Unpacking gcc-4.7-base:armhf...
+I: Unpacking gcc-4.8-base:armhf...
+I: Unpacking gcc-4.9-base:armhf...
+I: Unpacking grep...
+I: Unpacking gzip...
+I: Unpacking hostname...
+I: Unpacking init...
+I: Unpacking init-system-helpers...
+I: Unpacking initramfs-tools...
+I: Unpacking initscripts...
+I: Unpacking insserv...
+I: Unpacking klibc-utils...
+I: Unpacking kmod...
+I: Unpacking libacl1:armhf...
+I: Unpacking libattr1:armhf...
+I: Unpacking libaudit-common...
+I: Unpacking libaudit1:armhf...
+I: Unpacking libblkid1:armhf...
+I: Unpacking libbz2-1.0:armhf...
+I: Unpacking libc-bin...
+I: Unpacking libc6:armhf...
+I: Unpacking libcap2:armhf...
+I: Unpacking libcap2-bin...
+I: Unpacking libcomerr2:armhf...
+I: Unpacking libcryptsetup4:armhf...
+I: Unpacking libdb5.3:armhf...
+I: Unpacking libdbus-1-3:armhf...
+I: Unpacking libdebconfclient0:armhf...
+I: Unpacking libdevmapper1.02.1:armhf...
+I: Unpacking libdrm2:armhf...
+I: Unpacking libgcc1:armhf...
+I: Unpacking libgcrypt20:armhf...
+I: Unpacking libgpg-error0:armhf...
+I: Unpacking libklibc...
+I: Unpacking libkmod2:armhf...
+I: Unpacking liblocale-gettext-perl...
+I: Unpacking liblzma5:armhf...
+I: Unpacking libmount1:armhf...
+I: Unpacking libncurses5:armhf...
+I: Unpacking libncursesw5:armhf...
+I: Unpacking libnih-dbus1...
+I: Unpacking libnih1...
+I: Unpacking libpam-modules:armhf...
+I: Unpacking libpam-modules-bin...
+I: Unpacking libpam-runtime...
+I: Unpacking libpam0g:armhf...
+I: Unpacking libpcre3:armhf...
+I: Unpacking libpng12-0:armhf...
+I: Unpacking libprocps3:armhf...
+I: Unpacking libselinux1:armhf...
+I: Unpacking libsemanage-common...
+I: Unpacking libsemanage1:armhf...
+I: Unpacking libsepol1:armhf...
+I: Unpacking libslang2:armhf...
+I: Unpacking libsmartcols1:armhf...
+I: Unpacking libss2:armhf...
+I: Unpacking libsystemd0:armhf...
+I: Unpacking libtext-charwidth-perl...
+I: Unpacking libtext-iconv-perl...
+I: Unpacking libtext-wrapi18n-perl...
+I: Unpacking libtinfo5:armhf...
+I: Unpacking libudev1:armhf...
+I: Unpacking libustr-1.0-1:armhf...
+I: Unpacking libuuid1:armhf...
+I: Unpacking login...
+I: Unpacking lsb-base...
+I: Unpacking makedev...
+I: Unpacking mawk...
+I: Unpacking mount...
+I: Unpacking mountall...
+I: Unpacking multiarch-support...
+I: Unpacking ncurses-base...
+I: Unpacking ncurses-bin...
+I: Unpacking passwd...
+I: Unpacking perl-base...
+I: Unpacking plymouth...
+I: Unpacking procps...
+I: Unpacking sed...
+I: Unpacking sensible-utils...
+I: Unpacking startpar...
+I: Unpacking systemd...
+I: Unpacking systemd-sysv...
+I: Unpacking sysv-rc...
+I: Unpacking sysvinit-utils...
+I: Unpacking tar...
+I: Unpacking tzdata...
+I: Unpacking udev...
+I: Unpacking util-linux...
+I: Unpacking xz-utils...
+I: Unpacking zlib1g:armhf...
+I: Configuring required packages...
+I: Configuring gcc-4.8-base:armhf...
+I: Configuring libklibc...
+I: Configuring lsb-base...
+I: Configuring sensible-utils...
+I: Configuring ncurses-base...
+I: Configuring libsemanage-common...
+I: Configuring gcc-4.9-base:armhf...
+I: Configuring libaudit-common...
+I: Configuring gcc-4.7-base:armhf...
+I: Configuring gcc-4.6-base:armhf...
+I: Configuring klibc-utils...
+I: Configuring libc6:armhf...
+I: Configuring startpar...
+I: Configuring libc-bin...
+I: Configuring insserv...
+I: Configuring findutils...
+I: Configuring libnih1...
+I: Configuring cpio...
+I: Configuring debianutils...
+I: Configuring hostname...
+I: Configuring multiarch-support...
+I: Configuring mawk...
+I: Configuring libprocps3:armhf...
+I: Configuring libpcre3:armhf...
+I: Configuring libbz2-1.0:armhf...
+I: Configuring libkmod2:armhf...
+I: Configuring libdrm2:armhf...
+I: Configuring libgpg-error0:armhf...
+I: Configuring base-files...
+I: Configuring libdebconfclient0:armhf...
+I: Configuring libselinux1:armhf...
+I: Configuring libcomerr2:armhf...
+I: Configuring libslang2:armhf...
+I: Configuring libsepol1:armhf...
+I: Configuring libdbus-1-3:armhf...
+I: Configuring libgcc1:armhf...
+I: Configuring libustr-1.0-1:armhf...
+I: Configuring libnih-dbus1...
+I: Configuring libsmartcols1:armhf...
+I: Configuring libaudit1:armhf...
+I: Configuring libtinfo5:armhf...
+I: Configuring libudev1:armhf...
+I: Configuring kmod...
+I: Configuring libattr1:armhf...
+I: Configuring libss2:armhf...
+I: Configuring liblzma5:armhf...
+I: Configuring base-passwd...
+I: Configuring e2fslibs:armhf...
+I: Configuring libgcrypt20:armhf...
+I: Configuring libncursesw5:armhf...
+I: Configuring libdb5.3:armhf...
+I: Configuring zlib1g:armhf...
+I: Configuring libcap2:armhf...
+I: Configuring libsystemd0:armhf...
+I: Configuring libdevmapper1.02.1:armhf...
+I: Configuring libpng12-0:armhf...
+I: Configuring libsemanage1:armhf...
+I: Configuring sysvinit-utils...
+I: Configuring xz-utils...
+I: Configuring diffutils...
+I: Configuring libacl1:armhf...
+I: Configuring ncurses-bin...
+I: Configuring acl...
+I: Configuring libncurses5:armhf...
+I: Configuring makedev...
+I: Configuring libcap2-bin...
+I: Configuring bsdutils...
+I: Configuring coreutils...
+I: Configuring tar...
+I: Configuring dpkg...
+I: Configuring sed...
+I: Configuring perl-base...
+I: Configuring grep...
+I: Configuring debconf...
+I: Configuring tzdata...
+I: Configuring gzip...
+I: Configuring dash...
+I: Configuring init-system-helpers...
+I: Configuring libtext-iconv-perl...
+I: Configuring sysv-rc...
+I: Configuring liblocale-gettext-perl...
+I: Configuring libtext-charwidth-perl...
+I: Configuring libpam0g:armhf...
+I: Configuring initscripts...
+I: Configuring libpam-modules-bin...
+I: Configuring bash...
+I: Configuring procps...
+I: Configuring libtext-wrapi18n-perl...
+I: Configuring libpam-modules:armhf...
+I: Configuring libpam-runtime...
+I: Configuring debconf-i18n...
+I: Configuring passwd...
+I: Configuring login...
+I: Configuring adduser...
+I: Configuring libuuid1:armhf...
+I: Configuring libblkid1:armhf...
+I: Configuring libmount1:armhf...
+I: Configuring util-linux...
+I: Configuring libcryptsetup4:armhf...
+I: Configuring mount...
+I: Configuring e2fsprogs...
+I: Configuring udev...
+I: Configuring systemd...
+I: Configuring dmsetup...
+I: Configuring systemd-sysv...
+I: Configuring initramfs-tools...
+I: Configuring plymouth...
+I: Configuring mountall...
+I: Configuring init...
+I: Configuring libc-bin...
+I: Configuring initramfs-tools...
+I: Unpacking the base system...
+I: Unpacking apt...
+I: Unpacking apt-utils...
+I: Unpacking aptitude...
+I: Unpacking aptitude-common...
+I: Unpacking bsdmainutils...
+I: Unpacking cron...
+I: Unpacking dmidecode...
+I: Unpacking gnupg...
+I: Unpacking gpgv...
+I: Unpacking groff-base...
+I: Unpacking ifupdown...
+I: Unpacking info...
+I: Unpacking install-info...
+I: Unpacking iproute2...
+I: Unpacking iptables...
+I: Unpacking iputils-ping...
+I: Unpacking isc-dhcp-client...
+I: Unpacking isc-dhcp-common...
+I: Unpacking less...
+I: Unpacking libapt-inst1.5:armhf...
+I: Unpacking libapt-pkg4.12:armhf...
+I: Unpacking libboost-iostreams1.49.0...
+I: Unpacking libboost-iostreams1.50.0...
+I: Unpacking libboost-iostreams1.53.0...
+I: Unpacking libboost-iostreams1.54.0:armhf...
+I: Unpacking libboost-iostreams1.55.0:armhf...
+I: Unpacking libbsd0:armhf...
+I: Unpacking libcwidget3:armhf...
+I: Unpacking libdns-export100...
+I: Unpacking libestr0...
+I: Unpacking libffi6:armhf...
+I: Unpacking libgdbm3:armhf...
+I: Unpacking libgmp10:armhf...
+I: Unpacking libgnutls-deb0-28:armhf...
+I: Unpacking libgnutls-openssl27:armhf...
+I: Unpacking libhogweed2:armhf...
+I: Unpacking libicu52:armhf...
+I: Unpacking libident...
+I: Unpacking libidn11:armhf...
+I: Unpacking libirs-export91...
+I: Unpacking libisc-export95...
+I: Unpacking libisccfg-export90...
+I: Unpacking libjson-c2:armhf...
+I: Unpacking liblogging-stdlog0:armhf...
+I: Unpacking liblognorm1:armhf...
+I: Unpacking libnettle4:armhf...
+I: Unpacking libnewt0.52:armhf...
+I: Unpacking libnfnetlink0:armhf...
+I: Unpacking libp11-kit0:armhf...
+I: Unpacking libpipeline1:armhf...
+I: Unpacking libpopt0:armhf...
+I: Unpacking libpsl0:armhf...
+I: Unpacking libreadline6:armhf...
+I: Unpacking libsigc++-1.2-5c2...
+I: Unpacking libsigc++-2.0-0c2a:armhf...
+I: Unpacking libsqlite3-0:armhf...
+I: Unpacking libssl1.0.0:armhf...
+I: Unpacking libstdc++6:armhf...
+I: Unpacking libsysfs2:armhf...
+I: Unpacking libtasn1-6:armhf...
+I: Unpacking libudev0:armhf...
+I: Unpacking libusb-0.1-4:armhf...
+I: Unpacking libxapian22...
+I: Unpacking libxtables10...
+I: Unpacking logrotate...
+I: Unpacking man-db...
+I: Unpacking manpages...
+I: Unpacking nano...
+I: Unpacking net-tools...
+I: Unpacking netbase...
+I: Unpacking netcat-openbsd...
+I: Unpacking netcat-traditional...
+I: Unpacking raspbian-archive-keyring...
+I: Unpacking readline-common...
+I: Unpacking rsyslog...
+I: Unpacking tasksel...
+I: Unpacking tasksel-data...
+I: Unpacking traceroute...
+I: Unpacking vim-common...
+I: Unpacking vim-tiny...
+I: Unpacking wget...
+I: Unpacking whiptail...
+I: Configuring the base system...
+I: Configuring readline-common...
+I: Configuring libgdbm3:armhf...
+I: Configuring manpages...
+I: Configuring libxtables10...
+I: Configuring libpopt0:armhf...
+I: Configuring libestr0...
+I: Configuring less...
+I: Configuring libssl1.0.0:armhf...
+I: Configuring dmidecode...
+I: Configuring install-info...
+I: Configuring gpgv...
+I: Configuring liblogging-stdlog0:armhf...
+I: Configuring netcat-traditional...
+I: Configuring libpipeline1:armhf...
+I: Configuring libsysfs2:armhf...
+I: Configuring iproute2...
+I: Configuring libbsd0:armhf...
+I: Configuring aptitude-common...
+I: Configuring libtasn1-6:armhf...
+I: Configuring netcat-openbsd...
+I: Configuring nano...
+I: Configuring libgmp10:armhf...
+I: Configuring libisc-export95...
+I: Configuring libnettle4:armhf...
+I: Configuring vim-common...
+I: Configuring libsqlite3-0:armhf...
+I: Configuring libudev0:armhf...
+I: Configuring libnfnetlink0:armhf...
+I: Configuring libstdc++6:armhf...
+I: Configuring libffi6:armhf...
+I: Configuring libnewt0.52:armhf...
+I: Configuring bsdmainutils...
+I: Configuring net-tools...
+I: Configuring cron...
+I: Configuring libapt-pkg4.12:armhf...
+I: Configuring libusb-0.1-4:armhf...
+I: Configuring traceroute...
+I: Configuring logrotate...
+I: Configuring libidn11:armhf...
+I: Configuring libreadline6:armhf...
+I: Configuring libident...
+I: Configuring libsigc++-1.2-5c2...
+I: Configuring libjson-c2:armhf...
+I: Configuring libicu52:armhf...
+I: Configuring netbase...
+I: Configuring libboost-iostreams1.49.0...
+I: Configuring vim-tiny...
+I: Configuring libboost-iostreams1.53.0...
+I: Configuring libhogweed2:armhf...
+I: Configuring ifupdown...
+I: Configuring info...
+I: Configuring libisccfg-export90...
+I: Configuring libsigc++-2.0-0c2a:armhf...
+I: Configuring libxapian22...
+I: Configuring libboost-iostreams1.54.0:armhf...
+I: Configuring groff-base...
+I: Configuring liblognorm1:armhf...
+I: Configuring libboost-iostreams1.50.0...
+I: Configuring whiptail...
+I: Configuring gnupg...
+I: Configuring libpsl0:armhf...
+I: Configuring libboost-iostreams1.55.0:armhf...
+I: Configuring libdns-export100...
+I: Configuring iptables...
+I: Configuring libapt-inst1.5:armhf...
+I: Configuring libp11-kit0:armhf...
+I: Configuring libgnutls-deb0-28:armhf...
+I: Configuring wget...
+I: Configuring man-db...
+I: Configuring libcwidget3:armhf...
+I: Configuring rsyslog...
+I: Configuring raspbian-archive-keyring...
+I: Configuring libirs-export91...
+I: Configuring aptitude...
+I: Configuring libgnutls-openssl27:armhf...
+I: Configuring apt...
+I: Configuring iputils-ping...
+I: Configuring isc-dhcp-common...
+I: Configuring apt-utils...
+I: Configuring isc-dhcp-client...
+I: Configuring tasksel...
+I: Configuring tasksel-data...
+I: Configuring libc-bin...
+I: Configuring systemd...
+I: Base system installed successfully.
++ log 'End /home/adampie/pi-gen/stage0/prerun.sh'
++ date '+[%T] End /home/adampie/pi-gen/stage0/prerun.sh'
++ tee -a /home/adampie/pi-gen/work/2016-10-08-Raspbian/build.log
+[15:21:08] End /home/adampie/pi-gen/stage0/prerun.sh
++ for SUB_STAGE_DIR in '${STAGE_DIR}/*'
++ '[' -d /home/adampie/pi-gen/stage0/01-configure-apt ']'
++ '[' '!' -f /home/adampie/pi-gen/stage0/01-configure-apt/SKIP ']'
++ run_sub_stage
++ log 'Begin /home/adampie/pi-gen/stage0/01-configure-apt'
++ date '+[%T] Begin /home/adampie/pi-gen/stage0/01-configure-apt'
++ tee -a /home/adampie/pi-gen/work/2016-10-08-Raspbian/build.log
+[15:21:08] Begin /home/adampie/pi-gen/stage0/01-configure-apt
++ pushd /home/adampie/pi-gen/stage0/01-configure-apt
++ for i in '{00..99}'
++ '[' -f 00-debconf ']'
++ '[' -f 00-packages-nr ']'
++ '[' -f 00-packages ']'
++ '[' -d 00-patches ']'
++ '[' -x 00-run.sh ']'
++ log 'Begin /home/adampie/pi-gen/stage0/01-configure-apt/00-run.sh'
++ date '+[%T] Begin /home/adampie/pi-gen/stage0/01-configure-apt/00-run.sh'
++ tee -a /home/adampie/pi-gen/work/2016-10-08-Raspbian/build.log
+[15:21:08] Begin /home/adampie/pi-gen/stage0/01-configure-apt/00-run.sh
++ ./00-run.sh
+OK
+
+
+0% [Working]
+            
+Get:1 http://archive.raspberrypi.org jessie InRelease [13.2 kB]
+
+            
+88% [Waiting for headers] [1 InRelease 11.6 kB/13.2 kB 88%]
+                                                           
+Get:2 http://mirrordirector.raspbian.org jessie InRelease [14.9 kB]
+
+                                                           
+92% [2 InRelease 14.3 kB/14.9 kB 96%] [1 InRelease 11.6 kB/13.2 kB 88%]
+                                                                       
+100% [2 InRelease 14.9 kB/14.9 kB 100%]
+                                       
+100% [Working]
+              
+100% [1 InRelease gpgv 13.2 kB]
+                               
+100% [Working]
+              
+100% [2 InRelease gpgv 14.9 kB]
+                               
+Get:3 http://archive.raspberrypi.org jessie/main armhf Packages [144 kB]
+
+                               
+21% [2 InRelease gpgv 14.9 kB] [3 Packages 7240 B/144 kB 5%]
+                                                            
+100% [2 InRelease gpgv 14.9 kB]
+                               
+100% [Working]
+              
+100% [3 Packages gzip 0 B] [Waiting for headers] [Waiting for headers]
+                                                                      
+Get:4 http://archive.raspberrypi.org jessie/ui armhf Packages [14.2 kB]
+
+                                                                      
+93% [3 Packages gzip 0 B] [Waiting for headers] [4 Packages 1448 B/14.2 kB 10%]
+                                                                               
+100% [3 Packages gzip 0 B] [Waiting for headers]
+                                                
+Get:5 http://mirrordirector.raspbian.org jessie/main armhf Packages [8981 kB]
+
+                                                
+2% [3 Packages gzip 0 B] [5 Packages 12.8 kB/8981 kB 0%] [Waiting for headers]
+                                                                              
+2% [5 Packages 34.5 kB/8981 kB 0%] [Waiting for headers]
+                                                        
+2% [4 Packages gzip 0 B] [5 Packages 34.5 kB/8981 kB 0%] [Waiting for headers]
+                                                                              
+2% [5 Packages 34.5 kB/8981 kB 0%] [Waiting for headers]
+                                                        
+Get:6 http://archive.raspberrypi.org jessie/staging armhf Packages [20 B]
+
+                                                        
+3% [5 Packages 120 kB/8981 kB 1%] [6 Packages 20 B/20 B 100%]
+                                                             
+4% [5 Packages 143 kB/8981 kB 2%]
+                                 
+4% [6 Packages gzip 0 B] [5 Packages 150 kB/8981 kB 2%] [Waiting for headers]
+                                                                             
+4% [5 Packages 150 kB/8981 kB 2%] [Waiting for headers]
+                                                       
+Ign http://archive.raspberrypi.org jessie/main Translation-en
+
+                                                       
+15% [5 Packages 1164 kB/8981 kB 13%]
+                                    
+Ign http://archive.raspberrypi.org jessie/staging Translation-en
+
+17% [5 Packages 1328 kB/8981 kB 15%]
+                                    
+Ign http://archive.raspberrypi.org jessie/ui Translation-en
+
+19% [5 Packages 1551 kB/8981 kB 17%]
+90% [5 Packages 8046 kB/8981 kB 90%]
+                                    
+100% [Working]
+              
+100% [5 Packages xz 0 B] [Waiting for headers]
+                                              
+Get:7 http://mirrordirector.raspbian.org jessie/contrib armhf Packages [37.5 kB]
+
+                                              
+100% [5 Packages xz 0 B] [7 Packages 7001 B/37.5 kB 19%]
+                                                        
+100% [5 Packages xz 0 B]
+                        
+Get:8 http://mirrordirector.raspbian.org jessie/non-free armhf Packages [70.3 kB]
+
+                        
+99% [5 Packages xz 0 B] [8 Packages 9726 B/70.3 kB 14%]
+                                                       
+100% [5 Packages xz 0 B]
+                        
+Get:9 http://mirrordirector.raspbian.org jessie/rpi armhf Packages [1356 B]
+
+                        
+100% [5 Packages xz 0 B] [9 Packages 1356 B/1356 B 100%]
+                                                        
+100% [5 Packages xz 0 B]
+                        
+Ign http://mirrordirector.raspbian.org jessie/contrib Translation-en
+
+100% [5 Packages xz 0 B]
+                        
+Ign http://mirrordirector.raspbian.org jessie/main Translation-en
+
+100% [5 Packages xz 0 B]
+                        
+Ign http://mirrordirector.raspbian.org jessie/non-free Translation-en
+
+100% [5 Packages xz 0 B]
+                        
+Ign http://mirrordirector.raspbian.org jessie/rpi Translation-en
+
+100% [5 Packages xz 0 B]
+100% [5 Packages xz 0 B]
+100% [5 Packages xz 0 B]
+100% [5 Packages xz 0 B]
+100% [5 Packages xz 0 B]
+100% [5 Packages xz 0 B]
+100% [5 Packages xz 0 B]
+100% [5 Packages xz 0 B]
+                        
+100% [5 Packages xz 0 B]                                                                                                                                                                              1457 kB/s 0s
+100% [5 Packages xz 0 B]                                                                                                                                                                              1457 kB/s 0s
+100% [5 Packages xz 0 B]                                                                                                                                                                              1457 kB/s 0s
+100% [5 Packages xz 0 B]                                                                                                                                                                              1457 kB/s 0s
+100% [5 Packages xz 0 B]                                                                                                                                                                              1457 kB/s 0s
+100% [5 Packages xz 0 B]                                                                                                                                                                              1457 kB/s 0s
+100% [5 Packages xz 0 B]                                                                                                                                                                              1457 kB/s 0s
+100% [5 Packages xz 0 B]                                                                                                                                                                              1457 kB/s 0s
+100% [5 Packages xz 0 B]                                                                                                                                                                              1457 kB/s 0s
+100% [5 Packages xz 0 B]                                                                                                                                                                              1457 kB/s 0s
+100% [5 Packages xz 0 B]                                                                                                                                                                              1457 kB/s 0s
+100% [Working]                                                                                                                                                                                        1457 kB/s 0s
+100% [7 Packages xz 0 B]                                                                                                                                                                              1457 kB/s 0s
+100% [Working]                                                                                                                                                                                        1457 kB/s 0s
+100% [8 Packages xz 0 B]                                                                                                                                                                              1457 kB/s 0s
+100% [Working]                                                                                                                                                                                        1457 kB/s 0s
+100% [9 Packages xz 0 B]                                                                                                                                                                              1457 kB/s 0s
+100% [Working]                                                                                                                                                                                        1457 kB/s 0s
+                                                                                                                                                                                                                  
+Fetched 9276 kB in 11s (799 kB/s)
+
+Reading package lists... 0%
+
+Reading package lists... 0%
+
+Reading package lists... 1%
+
+Reading package lists... 7%
+
+Reading package lists... 13%
+
+Reading package lists... 19%
+
+Reading package lists... 24%
+
+Reading package lists... 31%
+
+Reading package lists... 37%
+
+Reading package lists... 43%
+
+Reading package lists... 49%
+
+Reading package lists... 55%
+
+Reading package lists... 61%
+
+Reading package lists... 67%
+
+Reading package lists... 73%
+
+Reading package lists... 79%
+
+Reading package lists... 85%
+
+Reading package lists... 90%
+
+Reading package lists... 96%
+
+Reading package lists... 97%
+
+Reading package lists... 97%
+
+Reading package lists... 97%
+
+Reading package lists... 97%
+
+Reading package lists... 98%
+
+Reading package lists... 98%
+
+Reading package lists... 98%
+
+Reading package lists... 98%
+
+Reading package lists... 99%
+
+Reading package lists... 99%
+
+Reading package lists... 99%
+
+Reading package lists... 99%
+
+Reading package lists... 99%
+
+Reading package lists... 99%
+
+Reading package lists... Done
+
+
+Reading package lists... 0%
+
+Reading package lists... 100%
+
+Reading package lists... Done
+
+
+Building dependency tree... 0%
+
+Building dependency tree... 0%
+
+Building dependency tree... 50%
+
+Building dependency tree... 50%
+
+Building dependency tree... 85%
+
+Building dependency tree... Done
+
+Calculating upgrade... Done
+The following NEW packages will be installed:
+  libplymouth4
+The following packages will be upgraded:
+  libdrm2 plymouth
+2 upgraded, 1 newly installed, 0 to remove and 0 not upgraded.
+Need to get 215 kB of archives.
+After this operation, 79.9 kB of additional disk space will be used.
+
+
+0% [Working]
+            
+Get:1 http://archive.raspberrypi.org/debian/ jessie/main libdrm2 armhf 2.4.65-3~bpo8+1 [31.4 kB]
+
+            
+0% [1 libdrm2 0 B/31.4 kB 0%]
+                             
+15% [Working]
+             
+15% [Waiting for headers]
+15% [Waiting for headers]
+                         
+Get:2 http://archive.raspberrypi.org/debian/ jessie/ui plymouth armhf 0.9.2-3+rpi1 [104 kB]
+
+                         
+15% [2 plymouth 0 B/104 kB 0%]
+                              
+63% [Working]
+             
+Get:3 http://archive.raspberrypi.org/debian/ jessie/ui libplymouth4 armhf 0.9.2-3+rpi1 [80.2 kB]
+
+             
+63% [3 libplymouth4 0 B/80.2 kB 0%]
+                                   
+100% [Working]
+              
+Fetched 215 kB in 2s (97.9 kB/s)
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = "en_GB:en",
+	LC_ALL = (unset),
+	LC_PAPER = "en_GB.utf8",
+	LC_NUMERIC = "en_GB.utf8",
+	LC_MEASUREMENT = "en_GB.utf8",
+	LC_MONETARY = "en_GB.utf8",
+	LC_TIME = "en_GB.utf8",
+	LANG = "en_GB.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+/usr/bin/locale: Cannot set LC_CTYPE to default locale: No such file or directory
+/usr/bin/locale: Cannot set LC_MESSAGES to default locale: No such file or directory
+/usr/bin/locale: Cannot set LC_ALL to default locale: No such file or directory
+(Reading database ... 
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 10383 files and directories currently installed.)
+
+Preparing to unpack .../libdrm2_2.4.65-3~bpo8+1_armhf.deb ...
+
+Unpacking libdrm2:armhf (2.4.65-3~bpo8+1) over (2.4.58-2) ...
+
+Preparing to unpack .../plymouth_0.9.2-3+rpi1_armhf.deb ...
+
+Unpacking plymouth (0.9.2-3+rpi1) over (0.9.0-9) ...
+
+Selecting previously unselected package libplymouth4:armhf.
+
+Preparing to unpack .../libplymouth4_0.9.2-3+rpi1_armhf.deb ...
+
+Unpacking libplymouth4:armhf (0.9.2-3+rpi1) ...
+
+Processing triggers for systemd (215-17+deb8u5) ...
+
+Processing triggers for man-db (2.7.0.2-5) ...
+
+Setting up libdrm2:armhf (2.4.65-3~bpo8+1) ...
+
+Setting up libplymouth4:armhf (0.9.2-3+rpi1) ...
+
+Setting up plymouth (0.9.2-3+rpi1) ...
+
+Installing new version of config file /etc/init.d/plymouth ...
+
+update-initramfs: deferring update (trigger activated)
+
+update-rc.d: warning: start and stop actions are no longer supported; falling back to defaults
+
+update-rc.d: warning: start and stop actions are no longer supported; falling back to defaults
+
+Processing triggers for libc-bin (2.19-18+deb8u6) ...
+
+Processing triggers for systemd (215-17+deb8u5) ...
+
+Processing triggers for initramfs-tools (0.120+deb8u2) ...
+
++ log 'End /home/adampie/pi-gen/stage0/01-configure-apt/00-run.sh'
++ date '+[%T] End /home/adampie/pi-gen/stage0/01-configure-apt/00-run.sh'
++ tee -a /home/adampie/pi-gen/work/2016-10-08-Raspbian/build.log
+[15:21:55] End /home/adampie/pi-gen/stage0/01-configure-apt/00-run.sh
++ '[' -f 00-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 01-debconf ']'
++ '[' -f 01-packages-nr ']'
++ '[' -f 01-packages ']'
++ '[' -d 01-patches ']'
++ '[' -x 01-run.sh ']'
++ '[' -f 01-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 02-debconf ']'
++ '[' -f 02-packages-nr ']'
++ '[' -f 02-packages ']'
++ '[' -d 02-patches ']'
++ '[' -x 02-run.sh ']'
++ '[' -f 02-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 03-debconf ']'
++ '[' -f 03-packages-nr ']'
++ '[' -f 03-packages ']'
++ '[' -d 03-patches ']'
++ '[' -x 03-run.sh ']'
++ '[' -f 03-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 04-debconf ']'
++ '[' -f 04-packages-nr ']'
++ '[' -f 04-packages ']'
++ '[' -d 04-patches ']'
++ '[' -x 04-run.sh ']'
++ '[' -f 04-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 05-debconf ']'
++ '[' -f 05-packages-nr ']'
++ '[' -f 05-packages ']'
++ '[' -d 05-patches ']'
++ '[' -x 05-run.sh ']'
++ '[' -f 05-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 06-debconf ']'
++ '[' -f 06-packages-nr ']'
++ '[' -f 06-packages ']'
++ '[' -d 06-patches ']'
++ '[' -x 06-run.sh ']'
++ '[' -f 06-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 07-debconf ']'
++ '[' -f 07-packages-nr ']'
++ '[' -f 07-packages ']'
++ '[' -d 07-patches ']'
++ '[' -x 07-run.sh ']'
++ '[' -f 07-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 08-debconf ']'
++ '[' -f 08-packages-nr ']'
++ '[' -f 08-packages ']'
++ '[' -d 08-patches ']'
++ '[' -x 08-run.sh ']'
++ '[' -f 08-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 09-debconf ']'
++ '[' -f 09-packages-nr ']'
++ '[' -f 09-packages ']'
++ '[' -d 09-patches ']'
++ '[' -x 09-run.sh ']'
++ '[' -f 09-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 10-debconf ']'
++ '[' -f 10-packages-nr ']'
++ '[' -f 10-packages ']'
++ '[' -d 10-patches ']'
++ '[' -x 10-run.sh ']'
++ '[' -f 10-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 11-debconf ']'
++ '[' -f 11-packages-nr ']'
++ '[' -f 11-packages ']'
++ '[' -d 11-patches ']'
++ '[' -x 11-run.sh ']'
++ '[' -f 11-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 12-debconf ']'
++ '[' -f 12-packages-nr ']'
++ '[' -f 12-packages ']'
++ '[' -d 12-patches ']'
++ '[' -x 12-run.sh ']'
++ '[' -f 12-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 13-debconf ']'
++ '[' -f 13-packages-nr ']'
++ '[' -f 13-packages ']'
++ '[' -d 13-patches ']'
++ '[' -x 13-run.sh ']'
++ '[' -f 13-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 14-debconf ']'
++ '[' -f 14-packages-nr ']'
++ '[' -f 14-packages ']'
++ '[' -d 14-patches ']'
++ '[' -x 14-run.sh ']'
++ '[' -f 14-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 15-debconf ']'
++ '[' -f 15-packages-nr ']'
++ '[' -f 15-packages ']'
++ '[' -d 15-patches ']'
++ '[' -x 15-run.sh ']'
++ '[' -f 15-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 16-debconf ']'
++ '[' -f 16-packages-nr ']'
++ '[' -f 16-packages ']'
++ '[' -d 16-patches ']'
++ '[' -x 16-run.sh ']'
++ '[' -f 16-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 17-debconf ']'
++ '[' -f 17-packages-nr ']'
++ '[' -f 17-packages ']'
++ '[' -d 17-patches ']'
++ '[' -x 17-run.sh ']'
++ '[' -f 17-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 18-debconf ']'
++ '[' -f 18-packages-nr ']'
++ '[' -f 18-packages ']'
++ '[' -d 18-patches ']'
++ '[' -x 18-run.sh ']'
++ '[' -f 18-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 19-debconf ']'
++ '[' -f 19-packages-nr ']'
++ '[' -f 19-packages ']'
++ '[' -d 19-patches ']'
++ '[' -x 19-run.sh ']'
++ '[' -f 19-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 20-debconf ']'
++ '[' -f 20-packages-nr ']'
++ '[' -f 20-packages ']'
++ '[' -d 20-patches ']'
++ '[' -x 20-run.sh ']'
++ '[' -f 20-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 21-debconf ']'
++ '[' -f 21-packages-nr ']'
++ '[' -f 21-packages ']'
++ '[' -d 21-patches ']'
++ '[' -x 21-run.sh ']'
++ '[' -f 21-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 22-debconf ']'
++ '[' -f 22-packages-nr ']'
++ '[' -f 22-packages ']'
++ '[' -d 22-patches ']'
++ '[' -x 22-run.sh ']'
++ '[' -f 22-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 23-debconf ']'
++ '[' -f 23-packages-nr ']'
++ '[' -f 23-packages ']'
++ '[' -d 23-patches ']'
++ '[' -x 23-run.sh ']'
++ '[' -f 23-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 24-debconf ']'
++ '[' -f 24-packages-nr ']'
++ '[' -f 24-packages ']'
++ '[' -d 24-patches ']'
++ '[' -x 24-run.sh ']'
++ '[' -f 24-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 25-debconf ']'
++ '[' -f 25-packages-nr ']'
++ '[' -f 25-packages ']'
++ '[' -d 25-patches ']'
++ '[' -x 25-run.sh ']'
++ '[' -f 25-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 26-debconf ']'
++ '[' -f 26-packages-nr ']'
++ '[' -f 26-packages ']'
++ '[' -d 26-patches ']'
++ '[' -x 26-run.sh ']'
++ '[' -f 26-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 27-debconf ']'
++ '[' -f 27-packages-nr ']'
++ '[' -f 27-packages ']'
++ '[' -d 27-patches ']'
++ '[' -x 27-run.sh ']'
++ '[' -f 27-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 28-debconf ']'
++ '[' -f 28-packages-nr ']'
++ '[' -f 28-packages ']'
++ '[' -d 28-patches ']'
++ '[' -x 28-run.sh ']'
++ '[' -f 28-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 29-debconf ']'
++ '[' -f 29-packages-nr ']'
++ '[' -f 29-packages ']'
++ '[' -d 29-patches ']'
++ '[' -x 29-run.sh ']'
++ '[' -f 29-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 30-debconf ']'
++ '[' -f 30-packages-nr ']'
++ '[' -f 30-packages ']'
++ '[' -d 30-patches ']'
++ '[' -x 30-run.sh ']'
++ '[' -f 30-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 31-debconf ']'
++ '[' -f 31-packages-nr ']'
++ '[' -f 31-packages ']'
++ '[' -d 31-patches ']'
++ '[' -x 31-run.sh ']'
++ '[' -f 31-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 32-debconf ']'
++ '[' -f 32-packages-nr ']'
++ '[' -f 32-packages ']'
++ '[' -d 32-patches ']'
++ '[' -x 32-run.sh ']'
++ '[' -f 32-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 33-debconf ']'
++ '[' -f 33-packages-nr ']'
++ '[' -f 33-packages ']'
++ '[' -d 33-patches ']'
++ '[' -x 33-run.sh ']'
++ '[' -f 33-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 34-debconf ']'
++ '[' -f 34-packages-nr ']'
++ '[' -f 34-packages ']'
++ '[' -d 34-patches ']'
++ '[' -x 34-run.sh ']'
++ '[' -f 34-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 35-debconf ']'
++ '[' -f 35-packages-nr ']'
++ '[' -f 35-packages ']'
++ '[' -d 35-patches ']'
++ '[' -x 35-run.sh ']'
++ '[' -f 35-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 36-debconf ']'
++ '[' -f 36-packages-nr ']'
++ '[' -f 36-packages ']'
++ '[' -d 36-patches ']'
++ '[' -x 36-run.sh ']'
++ '[' -f 36-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 37-debconf ']'
++ '[' -f 37-packages-nr ']'
++ '[' -f 37-packages ']'
++ '[' -d 37-patches ']'
++ '[' -x 37-run.sh ']'
++ '[' -f 37-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 38-debconf ']'
++ '[' -f 38-packages-nr ']'
++ '[' -f 38-packages ']'
++ '[' -d 38-patches ']'
++ '[' -x 38-run.sh ']'
++ '[' -f 38-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 39-debconf ']'
++ '[' -f 39-packages-nr ']'
++ '[' -f 39-packages ']'
++ '[' -d 39-patches ']'
++ '[' -x 39-run.sh ']'
++ '[' -f 39-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 40-debconf ']'
++ '[' -f 40-packages-nr ']'
++ '[' -f 40-packages ']'
++ '[' -d 40-patches ']'
++ '[' -x 40-run.sh ']'
++ '[' -f 40-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 41-debconf ']'
++ '[' -f 41-packages-nr ']'
++ '[' -f 41-packages ']'
++ '[' -d 41-patches ']'
++ '[' -x 41-run.sh ']'
++ '[' -f 41-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 42-debconf ']'
++ '[' -f 42-packages-nr ']'
++ '[' -f 42-packages ']'
++ '[' -d 42-patches ']'
++ '[' -x 42-run.sh ']'
++ '[' -f 42-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 43-debconf ']'
++ '[' -f 43-packages-nr ']'
++ '[' -f 43-packages ']'
++ '[' -d 43-patches ']'
++ '[' -x 43-run.sh ']'
++ '[' -f 43-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 44-debconf ']'
++ '[' -f 44-packages-nr ']'
++ '[' -f 44-packages ']'
++ '[' -d 44-patches ']'
++ '[' -x 44-run.sh ']'
++ '[' -f 44-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 45-debconf ']'
++ '[' -f 45-packages-nr ']'
++ '[' -f 45-packages ']'
++ '[' -d 45-patches ']'
++ '[' -x 45-run.sh ']'
++ '[' -f 45-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 46-debconf ']'
++ '[' -f 46-packages-nr ']'
++ '[' -f 46-packages ']'
++ '[' -d 46-patches ']'
++ '[' -x 46-run.sh ']'
++ '[' -f 46-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 47-debconf ']'
++ '[' -f 47-packages-nr ']'
++ '[' -f 47-packages ']'
++ '[' -d 47-patches ']'
++ '[' -x 47-run.sh ']'
++ '[' -f 47-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 48-debconf ']'
++ '[' -f 48-packages-nr ']'
++ '[' -f 48-packages ']'
++ '[' -d 48-patches ']'
++ '[' -x 48-run.sh ']'
++ '[' -f 48-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 49-debconf ']'
++ '[' -f 49-packages-nr ']'
++ '[' -f 49-packages ']'
++ '[' -d 49-patches ']'
++ '[' -x 49-run.sh ']'
++ '[' -f 49-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 50-debconf ']'
++ '[' -f 50-packages-nr ']'
++ '[' -f 50-packages ']'
++ '[' -d 50-patches ']'
++ '[' -x 50-run.sh ']'
++ '[' -f 50-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 51-debconf ']'
++ '[' -f 51-packages-nr ']'
++ '[' -f 51-packages ']'
++ '[' -d 51-patches ']'
++ '[' -x 51-run.sh ']'
++ '[' -f 51-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 52-debconf ']'
++ '[' -f 52-packages-nr ']'
++ '[' -f 52-packages ']'
++ '[' -d 52-patches ']'
++ '[' -x 52-run.sh ']'
++ '[' -f 52-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 53-debconf ']'
++ '[' -f 53-packages-nr ']'
++ '[' -f 53-packages ']'
++ '[' -d 53-patches ']'
++ '[' -x 53-run.sh ']'
++ '[' -f 53-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 54-debconf ']'
++ '[' -f 54-packages-nr ']'
++ '[' -f 54-packages ']'
++ '[' -d 54-patches ']'
++ '[' -x 54-run.sh ']'
++ '[' -f 54-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 55-debconf ']'
++ '[' -f 55-packages-nr ']'
++ '[' -f 55-packages ']'
++ '[' -d 55-patches ']'
++ '[' -x 55-run.sh ']'
++ '[' -f 55-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 56-debconf ']'
++ '[' -f 56-packages-nr ']'
++ '[' -f 56-packages ']'
++ '[' -d 56-patches ']'
++ '[' -x 56-run.sh ']'
++ '[' -f 56-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 57-debconf ']'
++ '[' -f 57-packages-nr ']'
++ '[' -f 57-packages ']'
++ '[' -d 57-patches ']'
++ '[' -x 57-run.sh ']'
++ '[' -f 57-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 58-debconf ']'
++ '[' -f 58-packages-nr ']'
++ '[' -f 58-packages ']'
++ '[' -d 58-patches ']'
++ '[' -x 58-run.sh ']'
++ '[' -f 58-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 59-debconf ']'
++ '[' -f 59-packages-nr ']'
++ '[' -f 59-packages ']'
++ '[' -d 59-patches ']'
++ '[' -x 59-run.sh ']'
++ '[' -f 59-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 60-debconf ']'
++ '[' -f 60-packages-nr ']'
++ '[' -f 60-packages ']'
++ '[' -d 60-patches ']'
++ '[' -x 60-run.sh ']'
++ '[' -f 60-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 61-debconf ']'
++ '[' -f 61-packages-nr ']'
++ '[' -f 61-packages ']'
++ '[' -d 61-patches ']'
++ '[' -x 61-run.sh ']'
++ '[' -f 61-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 62-debconf ']'
++ '[' -f 62-packages-nr ']'
++ '[' -f 62-packages ']'
++ '[' -d 62-patches ']'
++ '[' -x 62-run.sh ']'
++ '[' -f 62-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 63-debconf ']'
++ '[' -f 63-packages-nr ']'
++ '[' -f 63-packages ']'
++ '[' -d 63-patches ']'
++ '[' -x 63-run.sh ']'
++ '[' -f 63-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 64-debconf ']'
++ '[' -f 64-packages-nr ']'
++ '[' -f 64-packages ']'
++ '[' -d 64-patches ']'
++ '[' -x 64-run.sh ']'
++ '[' -f 64-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 65-debconf ']'
++ '[' -f 65-packages-nr ']'
++ '[' -f 65-packages ']'
++ '[' -d 65-patches ']'
++ '[' -x 65-run.sh ']'
++ '[' -f 65-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 66-debconf ']'
++ '[' -f 66-packages-nr ']'
++ '[' -f 66-packages ']'
++ '[' -d 66-patches ']'
++ '[' -x 66-run.sh ']'
++ '[' -f 66-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 67-debconf ']'
++ '[' -f 67-packages-nr ']'
++ '[' -f 67-packages ']'
++ '[' -d 67-patches ']'
++ '[' -x 67-run.sh ']'
++ '[' -f 67-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 68-debconf ']'
++ '[' -f 68-packages-nr ']'
++ '[' -f 68-packages ']'
++ '[' -d 68-patches ']'
++ '[' -x 68-run.sh ']'
++ '[' -f 68-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 69-debconf ']'
++ '[' -f 69-packages-nr ']'
++ '[' -f 69-packages ']'
++ '[' -d 69-patches ']'
++ '[' -x 69-run.sh ']'
++ '[' -f 69-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 70-debconf ']'
++ '[' -f 70-packages-nr ']'
++ '[' -f 70-packages ']'
++ '[' -d 70-patches ']'
++ '[' -x 70-run.sh ']'
++ '[' -f 70-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 71-debconf ']'
++ '[' -f 71-packages-nr ']'
++ '[' -f 71-packages ']'
++ '[' -d 71-patches ']'
++ '[' -x 71-run.sh ']'
++ '[' -f 71-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 72-debconf ']'
++ '[' -f 72-packages-nr ']'
++ '[' -f 72-packages ']'
++ '[' -d 72-patches ']'
++ '[' -x 72-run.sh ']'
++ '[' -f 72-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 73-debconf ']'
++ '[' -f 73-packages-nr ']'
++ '[' -f 73-packages ']'
++ '[' -d 73-patches ']'
++ '[' -x 73-run.sh ']'
++ '[' -f 73-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 74-debconf ']'
++ '[' -f 74-packages-nr ']'
++ '[' -f 74-packages ']'
++ '[' -d 74-patches ']'
++ '[' -x 74-run.sh ']'
++ '[' -f 74-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 75-debconf ']'
++ '[' -f 75-packages-nr ']'
++ '[' -f 75-packages ']'
++ '[' -d 75-patches ']'
++ '[' -x 75-run.sh ']'
++ '[' -f 75-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 76-debconf ']'
++ '[' -f 76-packages-nr ']'
++ '[' -f 76-packages ']'
++ '[' -d 76-patches ']'
++ '[' -x 76-run.sh ']'
++ '[' -f 76-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 77-debconf ']'
++ '[' -f 77-packages-nr ']'
++ '[' -f 77-packages ']'
++ '[' -d 77-patches ']'
++ '[' -x 77-run.sh ']'
++ '[' -f 77-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 78-debconf ']'
++ '[' -f 78-packages-nr ']'
++ '[' -f 78-packages ']'
++ '[' -d 78-patches ']'
++ '[' -x 78-run.sh ']'
++ '[' -f 78-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 79-debconf ']'
++ '[' -f 79-packages-nr ']'
++ '[' -f 79-packages ']'
++ '[' -d 79-patches ']'
++ '[' -x 79-run.sh ']'
++ '[' -f 79-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 80-debconf ']'
++ '[' -f 80-packages-nr ']'
++ '[' -f 80-packages ']'
++ '[' -d 80-patches ']'
++ '[' -x 80-run.sh ']'
++ '[' -f 80-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 81-debconf ']'
++ '[' -f 81-packages-nr ']'
++ '[' -f 81-packages ']'
++ '[' -d 81-patches ']'
++ '[' -x 81-run.sh ']'
++ '[' -f 81-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 82-debconf ']'
++ '[' -f 82-packages-nr ']'
++ '[' -f 82-packages ']'
++ '[' -d 82-patches ']'
++ '[' -x 82-run.sh ']'
++ '[' -f 82-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 83-debconf ']'
++ '[' -f 83-packages-nr ']'
++ '[' -f 83-packages ']'
++ '[' -d 83-patches ']'
++ '[' -x 83-run.sh ']'
++ '[' -f 83-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 84-debconf ']'
++ '[' -f 84-packages-nr ']'
++ '[' -f 84-packages ']'
++ '[' -d 84-patches ']'
++ '[' -x 84-run.sh ']'
++ '[' -f 84-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 85-debconf ']'
++ '[' -f 85-packages-nr ']'
++ '[' -f 85-packages ']'
++ '[' -d 85-patches ']'
++ '[' -x 85-run.sh ']'
++ '[' -f 85-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 86-debconf ']'
++ '[' -f 86-packages-nr ']'
++ '[' -f 86-packages ']'
++ '[' -d 86-patches ']'
++ '[' -x 86-run.sh ']'
++ '[' -f 86-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 87-debconf ']'
++ '[' -f 87-packages-nr ']'
++ '[' -f 87-packages ']'
++ '[' -d 87-patches ']'
++ '[' -x 87-run.sh ']'
++ '[' -f 87-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 88-debconf ']'
++ '[' -f 88-packages-nr ']'
++ '[' -f 88-packages ']'
++ '[' -d 88-patches ']'
++ '[' -x 88-run.sh ']'
++ '[' -f 88-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 89-debconf ']'
++ '[' -f 89-packages-nr ']'
++ '[' -f 89-packages ']'
++ '[' -d 89-patches ']'
++ '[' -x 89-run.sh ']'
++ '[' -f 89-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 90-debconf ']'
++ '[' -f 90-packages-nr ']'
++ '[' -f 90-packages ']'
++ '[' -d 90-patches ']'
++ '[' -x 90-run.sh ']'
++ '[' -f 90-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 91-debconf ']'
++ '[' -f 91-packages-nr ']'
++ '[' -f 91-packages ']'
++ '[' -d 91-patches ']'
++ '[' -x 91-run.sh ']'
++ '[' -f 91-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 92-debconf ']'
++ '[' -f 92-packages-nr ']'
++ '[' -f 92-packages ']'
++ '[' -d 92-patches ']'
++ '[' -x 92-run.sh ']'
++ '[' -f 92-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 93-debconf ']'
++ '[' -f 93-packages-nr ']'
++ '[' -f 93-packages ']'
++ '[' -d 93-patches ']'
++ '[' -x 93-run.sh ']'
++ '[' -f 93-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 94-debconf ']'
++ '[' -f 94-packages-nr ']'
++ '[' -f 94-packages ']'
++ '[' -d 94-patches ']'
++ '[' -x 94-run.sh ']'
++ '[' -f 94-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 95-debconf ']'
++ '[' -f 95-packages-nr ']'
++ '[' -f 95-packages ']'
++ '[' -d 95-patches ']'
++ '[' -x 95-run.sh ']'
++ '[' -f 95-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 96-debconf ']'
++ '[' -f 96-packages-nr ']'
++ '[' -f 96-packages ']'
++ '[' -d 96-patches ']'
++ '[' -x 96-run.sh ']'
++ '[' -f 96-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 97-debconf ']'
++ '[' -f 97-packages-nr ']'
++ '[' -f 97-packages ']'
++ '[' -d 97-patches ']'
++ '[' -x 97-run.sh ']'
++ '[' -f 97-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 98-debconf ']'
++ '[' -f 98-packages-nr ']'
++ '[' -f 98-packages ']'
++ '[' -d 98-patches ']'
++ '[' -x 98-run.sh ']'
++ '[' -f 98-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 99-debconf ']'
++ '[' -f 99-packages-nr ']'
++ '[' -f 99-packages ']'
++ '[' -d 99-patches ']'
++ '[' -x 99-run.sh ']'
++ '[' -f 99-run-chroot ']'
++ popd
++ log 'End /home/adampie/pi-gen/stage0/01-configure-apt'
++ date '+[%T] End /home/adampie/pi-gen/stage0/01-configure-apt'
++ tee -a /home/adampie/pi-gen/work/2016-10-08-Raspbian/build.log
+[15:21:55] End /home/adampie/pi-gen/stage0/01-configure-apt
++ for SUB_STAGE_DIR in '${STAGE_DIR}/*'
++ '[' -d /home/adampie/pi-gen/stage0/02-firmware ']'
++ '[' '!' -f /home/adampie/pi-gen/stage0/02-firmware/SKIP ']'
++ run_sub_stage
++ log 'Begin /home/adampie/pi-gen/stage0/02-firmware'
++ date '+[%T] Begin /home/adampie/pi-gen/stage0/02-firmware'
++ tee -a /home/adampie/pi-gen/work/2016-10-08-Raspbian/build.log
+[15:21:55] Begin /home/adampie/pi-gen/stage0/02-firmware
++ pushd /home/adampie/pi-gen/stage0/02-firmware
++ for i in '{00..99}'
++ '[' -f 00-debconf ']'
++ '[' -f 00-packages-nr ']'
++ '[' -f 00-packages ']'
++ '[' -d 00-patches ']'
++ '[' -x 00-run.sh ']'
++ '[' -f 00-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 01-debconf ']'
++ '[' -f 01-packages-nr ']'
++ '[' -f 01-packages ']'
++ log 'Begin /home/adampie/pi-gen/stage0/02-firmware/01-packages'
++ date '+[%T] Begin /home/adampie/pi-gen/stage0/02-firmware/01-packages'
++ tee -a /home/adampie/pi-gen/work/2016-10-08-Raspbian/build.log
+[15:21:55] Begin /home/adampie/pi-gen/stage0/02-firmware/01-packages
+++ sed -f /home/adampie/pi-gen/scripts/remove-comments.sed
++ PACKAGES=raspberrypi-bootloader
++ '[' -n raspberrypi-bootloader ']'
++ on_chroot sh -e -
++ mount
+++ realpath /home/adampie/pi-gen/work/2016-10-08-Raspbian/stage0/rootfs/proc
++ grep -q /home/adampie/pi-gen/work/2016-10-08-Raspbian/stage0/rootfs/proc
++ mount
+++ realpath /home/adampie/pi-gen/work/2016-10-08-Raspbian/stage0/rootfs/dev
++ grep -q /home/adampie/pi-gen/work/2016-10-08-Raspbian/stage0/rootfs/dev
++ mount
+++ realpath /home/adampie/pi-gen/work/2016-10-08-Raspbian/stage0/rootfs/dev/pts
++ grep -q /home/adampie/pi-gen/work/2016-10-08-Raspbian/stage0/rootfs/dev/pts
++ mount
+++ realpath /home/adampie/pi-gen/work/2016-10-08-Raspbian/stage0/rootfs/sys
++ grep -q /home/adampie/pi-gen/work/2016-10-08-Raspbian/stage0/rootfs/sys
++ chroot /home/adampie/pi-gen/work/2016-10-08-Raspbian/stage0/rootfs/ sh -e -
+
+Reading package lists... 0%
+
+Reading package lists... 100%
+
+Reading package lists... Done
+
+
+Building dependency tree... 0%
+
+Building dependency tree... 0%
+
+Building dependency tree... 50%
+
+Building dependency tree... 50%
+
+Building dependency tree... 85%
+
+Building dependency tree       
+
+
+Reading state information... 0%
+
+Reading state information... 98%
+
+Reading state information... Done
+
+The following extra packages will be installed:
+  raspberrypi-kernel
+The following NEW packages will be installed:
+  raspberrypi-bootloader raspberrypi-kernel
+0 upgraded, 2 newly installed, 0 to remove and 0 not upgraded.
+Need to get 33.2 MB of archives.
+After this operation, 120 MB of additional disk space will be used.
+
+
+0% [Working]
+            
+Get:1 http://archive.raspberrypi.org/debian/ jessie/main raspberrypi-kernel armhf 1.20160921-1 [30.0 MB]
+
+            
+0% [1 raspberrypi-kernel 13.0 kB/30.0 MB 0%]
+4% [1 raspberrypi-kernel 1352 kB/30.0 MB 5%]
+8% [1 raspberrypi-kernel 2662 kB/30.0 MB 9%]
+                                            
+12% [1 raspberrypi-kernel 4030 kB/30.0 MB 13%]
+16% [1 raspberrypi-kernel 5308 kB/30.0 MB 18%]
+20% [1 raspberrypi-kernel 6676 kB/30.0 MB 22%]
+24% [1 raspberrypi-kernel 8028 kB/30.0 MB 27%]
+26% [1 raspberrypi-kernel 8618 kB/30.0 MB 29%]
+26% [1 raspberrypi-kernel 8618 kB/30.0 MB 29%]
+31% [1 raspberrypi-kernel 10.1 MB/30.0 MB 34%]
+35% [1 raspberrypi-kernel 11.5 MB/30.0 MB 38%]
+39% [1 raspberrypi-kernel 12.8 MB/30.0 MB 43%]
+                                              
+42% [1 raspberrypi-kernel 14.1 MB/30.0 MB 47%]                                                                                                                                                        2322 kB/s 8s
+46% [1 raspberrypi-kernel 15.4 MB/30.0 MB 51%]                                                                                                                                                        2322 kB/s 7s
+50% [1 raspberrypi-kernel 16.7 MB/30.0 MB 56%]                                                                                                                                                        2322 kB/s 7s
+54% [1 raspberrypi-kernel 18.0 MB/30.0 MB 60%]                                                                                                                                                        2322 kB/s 6s
+58% [1 raspberrypi-kernel 19.3 MB/30.0 MB 64%]                                                                                                                                                        2322 kB/s 5s
+62% [1 raspberrypi-kernel 20.6 MB/30.0 MB 69%]                                                                                                                                                        2322 kB/s 5s
+66% [1 raspberrypi-kernel 21.9 MB/30.0 MB 73%]                                                                                                                                                        2322 kB/s 4s
+70% [1 raspberrypi-kernel 23.2 MB/30.0 MB 77%]                                                                                                                                                        2322 kB/s 4s
+74% [1 raspberrypi-kernel 24.7 MB/30.0 MB 82%]                                                                                                                                                        2322 kB/s 3s
+78% [1 raspberrypi-kernel 26.0 MB/30.0 MB 87%]                                                                                                                                                        2322 kB/s 3s
+82% [1 raspberrypi-kernel 27.3 MB/30.0 MB 91%]                                                                                                                                                        2322 kB/s 2s
+86% [1 raspberrypi-kernel 28.6 MB/30.0 MB 95%]                                                                                                                                                        2322 kB/s 1s
+90% [1 raspberrypi-kernel 30.0 MB/30.0 MB 100%]                                                                                                                                                       2649 kB/s 1s
+90% [Working]                                                                                                                                                                                         2649 kB/s 1s
+                                                                                                                                                                                                                  
+Get:2 http://archive.raspberrypi.org/debian/ jessie/main raspberrypi-bootloader armhf 1.20160921-1 [3165 kB]
+
+90% [2 raspberrypi-bootloader 4344 B/3165 kB 0%]                                                                                                                                                      2649 kB/s 1s
+94% [2 raspberrypi-bootloader 1262 kB/3165 kB 40%]                                                                                                                                                    2649 kB/s 0s
+99% [2 raspberrypi-bootloader 2668 kB/3165 kB 84%]                                                                                                                                                    2649 kB/s 0s
+100% [2 raspberrypi-bootloader 3133 kB/3165 kB 99%]                                                                                                                                                   2649 kB/s 0s
+100% [2 raspberrypi-bootloader 3133 kB/3165 kB 99%]                                                                                                                                                   2649 kB/s 0s
+100% [2 raspberrypi-bootloader 3133 kB/3165 kB 99%]                                                                                                                                                   2649 kB/s 0s
+100% [2 raspberrypi-bootloader 3133 kB/3165 kB 99%]                                                                                                                                                   2649 kB/s 0s
+100% [Working]                                                                                                                                                                                        2649 kB/s 0s
+                                                                                                                                                                                                                  
+Fetched 33.2 MB in 15s (2168 kB/s)
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = "en_GB:en",
+	LC_ALL = (unset),
+	LC_PAPER = "en_GB.utf8",
+	LC_NUMERIC = "en_GB.utf8",
+	LC_MEASUREMENT = "en_GB.utf8",
+	LC_MONETARY = "en_GB.utf8",
+	LC_TIME = "en_GB.utf8",
+	LANG = "en_GB.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+/usr/bin/locale: Cannot set LC_CTYPE to default locale: No such file or directory
+/usr/bin/locale: Cannot set LC_MESSAGES to default locale: No such file or directory
+/usr/bin/locale: Cannot set LC_ALL to default locale: No such file or directory
+Selecting previously unselected package raspberrypi-kernel.
+
+(Reading database ... 
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 10391 files and directories currently installed.)
+
+Preparing to unpack .../raspberrypi-kernel_1.20160921-1_armhf.deb ...
+
+Adding 'diversion of /boot/bcm2708-rpi-b-plus.dtb to /usr/share/rpikernelhack/bcm2708-rpi-b-plus.dtb by rpikernelhack'
+
+Adding 'diversion of /boot/bcm2708-rpi-b.dtb to /usr/share/rpikernelhack/bcm2708-rpi-b.dtb by rpikernelhack'
+
+Adding 'diversion of /boot/bcm2708-rpi-cm.dtb to /usr/share/rpikernelhack/bcm2708-rpi-cm.dtb by rpikernelhack'
+
+Adding 'diversion of /boot/bcm2709-rpi-2-b.dtb to /usr/share/rpikernelhack/bcm2709-rpi-2-b.dtb by rpikernelhack'
+
+Adding 'diversion of /boot/bcm2710-rpi-3-b.dtb to /usr/share/rpikernelhack/bcm2710-rpi-3-b.dtb by rpikernelhack'
+
+Adding 'diversion of /boot/bcm2710-rpi-cm3.dtb to /usr/share/rpikernelhack/bcm2710-rpi-cm3.dtb by rpikernelhack'
+
+Adding 'diversion of /boot/kernel.img to /usr/share/rpikernelhack/kernel.img by rpikernelhack'
+
+Adding 'diversion of /boot/kernel7.img to /usr/share/rpikernelhack/kernel7.img by rpikernelhack'
+
+Adding 'diversion of /boot/COPYING.linux to /usr/share/rpikernelhack/COPYING.linux by rpikernelhack'
+
+Adding 'diversion of /boot/overlays/README to /usr/share/rpikernelhack/overlays/README by rpikernelhack'
+
+Adding 'diversion of /boot/overlays/adau1977-adc.dtbo to /usr/share/rpikernelhack/overlays/adau1977-adc.dtbo by rpikernelhack'
+
+Adding 'diversion of /boot/overlays/ads1015.dtbo to /usr/share/rpikernelhack/overlays/ads1015.dtbo by rpikernelhack'
+
+Adding 'diversion of /boot/overlays/ads7846.dtbo to /usr/share/rpikernelhack/overlays/ads7846.dtbo by rpikernelhack'
+
+Adding 'diversion of /boot/overlays/akkordion-iqdacplus.dtbo to /usr/share/rpikernelhack/overlays/akkordion-iqdacplus.dtbo by rpikernelhack'
+
+Adding 'diversion of /boot/overlays/at86rf233.dtbo to /usr/share/rpikernelhack/overlays/at86rf233.dtbo by rpikernelhack'
+
+Adding 'diversion of /boot/overlays/audioinjector-wm8731-audio.dtbo to /usr/share/rpikernelhack/overlays/audioinjector-wm8731-audio.dtbo by rpikernelhack'
+
+Adding 'diversion of /boot/overlays/audremap.dtbo to /usr/share/rpikernelhack/overlays/audremap.dtbo by rpikernelhack'
+
+Adding 'diversion of /boot/overlays/bmp085_i2c-sensor.dtbo to /usr/share/rpikernelhack/overlays/bmp085_i2c-sensor.dtbo by rpikernelhack'
+
+Adding 'diversion of /boot/overlays/dht11.dtbo to /usr/share/rpikernelhack/overlays/dht11.dtbo by rpikernelhack'
+
+Adding 'diversion of /boot/overlays/dionaudio-loco.dtbo to /usr/share/rpikernelhack/overlays/dionaudio-loco.dtbo by rpikernelhack'
+
+Adding 'diversion of /boot/overlays/dpi18.dtbo to /usr/share/rpikernelhack/overlays/dpi18.dtbo by rpikernelhack'
+
+Adding 'diversion of /boot/overlays/dpi24.dtbo to /usr/share/rpikernelhack/overlays/dpi24.dtbo by rpikernelhack'
+
+Adding 'diversion of /boot/overlays/dwc-otg.dtbo to /usr/share/rpikernelhack/overlays/dwc-otg.dtbo by rpikernelhack'
+
+Adding 'diversion of /boot/overlays/dwc2.dtbo to /usr/share/rpikernelhack/overlays/dwc2.dtbo by rpikernelhack'
+
+Adding 'diversion of /boot/overlays/enc28j60.dtbo to /usr/share/rpikernelhack/overlays/enc28j60.dtbo by rpikernelhack'
+
+Adding 'diversion of /boot/overlays/gpio-ir.dtbo to /usr/share/rpikernelhack/overlays/gpio-ir.dtbo by rpikernelhack'
+
+Adding 'diversion of /boot/overlays/gpio-poweroff.dtbo to /usr/share/rpikernelhack/overlays/gpio-poweroff.dtbo by rpikernelhack'
+
+Adding 'diversion of /boot/overlays/hifiberry-amp.dtbo to /usr/share/rpikernelhack/overlays/hifiberry-amp.dtbo by rpikernelhack'
+
+Adding 'diversion of /boot/overlays/hifiberry-dac.dtbo to /usr/share/rpikernelhack/overlays/hifiberry-dac.dtbo by rpikernelhack'
+
+Adding 'diversion of /boot/overlays/hifiberry-dacplus.dtbo to /usr/share/rpikernelhack/overlays/hifiberry-dacplus.dtbo by rpikernelhack'
+
+Adding 'diversion of /boot/overlays/hifiberry-digi-pro.dtbo to /usr/share/rpikernelhack/overlays/hifiberry-digi-pro.dtbo by rpikernelhack'
+
+Adding 'diversion of /boot/overlays/hifiberry-digi.dtbo to /usr/share/rpikernelhack/overlays/hifiberry-digi.dtbo by rpikernelhack'
+
+Adding 'diversion of /boot/overlays/hy28a.dtbo to /usr/share/rpikernelhack/overlays/hy28a.dtbo by rpikernelhack'
+
+Adding 'diversion of /boot/overlays/hy28b.dtbo to /usr/share/rpikernelhack/overlays/hy28b.dtbo by rpikernelhack'
+
+Adding 'diversion of /boot/overlays/i2c-gpio.dtbo to /usr/share/rpikernelhack/overlays/i2c-gpio.dtbo by rpikernelhack'
+
+Adding 'diversion of /boot/overlays/i2c-mux.dtbo to /usr/share/rpikernelhack/overlays/i2c-mux.dtbo by rpikernelhack'
+
+Adding 'diversion of /boot/overlays/i2c-pwm-pca9685a.dtbo to /usr/share/rpikernelhack/overlays/i2c-pwm-pca9685a.dtbo by rpikernelhack'
+
+Adding 'diversion of /boot/overlays/i2c-rtc.dtbo to /usr/share/rpikernelhack/overlays/i2c-rtc.dtbo by rpikernelhack'
+
+Adding 'diversion of /boot/overlays/i2c0-bcm2708.dtbo to /usr/share/rpikernelhack/overlays/i2c0-bcm2708.dtbo by rpikernelhack'
+
+Adding 'diversion of /boot/overlays/i2c1-bcm2708.dtbo to /usr/share/rpikernelhack/overlays/i2c1-bcm2708.dtbo by rpikernelhack'
+
+Adding 'diversion of /boot/overlays/i2s-gpio28-31.dtbo to /usr/share/rpikernelhack/overlays/i2s-gpio28-31.dtbo by rpikernelhack'
+
+Adding 'diversion of /boot/overlays/i2s-mmap.dtbo to /usr/share/rpikernelhack/overlays/i2s-mmap.dtbo by rpikernelhack'
+
+Adding 'diversion of /boot/overlays/iqaudio-dac.dtbo to /usr/share/rpikernelhack/overlays/iqaudio-dac.dtbo by rpikernelhack'
+
+Adding 'diversion of /boot/overlays/iqaudio-dacplus.dtbo to /usr/share/rpikernelhack/overlays/iqaudio-dacplus.dtbo by rpikernelhack'
+
+Adding 'diversion of /boot/overlays/iqaudio-digi-wm8804-audio.dtbo to /usr/share/rpikernelhack/overlays/iqaudio-digi-wm8804-audio.dtbo by rpikernelhack'
+
+Adding 'diversion of /boot/overlays/justboom-dac.dtbo to /usr/share/rpikernelhack/overlays/justboom-dac.dtbo by rpikernelhack'
+
+Adding 'diversion of /boot/overlays/justboom-digi.dtbo to /usr/share/rpikernelhack/overlays/justboom-digi.dtbo by rpikernelhack'
+
+Adding 'diversion of /boot/overlays/lirc-rpi.dtbo to /usr/share/rpikernelhack/overlays/lirc-rpi.dtbo by rpikernelhack'
+
+Adding 'diversion of /boot/overlays/mcp23017.dtbo to /usr/share/rpikernelhack/overlays/mcp23017.dtbo by rpikernelhack'
+
+Adding 'diversion of /boot/overlays/mcp23s17.dtbo to /usr/share/rpikernelhack/overlays/mcp23s17.dtbo by rpikernelhack'
+
+Adding 'diversion of /boot/overlays/mcp2515-can0.dtbo to /usr/share/rpikernelhack/overlays/mcp2515-can0.dtbo by rpikernelhack'
+
+Adding 'diversion of /boot/overlays/mcp2515-can1.dtbo to /usr/share/rpikernelhack/overlays/mcp2515-can1.dtbo by rpikernelhack'
+
+Adding 'diversion of /boot/overlays/mmc.dtbo to /usr/share/rpikernelhack/overlays/mmc.dtbo by rpikernelhack'
+
+Adding 'diversion of /boot/overlays/mz61581.dtbo to /usr/share/rpikernelhack/overlays/mz61581.dtbo by rpikernelhack'
+
+Adding 'diversion of /boot/overlays/pi3-act-led.dtbo to /usr/share/rpikernelhack/overlays/pi3-act-led.dtbo by rpikernelhack'
+
+Adding 'diversion of /boot/overlays/pi3-disable-bt.dtbo to /usr/share/rpikernelhack/overlays/pi3-disable-bt.dtbo by rpikernelhack'
+
+Adding 'diversion of /boot/overlays/pi3-miniuart-bt.dtbo to /usr/share/rpikernelhack/overlays/pi3-miniuart-bt.dtbo by rpikernelhack'
+
+Adding 'diversion of /boot/overlays/piscreen.dtbo to /usr/share/rpikernelhack/overlays/piscreen.dtbo by rpikernelhack'
+
+Adding 'diversion of /boot/overlays/piscreen2r.dtbo to /usr/share/rpikernelhack/overlays/piscreen2r.dtbo by rpikernelhack'
+
+Adding 'diversion of /boot/overlays/pitft22.dtbo to /usr/share/rpikernelhack/overlays/pitft22.dtbo by rpikernelhack'
+
+Adding 'diversion of /boot/overlays/pitft28-capacitive.dtbo to /usr/share/rpikernelhack/overlays/pitft28-capacitive.dtbo by rpikernelhack'
+
+Adding 'diversion of /boot/overlays/pitft28-resistive.dtbo to /usr/share/rpikernelhack/overlays/pitft28-resistive.dtbo by rpikernelhack'
+
+Adding 'diversion of /boot/overlays/pps-gpio.dtbo to /usr/share/rpikernelhack/overlays/pps-gpio.dtbo by rpikernelhack'
+
+Adding 'diversion of /boot/overlays/pwm-2chan.dtbo to /usr/share/rpikernelhack/overlays/pwm-2chan.dtbo by rpikernelhack'
+
+Adding 'diversion of /boot/overlays/pwm.dtbo to /usr/share/rpikernelhack/overlays/pwm.dtbo by rpikernelhack'
+
+Adding 'diversion of /boot/overlays/qca7000.dtbo to /usr/share/rpikernelhack/overlays/qca7000.dtbo by rpikernelhack'
+
+Adding 'diversion of /boot/overlays/raspidac3.dtbo to /usr/share/rpikernelhack/overlays/raspidac3.dtbo by rpikernelhack'
+
+Adding 'diversion of /boot/overlays/rpi-backlight.dtbo to /usr/share/rpikernelhack/overlays/rpi-backlight.dtbo by rpikernelhack'
+
+Adding 'diversion of /boot/overlays/rpi-dac.dtbo to /usr/share/rpikernelhack/overlays/rpi-dac.dtbo by rpikernelhack'
+
+Adding 'diversion of /boot/overlays/rpi-display.dtbo to /usr/share/rpikernelhack/overlays/rpi-display.dtbo by rpikernelhack'
+
+Adding 'diversion of /boot/overlays/rpi-ft5406.dtbo to /usr/share/rpikernelhack/overlays/rpi-ft5406.dtbo by rpikernelhack'
+
+Adding 'diversion of /boot/overlays/rpi-proto.dtbo to /usr/share/rpikernelhack/overlays/rpi-proto.dtbo by rpikernelhack'
+
+Adding 'diversion of /boot/overlays/rpi-sense.dtbo to /usr/share/rpikernelhack/overlays/rpi-sense.dtbo by rpikernelhack'
+
+Adding 'diversion of /boot/overlays/rra-digidac1-wm8741-audio.dtbo to /usr/share/rpikernelhack/overlays/rra-digidac1-wm8741-audio.dtbo by rpikernelhack'
+
+Adding 'diversion of /boot/overlays/sc16is750-i2c.dtbo to /usr/share/rpikernelhack/overlays/sc16is750-i2c.dtbo by rpikernelhack'
+
+Adding 'diversion of /boot/overlays/sc16is752-spi1.dtbo to /usr/share/rpikernelhack/overlays/sc16is752-spi1.dtbo by rpikernelhack'
+
+Adding 'diversion of /boot/overlays/sdhost.dtbo to /usr/share/rpikernelhack/overlays/sdhost.dtbo by rpikernelhack'
+
+Adding 'diversion of /boot/overlays/sdio-1bit.dtbo to /usr/share/rpikernelhack/overlays/sdio-1bit.dtbo by rpikernelhack'
+
+Adding 'diversion of /boot/overlays/sdio.dtbo to /usr/share/rpikernelhack/overlays/sdio.dtbo by rpikernelhack'
+
+Adding 'diversion of /boot/overlays/sdtweak.dtbo to /usr/share/rpikernelhack/overlays/sdtweak.dtbo by rpikernelhack'
+
+Adding 'diversion of /boot/overlays/smi-dev.dtbo to /usr/share/rpikernelhack/overlays/smi-dev.dtbo by rpikernelhack'
+
+Adding 'diversion of /boot/overlays/smi-nand.dtbo to /usr/share/rpikernelhack/overlays/smi-nand.dtbo by rpikernelhack'
+
+Adding 'diversion of /boot/overlays/smi.dtbo to /usr/share/rpikernelhack/overlays/smi.dtbo by rpikernelhack'
+
+Adding 'diversion of /boot/overlays/spi-gpio35-39.dtbo to /usr/share/rpikernelhack/overlays/spi-gpio35-39.dtbo by rpikernelhack'
+
+Adding 'diversion of /boot/overlays/spi-rtc.dtbo to /usr/share/rpikernelhack/overlays/spi-rtc.dtbo by rpikernelhack'
+
+Adding 'diversion of /boot/overlays/spi0-hw-cs.dtbo to /usr/share/rpikernelhack/overlays/spi0-hw-cs.dtbo by rpikernelhack'
+
+Adding 'diversion of /boot/overlays/spi1-1cs.dtbo to /usr/share/rpikernelhack/overlays/spi1-1cs.dtbo by rpikernelhack'
+
+Adding 'diversion of /boot/overlays/spi1-2cs.dtbo to /usr/share/rpikernelhack/overlays/spi1-2cs.dtbo by rpikernelhack'
+
+Adding 'diversion of /boot/overlays/spi1-3cs.dtbo to /usr/share/rpikernelhack/overlays/spi1-3cs.dtbo by rpikernelhack'
+
+Adding 'diversion of /boot/overlays/spi2-1cs.dtbo to /usr/share/rpikernelhack/overlays/spi2-1cs.dtbo by rpikernelhack'
+
+Adding 'diversion of /boot/overlays/spi2-2cs.dtbo to /usr/share/rpikernelhack/overlays/spi2-2cs.dtbo by rpikernelhack'
+
+Adding 'diversion of /boot/overlays/spi2-3cs.dtbo to /usr/share/rpikernelhack/overlays/spi2-3cs.dtbo by rpikernelhack'
+
+Adding 'diversion of /boot/overlays/tinylcd35.dtbo to /usr/share/rpikernelhack/overlays/tinylcd35.dtbo by rpikernelhack'
+
+Adding 'diversion of /boot/overlays/uart1.dtbo to /usr/share/rpikernelhack/overlays/uart1.dtbo by rpikernelhack'
+
+Adding 'diversion of /boot/overlays/vc4-fkms-v3d.dtbo to /usr/share/rpikernelhack/overlays/vc4-fkms-v3d.dtbo by rpikernelhack'
+
+Adding 'diversion of /boot/overlays/vc4-kms-v3d.dtbo to /usr/share/rpikernelhack/overlays/vc4-kms-v3d.dtbo by rpikernelhack'
+
+Adding 'diversion of /boot/overlays/vga666.dtbo to /usr/share/rpikernelhack/overlays/vga666.dtbo by rpikernelhack'
+
+Adding 'diversion of /boot/overlays/w1-gpio-pullup.dtbo to /usr/share/rpikernelhack/overlays/w1-gpio-pullup.dtbo by rpikernelhack'
+
+Adding 'diversion of /boot/overlays/w1-gpio.dtbo to /usr/share/rpikernelhack/overlays/w1-gpio.dtbo by rpikernelhack'
+
+Adding 'diversion of /boot/overlays/wittypi.dtbo to /usr/share/rpikernelhack/overlays/wittypi.dtbo by rpikernelhack'
+
+Unpacking raspberrypi-kernel (1.20160921-1) ...
+
+Selecting previously unselected package raspberrypi-bootloader.
+
+Preparing to unpack .../raspberrypi-bootloader_1.20160921-1_armhf.deb ...
+
+Adding 'diversion of /boot/start.elf to /usr/share/rpikernelhack/start.elf by rpikernelhack'
+
+Adding 'diversion of /boot/start_cd.elf to /usr/share/rpikernelhack/start_cd.elf by rpikernelhack'
+
+Adding 'diversion of /boot/start_db.elf to /usr/share/rpikernelhack/start_db.elf by rpikernelhack'
+
+Adding 'diversion of /boot/start_x.elf to /usr/share/rpikernelhack/start_x.elf by rpikernelhack'
+
+Adding 'diversion of /boot/fixup.dat to /usr/share/rpikernelhack/fixup.dat by rpikernelhack'
+
+Adding 'diversion of /boot/fixup_cd.dat to /usr/share/rpikernelhack/fixup_cd.dat by rpikernelhack'
+
+Adding 'diversion of /boot/fixup_db.dat to /usr/share/rpikernelhack/fixup_db.dat by rpikernelhack'
+
+Adding 'diversion of /boot/fixup_x.dat to /usr/share/rpikernelhack/fixup_x.dat by rpikernelhack'
+
+Adding 'diversion of /boot/bootcode.bin to /usr/share/rpikernelhack/bootcode.bin by rpikernelhack'
+
+Adding 'diversion of /boot/LICENCE.broadcom to /usr/share/rpikernelhack/LICENCE.broadcom by rpikernelhack'
+
+Unpacking raspberrypi-bootloader (1.20160921-1) ...
+
+Setting up raspberrypi-kernel (1.20160921-1) ...
+
+Removing 'diversion of /boot/bcm2708-rpi-b-plus.dtb to /usr/share/rpikernelhack/bcm2708-rpi-b-plus.dtb by rpikernelhack'
+
+Removing 'diversion of /boot/bcm2708-rpi-b.dtb to /usr/share/rpikernelhack/bcm2708-rpi-b.dtb by rpikernelhack'
+
+Removing 'diversion of /boot/bcm2708-rpi-cm.dtb to /usr/share/rpikernelhack/bcm2708-rpi-cm.dtb by rpikernelhack'
+
+Removing 'diversion of /boot/bcm2709-rpi-2-b.dtb to /usr/share/rpikernelhack/bcm2709-rpi-2-b.dtb by rpikernelhack'
+
+Removing 'diversion of /boot/bcm2710-rpi-3-b.dtb to /usr/share/rpikernelhack/bcm2710-rpi-3-b.dtb by rpikernelhack'
+
+Removing 'diversion of /boot/bcm2710-rpi-cm3.dtb to /usr/share/rpikernelhack/bcm2710-rpi-cm3.dtb by rpikernelhack'
+
+Removing 'diversion of /boot/kernel.img to /usr/share/rpikernelhack/kernel.img by rpikernelhack'
+
+Removing 'diversion of /boot/kernel7.img to /usr/share/rpikernelhack/kernel7.img by rpikernelhack'
+
+Removing 'diversion of /boot/COPYING.linux to /usr/share/rpikernelhack/COPYING.linux by rpikernelhack'
+
+Removing 'diversion of /boot/overlays/README to /usr/share/rpikernelhack/overlays/README by rpikernelhack'
+
+Removing 'diversion of /boot/overlays/adau1977-adc.dtbo to /usr/share/rpikernelhack/overlays/adau1977-adc.dtbo by rpikernelhack'
+
+Removing 'diversion of /boot/overlays/ads1015.dtbo to /usr/share/rpikernelhack/overlays/ads1015.dtbo by rpikernelhack'
+
+Removing 'diversion of /boot/overlays/ads7846.dtbo to /usr/share/rpikernelhack/overlays/ads7846.dtbo by rpikernelhack'
+
+Removing 'diversion of /boot/overlays/akkordion-iqdacplus.dtbo to /usr/share/rpikernelhack/overlays/akkordion-iqdacplus.dtbo by rpikernelhack'
+
+Removing 'diversion of /boot/overlays/at86rf233.dtbo to /usr/share/rpikernelhack/overlays/at86rf233.dtbo by rpikernelhack'
+
+Removing 'diversion of /boot/overlays/audioinjector-wm8731-audio.dtbo to /usr/share/rpikernelhack/overlays/audioinjector-wm8731-audio.dtbo by rpikernelhack'
+
+Removing 'diversion of /boot/overlays/audremap.dtbo to /usr/share/rpikernelhack/overlays/audremap.dtbo by rpikernelhack'
+
+Removing 'diversion of /boot/overlays/bmp085_i2c-sensor.dtbo to /usr/share/rpikernelhack/overlays/bmp085_i2c-sensor.dtbo by rpikernelhack'
+
+Removing 'diversion of /boot/overlays/dht11.dtbo to /usr/share/rpikernelhack/overlays/dht11.dtbo by rpikernelhack'
+
+Removing 'diversion of /boot/overlays/dionaudio-loco.dtbo to /usr/share/rpikernelhack/overlays/dionaudio-loco.dtbo by rpikernelhack'
+
+Removing 'diversion of /boot/overlays/dpi18.dtbo to /usr/share/rpikernelhack/overlays/dpi18.dtbo by rpikernelhack'
+
+Removing 'diversion of /boot/overlays/dpi24.dtbo to /usr/share/rpikernelhack/overlays/dpi24.dtbo by rpikernelhack'
+
+Removing 'diversion of /boot/overlays/dwc-otg.dtbo to /usr/share/rpikernelhack/overlays/dwc-otg.dtbo by rpikernelhack'
+
+Removing 'diversion of /boot/overlays/dwc2.dtbo to /usr/share/rpikernelhack/overlays/dwc2.dtbo by rpikernelhack'
+
+Removing 'diversion of /boot/overlays/enc28j60.dtbo to /usr/share/rpikernelhack/overlays/enc28j60.dtbo by rpikernelhack'
+
+Removing 'diversion of /boot/overlays/gpio-ir.dtbo to /usr/share/rpikernelhack/overlays/gpio-ir.dtbo by rpikernelhack'
+
+Removing 'diversion of /boot/overlays/gpio-poweroff.dtbo to /usr/share/rpikernelhack/overlays/gpio-poweroff.dtbo by rpikernelhack'
+
+Removing 'diversion of /boot/overlays/hifiberry-amp.dtbo to /usr/share/rpikernelhack/overlays/hifiberry-amp.dtbo by rpikernelhack'
+
+Removing 'diversion of /boot/overlays/hifiberry-dac.dtbo to /usr/share/rpikernelhack/overlays/hifiberry-dac.dtbo by rpikernelhack'
+
+Removing 'diversion of /boot/overlays/hifiberry-dacplus.dtbo to /usr/share/rpikernelhack/overlays/hifiberry-dacplus.dtbo by rpikernelhack'
+
+Removing 'diversion of /boot/overlays/hifiberry-digi-pro.dtbo to /usr/share/rpikernelhack/overlays/hifiberry-digi-pro.dtbo by rpikernelhack'
+
+Removing 'diversion of /boot/overlays/hifiberry-digi.dtbo to /usr/share/rpikernelhack/overlays/hifiberry-digi.dtbo by rpikernelhack'
+
+Removing 'diversion of /boot/overlays/hy28a.dtbo to /usr/share/rpikernelhack/overlays/hy28a.dtbo by rpikernelhack'
+
+Removing 'diversion of /boot/overlays/hy28b.dtbo to /usr/share/rpikernelhack/overlays/hy28b.dtbo by rpikernelhack'
+
+Removing 'diversion of /boot/overlays/i2c-gpio.dtbo to /usr/share/rpikernelhack/overlays/i2c-gpio.dtbo by rpikernelhack'
+
+Removing 'diversion of /boot/overlays/i2c-mux.dtbo to /usr/share/rpikernelhack/overlays/i2c-mux.dtbo by rpikernelhack'
+
+Removing 'diversion of /boot/overlays/i2c-pwm-pca9685a.dtbo to /usr/share/rpikernelhack/overlays/i2c-pwm-pca9685a.dtbo by rpikernelhack'
+
+Removing 'diversion of /boot/overlays/i2c-rtc.dtbo to /usr/share/rpikernelhack/overlays/i2c-rtc.dtbo by rpikernelhack'
+
+Removing 'diversion of /boot/overlays/i2c0-bcm2708.dtbo to /usr/share/rpikernelhack/overlays/i2c0-bcm2708.dtbo by rpikernelhack'
+
+Removing 'diversion of /boot/overlays/i2c1-bcm2708.dtbo to /usr/share/rpikernelhack/overlays/i2c1-bcm2708.dtbo by rpikernelhack'
+
+Removing 'diversion of /boot/overlays/i2s-gpio28-31.dtbo to /usr/share/rpikernelhack/overlays/i2s-gpio28-31.dtbo by rpikernelhack'
+
+Removing 'diversion of /boot/overlays/i2s-mmap.dtbo to /usr/share/rpikernelhack/overlays/i2s-mmap.dtbo by rpikernelhack'
+
+Removing 'diversion of /boot/overlays/iqaudio-dac.dtbo to /usr/share/rpikernelhack/overlays/iqaudio-dac.dtbo by rpikernelhack'
+
+Removing 'diversion of /boot/overlays/iqaudio-dacplus.dtbo to /usr/share/rpikernelhack/overlays/iqaudio-dacplus.dtbo by rpikernelhack'
+
+Removing 'diversion of /boot/overlays/iqaudio-digi-wm8804-audio.dtbo to /usr/share/rpikernelhack/overlays/iqaudio-digi-wm8804-audio.dtbo by rpikernelhack'
+
+Removing 'diversion of /boot/overlays/justboom-dac.dtbo to /usr/share/rpikernelhack/overlays/justboom-dac.dtbo by rpikernelhack'
+
+Removing 'diversion of /boot/overlays/justboom-digi.dtbo to /usr/share/rpikernelhack/overlays/justboom-digi.dtbo by rpikernelhack'
+
+Removing 'diversion of /boot/overlays/lirc-rpi.dtbo to /usr/share/rpikernelhack/overlays/lirc-rpi.dtbo by rpikernelhack'
+
+Removing 'diversion of /boot/overlays/mcp23017.dtbo to /usr/share/rpikernelhack/overlays/mcp23017.dtbo by rpikernelhack'
+
+Removing 'diversion of /boot/overlays/mcp23s17.dtbo to /usr/share/rpikernelhack/overlays/mcp23s17.dtbo by rpikernelhack'
+
+Removing 'diversion of /boot/overlays/mcp2515-can0.dtbo to /usr/share/rpikernelhack/overlays/mcp2515-can0.dtbo by rpikernelhack'
+
+Removing 'diversion of /boot/overlays/mcp2515-can1.dtbo to /usr/share/rpikernelhack/overlays/mcp2515-can1.dtbo by rpikernelhack'
+
+Removing 'diversion of /boot/overlays/mmc.dtbo to /usr/share/rpikernelhack/overlays/mmc.dtbo by rpikernelhack'
+
+Removing 'diversion of /boot/overlays/mz61581.dtbo to /usr/share/rpikernelhack/overlays/mz61581.dtbo by rpikernelhack'
+
+Removing 'diversion of /boot/overlays/pi3-act-led.dtbo to /usr/share/rpikernelhack/overlays/pi3-act-led.dtbo by rpikernelhack'
+
+Removing 'diversion of /boot/overlays/pi3-disable-bt.dtbo to /usr/share/rpikernelhack/overlays/pi3-disable-bt.dtbo by rpikernelhack'
+
+Removing 'diversion of /boot/overlays/pi3-miniuart-bt.dtbo to /usr/share/rpikernelhack/overlays/pi3-miniuart-bt.dtbo by rpikernelhack'
+
+Removing 'diversion of /boot/overlays/piscreen.dtbo to /usr/share/rpikernelhack/overlays/piscreen.dtbo by rpikernelhack'
+
+Removing 'diversion of /boot/overlays/piscreen2r.dtbo to /usr/share/rpikernelhack/overlays/piscreen2r.dtbo by rpikernelhack'
+
+Removing 'diversion of /boot/overlays/pitft22.dtbo to /usr/share/rpikernelhack/overlays/pitft22.dtbo by rpikernelhack'
+
+Removing 'diversion of /boot/overlays/pitft28-capacitive.dtbo to /usr/share/rpikernelhack/overlays/pitft28-capacitive.dtbo by rpikernelhack'
+
+Removing 'diversion of /boot/overlays/pitft28-resistive.dtbo to /usr/share/rpikernelhack/overlays/pitft28-resistive.dtbo by rpikernelhack'
+
+Removing 'diversion of /boot/overlays/pps-gpio.dtbo to /usr/share/rpikernelhack/overlays/pps-gpio.dtbo by rpikernelhack'
+
+Removing 'diversion of /boot/overlays/pwm-2chan.dtbo to /usr/share/rpikernelhack/overlays/pwm-2chan.dtbo by rpikernelhack'
+
+Removing 'diversion of /boot/overlays/pwm.dtbo to /usr/share/rpikernelhack/overlays/pwm.dtbo by rpikernelhack'
+
+Removing 'diversion of /boot/overlays/qca7000.dtbo to /usr/share/rpikernelhack/overlays/qca7000.dtbo by rpikernelhack'
+
+Removing 'diversion of /boot/overlays/raspidac3.dtbo to /usr/share/rpikernelhack/overlays/raspidac3.dtbo by rpikernelhack'
+
+Removing 'diversion of /boot/overlays/rpi-backlight.dtbo to /usr/share/rpikernelhack/overlays/rpi-backlight.dtbo by rpikernelhack'
+
+Removing 'diversion of /boot/overlays/rpi-dac.dtbo to /usr/share/rpikernelhack/overlays/rpi-dac.dtbo by rpikernelhack'
+
+Removing 'diversion of /boot/overlays/rpi-display.dtbo to /usr/share/rpikernelhack/overlays/rpi-display.dtbo by rpikernelhack'
+
+Removing 'diversion of /boot/overlays/rpi-ft5406.dtbo to /usr/share/rpikernelhack/overlays/rpi-ft5406.dtbo by rpikernelhack'
+
+Removing 'diversion of /boot/overlays/rpi-proto.dtbo to /usr/share/rpikernelhack/overlays/rpi-proto.dtbo by rpikernelhack'
+
+Removing 'diversion of /boot/overlays/rpi-sense.dtbo to /usr/share/rpikernelhack/overlays/rpi-sense.dtbo by rpikernelhack'
+
+Removing 'diversion of /boot/overlays/rra-digidac1-wm8741-audio.dtbo to /usr/share/rpikernelhack/overlays/rra-digidac1-wm8741-audio.dtbo by rpikernelhack'
+
+Removing 'diversion of /boot/overlays/sc16is750-i2c.dtbo to /usr/share/rpikernelhack/overlays/sc16is750-i2c.dtbo by rpikernelhack'
+
+Removing 'diversion of /boot/overlays/sc16is752-spi1.dtbo to /usr/share/rpikernelhack/overlays/sc16is752-spi1.dtbo by rpikernelhack'
+
+Removing 'diversion of /boot/overlays/sdhost.dtbo to /usr/share/rpikernelhack/overlays/sdhost.dtbo by rpikernelhack'
+
+Removing 'diversion of /boot/overlays/sdio-1bit.dtbo to /usr/share/rpikernelhack/overlays/sdio-1bit.dtbo by rpikernelhack'
+
+Removing 'diversion of /boot/overlays/sdio.dtbo to /usr/share/rpikernelhack/overlays/sdio.dtbo by rpikernelhack'
+
+Removing 'diversion of /boot/overlays/sdtweak.dtbo to /usr/share/rpikernelhack/overlays/sdtweak.dtbo by rpikernelhack'
+
+Removing 'diversion of /boot/overlays/smi-dev.dtbo to /usr/share/rpikernelhack/overlays/smi-dev.dtbo by rpikernelhack'
+
+Removing 'diversion of /boot/overlays/smi-nand.dtbo to /usr/share/rpikernelhack/overlays/smi-nand.dtbo by rpikernelhack'
+
+Removing 'diversion of /boot/overlays/smi.dtbo to /usr/share/rpikernelhack/overlays/smi.dtbo by rpikernelhack'
+
+Removing 'diversion of /boot/overlays/spi-gpio35-39.dtbo to /usr/share/rpikernelhack/overlays/spi-gpio35-39.dtbo by rpikernelhack'
+
+Removing 'diversion of /boot/overlays/spi-rtc.dtbo to /usr/share/rpikernelhack/overlays/spi-rtc.dtbo by rpikernelhack'
+
+Removing 'diversion of /boot/overlays/spi0-hw-cs.dtbo to /usr/share/rpikernelhack/overlays/spi0-hw-cs.dtbo by rpikernelhack'
+
+Removing 'diversion of /boot/overlays/spi1-1cs.dtbo to /usr/share/rpikernelhack/overlays/spi1-1cs.dtbo by rpikernelhack'
+
+Removing 'diversion of /boot/overlays/spi1-2cs.dtbo to /usr/share/rpikernelhack/overlays/spi1-2cs.dtbo by rpikernelhack'
+
+Removing 'diversion of /boot/overlays/spi1-3cs.dtbo to /usr/share/rpikernelhack/overlays/spi1-3cs.dtbo by rpikernelhack'
+
+Removing 'diversion of /boot/overlays/spi2-1cs.dtbo to /usr/share/rpikernelhack/overlays/spi2-1cs.dtbo by rpikernelhack'
+
+Removing 'diversion of /boot/overlays/spi2-2cs.dtbo to /usr/share/rpikernelhack/overlays/spi2-2cs.dtbo by rpikernelhack'
+
+Removing 'diversion of /boot/overlays/spi2-3cs.dtbo to /usr/share/rpikernelhack/overlays/spi2-3cs.dtbo by rpikernelhack'
+
+Removing 'diversion of /boot/overlays/tinylcd35.dtbo to /usr/share/rpikernelhack/overlays/tinylcd35.dtbo by rpikernelhack'
+
+Removing 'diversion of /boot/overlays/uart1.dtbo to /usr/share/rpikernelhack/overlays/uart1.dtbo by rpikernelhack'
+
+Removing 'diversion of /boot/overlays/vc4-fkms-v3d.dtbo to /usr/share/rpikernelhack/overlays/vc4-fkms-v3d.dtbo by rpikernelhack'
+
+Removing 'diversion of /boot/overlays/vc4-kms-v3d.dtbo to /usr/share/rpikernelhack/overlays/vc4-kms-v3d.dtbo by rpikernelhack'
+
+Removing 'diversion of /boot/overlays/vga666.dtbo to /usr/share/rpikernelhack/overlays/vga666.dtbo by rpikernelhack'
+
+Removing 'diversion of /boot/overlays/w1-gpio-pullup.dtbo to /usr/share/rpikernelhack/overlays/w1-gpio-pullup.dtbo by rpikernelhack'
+
+Removing 'diversion of /boot/overlays/w1-gpio.dtbo to /usr/share/rpikernelhack/overlays/w1-gpio.dtbo by rpikernelhack'
+
+Removing 'diversion of /boot/overlays/wittypi.dtbo to /usr/share/rpikernelhack/overlays/wittypi.dtbo by rpikernelhack'
+
+run-parts: executing /etc/kernel/postinst.d/apt-auto-removal 4.4.21+ /boot/kernel.img
+
+run-parts: executing /etc/kernel/postinst.d/initramfs-tools 4.4.21+ /boot/kernel.img
+
+run-parts: executing /etc/kernel/postinst.d/apt-auto-removal 4.4.21-v7+ /boot/kernel7.img
+
+run-parts: executing /etc/kernel/postinst.d/initramfs-tools 4.4.21-v7+ /boot/kernel7.img
+
+Setting up raspberrypi-bootloader (1.20160921-1) ...
+
+Removing 'diversion of /boot/start.elf to /usr/share/rpikernelhack/start.elf by rpikernelhack'
+
+Removing 'diversion of /boot/start_cd.elf to /usr/share/rpikernelhack/start_cd.elf by rpikernelhack'
+
+Removing 'diversion of /boot/start_db.elf to /usr/share/rpikernelhack/start_db.elf by rpikernelhack'
+
+Removing 'diversion of /boot/start_x.elf to /usr/share/rpikernelhack/start_x.elf by rpikernelhack'
+
+Removing 'diversion of /boot/fixup.dat to /usr/share/rpikernelhack/fixup.dat by rpikernelhack'
+
+Removing 'diversion of /boot/fixup_cd.dat to /usr/share/rpikernelhack/fixup_cd.dat by rpikernelhack'
+
+Removing 'diversion of /boot/fixup_db.dat to /usr/share/rpikernelhack/fixup_db.dat by rpikernelhack'
+
+Removing 'diversion of /boot/fixup_x.dat to /usr/share/rpikernelhack/fixup_x.dat by rpikernelhack'
+
+Removing 'diversion of /boot/bootcode.bin to /usr/share/rpikernelhack/bootcode.bin by rpikernelhack'
+
+Removing 'diversion of /boot/LICENCE.broadcom to /usr/share/rpikernelhack/LICENCE.broadcom by rpikernelhack'
+
++ log 'End /home/adampie/pi-gen/stage0/02-firmware/01-packages'
++ date '+[%T] End /home/adampie/pi-gen/stage0/02-firmware/01-packages'
++ tee -a /home/adampie/pi-gen/work/2016-10-08-Raspbian/build.log
+[15:23:23] End /home/adampie/pi-gen/stage0/02-firmware/01-packages
++ '[' -d 01-patches ']'
++ '[' -x 01-run.sh ']'
++ '[' -f 01-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 02-debconf ']'
++ '[' -f 02-packages-nr ']'
++ '[' -f 02-packages ']'
++ '[' -d 02-patches ']'
++ '[' -x 02-run.sh ']'
++ '[' -f 02-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 03-debconf ']'
++ '[' -f 03-packages-nr ']'
++ '[' -f 03-packages ']'
++ '[' -d 03-patches ']'
++ '[' -x 03-run.sh ']'
++ '[' -f 03-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 04-debconf ']'
++ '[' -f 04-packages-nr ']'
++ '[' -f 04-packages ']'
++ '[' -d 04-patches ']'
++ '[' -x 04-run.sh ']'
++ '[' -f 04-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 05-debconf ']'
++ '[' -f 05-packages-nr ']'
++ '[' -f 05-packages ']'
++ '[' -d 05-patches ']'
++ '[' -x 05-run.sh ']'
++ '[' -f 05-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 06-debconf ']'
++ '[' -f 06-packages-nr ']'
++ '[' -f 06-packages ']'
++ '[' -d 06-patches ']'
++ '[' -x 06-run.sh ']'
++ '[' -f 06-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 07-debconf ']'
++ '[' -f 07-packages-nr ']'
++ '[' -f 07-packages ']'
++ '[' -d 07-patches ']'
++ '[' -x 07-run.sh ']'
++ '[' -f 07-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 08-debconf ']'
++ '[' -f 08-packages-nr ']'
++ '[' -f 08-packages ']'
++ '[' -d 08-patches ']'
++ '[' -x 08-run.sh ']'
++ '[' -f 08-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 09-debconf ']'
++ '[' -f 09-packages-nr ']'
++ '[' -f 09-packages ']'
++ '[' -d 09-patches ']'
++ '[' -x 09-run.sh ']'
++ '[' -f 09-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 10-debconf ']'
++ '[' -f 10-packages-nr ']'
++ '[' -f 10-packages ']'
++ '[' -d 10-patches ']'
++ '[' -x 10-run.sh ']'
++ '[' -f 10-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 11-debconf ']'
++ '[' -f 11-packages-nr ']'
++ '[' -f 11-packages ']'
++ '[' -d 11-patches ']'
++ '[' -x 11-run.sh ']'
++ '[' -f 11-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 12-debconf ']'
++ '[' -f 12-packages-nr ']'
++ '[' -f 12-packages ']'
++ '[' -d 12-patches ']'
++ '[' -x 12-run.sh ']'
++ '[' -f 12-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 13-debconf ']'
++ '[' -f 13-packages-nr ']'
++ '[' -f 13-packages ']'
++ '[' -d 13-patches ']'
++ '[' -x 13-run.sh ']'
++ '[' -f 13-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 14-debconf ']'
++ '[' -f 14-packages-nr ']'
++ '[' -f 14-packages ']'
++ '[' -d 14-patches ']'
++ '[' -x 14-run.sh ']'
++ '[' -f 14-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 15-debconf ']'
++ '[' -f 15-packages-nr ']'
++ '[' -f 15-packages ']'
++ '[' -d 15-patches ']'
++ '[' -x 15-run.sh ']'
++ '[' -f 15-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 16-debconf ']'
++ '[' -f 16-packages-nr ']'
++ '[' -f 16-packages ']'
++ '[' -d 16-patches ']'
++ '[' -x 16-run.sh ']'
++ '[' -f 16-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 17-debconf ']'
++ '[' -f 17-packages-nr ']'
++ '[' -f 17-packages ']'
++ '[' -d 17-patches ']'
++ '[' -x 17-run.sh ']'
++ '[' -f 17-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 18-debconf ']'
++ '[' -f 18-packages-nr ']'
++ '[' -f 18-packages ']'
++ '[' -d 18-patches ']'
++ '[' -x 18-run.sh ']'
++ '[' -f 18-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 19-debconf ']'
++ '[' -f 19-packages-nr ']'
++ '[' -f 19-packages ']'
++ '[' -d 19-patches ']'
++ '[' -x 19-run.sh ']'
++ '[' -f 19-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 20-debconf ']'
++ '[' -f 20-packages-nr ']'
++ '[' -f 20-packages ']'
++ '[' -d 20-patches ']'
++ '[' -x 20-run.sh ']'
++ '[' -f 20-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 21-debconf ']'
++ '[' -f 21-packages-nr ']'
++ '[' -f 21-packages ']'
++ '[' -d 21-patches ']'
++ '[' -x 21-run.sh ']'
++ '[' -f 21-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 22-debconf ']'
++ '[' -f 22-packages-nr ']'
++ '[' -f 22-packages ']'
++ '[' -d 22-patches ']'
++ '[' -x 22-run.sh ']'
++ '[' -f 22-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 23-debconf ']'
++ '[' -f 23-packages-nr ']'
++ '[' -f 23-packages ']'
++ '[' -d 23-patches ']'
++ '[' -x 23-run.sh ']'
++ '[' -f 23-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 24-debconf ']'
++ '[' -f 24-packages-nr ']'
++ '[' -f 24-packages ']'
++ '[' -d 24-patches ']'
++ '[' -x 24-run.sh ']'
++ '[' -f 24-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 25-debconf ']'
++ '[' -f 25-packages-nr ']'
++ '[' -f 25-packages ']'
++ '[' -d 25-patches ']'
++ '[' -x 25-run.sh ']'
++ '[' -f 25-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 26-debconf ']'
++ '[' -f 26-packages-nr ']'
++ '[' -f 26-packages ']'
++ '[' -d 26-patches ']'
++ '[' -x 26-run.sh ']'
++ '[' -f 26-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 27-debconf ']'
++ '[' -f 27-packages-nr ']'
++ '[' -f 27-packages ']'
++ '[' -d 27-patches ']'
++ '[' -x 27-run.sh ']'
++ '[' -f 27-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 28-debconf ']'
++ '[' -f 28-packages-nr ']'
++ '[' -f 28-packages ']'
++ '[' -d 28-patches ']'
++ '[' -x 28-run.sh ']'
++ '[' -f 28-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 29-debconf ']'
++ '[' -f 29-packages-nr ']'
++ '[' -f 29-packages ']'
++ '[' -d 29-patches ']'
++ '[' -x 29-run.sh ']'
++ '[' -f 29-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 30-debconf ']'
++ '[' -f 30-packages-nr ']'
++ '[' -f 30-packages ']'
++ '[' -d 30-patches ']'
++ '[' -x 30-run.sh ']'
++ '[' -f 30-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 31-debconf ']'
++ '[' -f 31-packages-nr ']'
++ '[' -f 31-packages ']'
++ '[' -d 31-patches ']'
++ '[' -x 31-run.sh ']'
++ '[' -f 31-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 32-debconf ']'
++ '[' -f 32-packages-nr ']'
++ '[' -f 32-packages ']'
++ '[' -d 32-patches ']'
++ '[' -x 32-run.sh ']'
++ '[' -f 32-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 33-debconf ']'
++ '[' -f 33-packages-nr ']'
++ '[' -f 33-packages ']'
++ '[' -d 33-patches ']'
++ '[' -x 33-run.sh ']'
++ '[' -f 33-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 34-debconf ']'
++ '[' -f 34-packages-nr ']'
++ '[' -f 34-packages ']'
++ '[' -d 34-patches ']'
++ '[' -x 34-run.sh ']'
++ '[' -f 34-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 35-debconf ']'
++ '[' -f 35-packages-nr ']'
++ '[' -f 35-packages ']'
++ '[' -d 35-patches ']'
++ '[' -x 35-run.sh ']'
++ '[' -f 35-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 36-debconf ']'
++ '[' -f 36-packages-nr ']'
++ '[' -f 36-packages ']'
++ '[' -d 36-patches ']'
++ '[' -x 36-run.sh ']'
++ '[' -f 36-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 37-debconf ']'
++ '[' -f 37-packages-nr ']'
++ '[' -f 37-packages ']'
++ '[' -d 37-patches ']'
++ '[' -x 37-run.sh ']'
++ '[' -f 37-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 38-debconf ']'
++ '[' -f 38-packages-nr ']'
++ '[' -f 38-packages ']'
++ '[' -d 38-patches ']'
++ '[' -x 38-run.sh ']'
++ '[' -f 38-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 39-debconf ']'
++ '[' -f 39-packages-nr ']'
++ '[' -f 39-packages ']'
++ '[' -d 39-patches ']'
++ '[' -x 39-run.sh ']'
++ '[' -f 39-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 40-debconf ']'
++ '[' -f 40-packages-nr ']'
++ '[' -f 40-packages ']'
++ '[' -d 40-patches ']'
++ '[' -x 40-run.sh ']'
++ '[' -f 40-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 41-debconf ']'
++ '[' -f 41-packages-nr ']'
++ '[' -f 41-packages ']'
++ '[' -d 41-patches ']'
++ '[' -x 41-run.sh ']'
++ '[' -f 41-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 42-debconf ']'
++ '[' -f 42-packages-nr ']'
++ '[' -f 42-packages ']'
++ '[' -d 42-patches ']'
++ '[' -x 42-run.sh ']'
++ '[' -f 42-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 43-debconf ']'
++ '[' -f 43-packages-nr ']'
++ '[' -f 43-packages ']'
++ '[' -d 43-patches ']'
++ '[' -x 43-run.sh ']'
++ '[' -f 43-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 44-debconf ']'
++ '[' -f 44-packages-nr ']'
++ '[' -f 44-packages ']'
++ '[' -d 44-patches ']'
++ '[' -x 44-run.sh ']'
++ '[' -f 44-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 45-debconf ']'
++ '[' -f 45-packages-nr ']'
++ '[' -f 45-packages ']'
++ '[' -d 45-patches ']'
++ '[' -x 45-run.sh ']'
++ '[' -f 45-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 46-debconf ']'
++ '[' -f 46-packages-nr ']'
++ '[' -f 46-packages ']'
++ '[' -d 46-patches ']'
++ '[' -x 46-run.sh ']'
++ '[' -f 46-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 47-debconf ']'
++ '[' -f 47-packages-nr ']'
++ '[' -f 47-packages ']'
++ '[' -d 47-patches ']'
++ '[' -x 47-run.sh ']'
++ '[' -f 47-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 48-debconf ']'
++ '[' -f 48-packages-nr ']'
++ '[' -f 48-packages ']'
++ '[' -d 48-patches ']'
++ '[' -x 48-run.sh ']'
++ '[' -f 48-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 49-debconf ']'
++ '[' -f 49-packages-nr ']'
++ '[' -f 49-packages ']'
++ '[' -d 49-patches ']'
++ '[' -x 49-run.sh ']'
++ '[' -f 49-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 50-debconf ']'
++ '[' -f 50-packages-nr ']'
++ '[' -f 50-packages ']'
++ '[' -d 50-patches ']'
++ '[' -x 50-run.sh ']'
++ '[' -f 50-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 51-debconf ']'
++ '[' -f 51-packages-nr ']'
++ '[' -f 51-packages ']'
++ '[' -d 51-patches ']'
++ '[' -x 51-run.sh ']'
++ '[' -f 51-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 52-debconf ']'
++ '[' -f 52-packages-nr ']'
++ '[' -f 52-packages ']'
++ '[' -d 52-patches ']'
++ '[' -x 52-run.sh ']'
++ '[' -f 52-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 53-debconf ']'
++ '[' -f 53-packages-nr ']'
++ '[' -f 53-packages ']'
++ '[' -d 53-patches ']'
++ '[' -x 53-run.sh ']'
++ '[' -f 53-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 54-debconf ']'
++ '[' -f 54-packages-nr ']'
++ '[' -f 54-packages ']'
++ '[' -d 54-patches ']'
++ '[' -x 54-run.sh ']'
++ '[' -f 54-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 55-debconf ']'
++ '[' -f 55-packages-nr ']'
++ '[' -f 55-packages ']'
++ '[' -d 55-patches ']'
++ '[' -x 55-run.sh ']'
++ '[' -f 55-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 56-debconf ']'
++ '[' -f 56-packages-nr ']'
++ '[' -f 56-packages ']'
++ '[' -d 56-patches ']'
++ '[' -x 56-run.sh ']'
++ '[' -f 56-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 57-debconf ']'
++ '[' -f 57-packages-nr ']'
++ '[' -f 57-packages ']'
++ '[' -d 57-patches ']'
++ '[' -x 57-run.sh ']'
++ '[' -f 57-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 58-debconf ']'
++ '[' -f 58-packages-nr ']'
++ '[' -f 58-packages ']'
++ '[' -d 58-patches ']'
++ '[' -x 58-run.sh ']'
++ '[' -f 58-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 59-debconf ']'
++ '[' -f 59-packages-nr ']'
++ '[' -f 59-packages ']'
++ '[' -d 59-patches ']'
++ '[' -x 59-run.sh ']'
++ '[' -f 59-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 60-debconf ']'
++ '[' -f 60-packages-nr ']'
++ '[' -f 60-packages ']'
++ '[' -d 60-patches ']'
++ '[' -x 60-run.sh ']'
++ '[' -f 60-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 61-debconf ']'
++ '[' -f 61-packages-nr ']'
++ '[' -f 61-packages ']'
++ '[' -d 61-patches ']'
++ '[' -x 61-run.sh ']'
++ '[' -f 61-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 62-debconf ']'
++ '[' -f 62-packages-nr ']'
++ '[' -f 62-packages ']'
++ '[' -d 62-patches ']'
++ '[' -x 62-run.sh ']'
++ '[' -f 62-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 63-debconf ']'
++ '[' -f 63-packages-nr ']'
++ '[' -f 63-packages ']'
++ '[' -d 63-patches ']'
++ '[' -x 63-run.sh ']'
++ '[' -f 63-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 64-debconf ']'
++ '[' -f 64-packages-nr ']'
++ '[' -f 64-packages ']'
++ '[' -d 64-patches ']'
++ '[' -x 64-run.sh ']'
++ '[' -f 64-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 65-debconf ']'
++ '[' -f 65-packages-nr ']'
++ '[' -f 65-packages ']'
++ '[' -d 65-patches ']'
++ '[' -x 65-run.sh ']'
++ '[' -f 65-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 66-debconf ']'
++ '[' -f 66-packages-nr ']'
++ '[' -f 66-packages ']'
++ '[' -d 66-patches ']'
++ '[' -x 66-run.sh ']'
++ '[' -f 66-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 67-debconf ']'
++ '[' -f 67-packages-nr ']'
++ '[' -f 67-packages ']'
++ '[' -d 67-patches ']'
++ '[' -x 67-run.sh ']'
++ '[' -f 67-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 68-debconf ']'
++ '[' -f 68-packages-nr ']'
++ '[' -f 68-packages ']'
++ '[' -d 68-patches ']'
++ '[' -x 68-run.sh ']'
++ '[' -f 68-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 69-debconf ']'
++ '[' -f 69-packages-nr ']'
++ '[' -f 69-packages ']'
++ '[' -d 69-patches ']'
++ '[' -x 69-run.sh ']'
++ '[' -f 69-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 70-debconf ']'
++ '[' -f 70-packages-nr ']'
++ '[' -f 70-packages ']'
++ '[' -d 70-patches ']'
++ '[' -x 70-run.sh ']'
++ '[' -f 70-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 71-debconf ']'
++ '[' -f 71-packages-nr ']'
++ '[' -f 71-packages ']'
++ '[' -d 71-patches ']'
++ '[' -x 71-run.sh ']'
++ '[' -f 71-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 72-debconf ']'
++ '[' -f 72-packages-nr ']'
++ '[' -f 72-packages ']'
++ '[' -d 72-patches ']'
++ '[' -x 72-run.sh ']'
++ '[' -f 72-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 73-debconf ']'
++ '[' -f 73-packages-nr ']'
++ '[' -f 73-packages ']'
++ '[' -d 73-patches ']'
++ '[' -x 73-run.sh ']'
++ '[' -f 73-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 74-debconf ']'
++ '[' -f 74-packages-nr ']'
++ '[' -f 74-packages ']'
++ '[' -d 74-patches ']'
++ '[' -x 74-run.sh ']'
++ '[' -f 74-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 75-debconf ']'
++ '[' -f 75-packages-nr ']'
++ '[' -f 75-packages ']'
++ '[' -d 75-patches ']'
++ '[' -x 75-run.sh ']'
++ '[' -f 75-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 76-debconf ']'
++ '[' -f 76-packages-nr ']'
++ '[' -f 76-packages ']'
++ '[' -d 76-patches ']'
++ '[' -x 76-run.sh ']'
++ '[' -f 76-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 77-debconf ']'
++ '[' -f 77-packages-nr ']'
++ '[' -f 77-packages ']'
++ '[' -d 77-patches ']'
++ '[' -x 77-run.sh ']'
++ '[' -f 77-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 78-debconf ']'
++ '[' -f 78-packages-nr ']'
++ '[' -f 78-packages ']'
++ '[' -d 78-patches ']'
++ '[' -x 78-run.sh ']'
++ '[' -f 78-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 79-debconf ']'
++ '[' -f 79-packages-nr ']'
++ '[' -f 79-packages ']'
++ '[' -d 79-patches ']'
++ '[' -x 79-run.sh ']'
++ '[' -f 79-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 80-debconf ']'
++ '[' -f 80-packages-nr ']'
++ '[' -f 80-packages ']'
++ '[' -d 80-patches ']'
++ '[' -x 80-run.sh ']'
++ '[' -f 80-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 81-debconf ']'
++ '[' -f 81-packages-nr ']'
++ '[' -f 81-packages ']'
++ '[' -d 81-patches ']'
++ '[' -x 81-run.sh ']'
++ '[' -f 81-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 82-debconf ']'
++ '[' -f 82-packages-nr ']'
++ '[' -f 82-packages ']'
++ '[' -d 82-patches ']'
++ '[' -x 82-run.sh ']'
++ '[' -f 82-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 83-debconf ']'
++ '[' -f 83-packages-nr ']'
++ '[' -f 83-packages ']'
++ '[' -d 83-patches ']'
++ '[' -x 83-run.sh ']'
++ '[' -f 83-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 84-debconf ']'
++ '[' -f 84-packages-nr ']'
++ '[' -f 84-packages ']'
++ '[' -d 84-patches ']'
++ '[' -x 84-run.sh ']'
++ '[' -f 84-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 85-debconf ']'
++ '[' -f 85-packages-nr ']'
++ '[' -f 85-packages ']'
++ '[' -d 85-patches ']'
++ '[' -x 85-run.sh ']'
++ '[' -f 85-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 86-debconf ']'
++ '[' -f 86-packages-nr ']'
++ '[' -f 86-packages ']'
++ '[' -d 86-patches ']'
++ '[' -x 86-run.sh ']'
++ '[' -f 86-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 87-debconf ']'
++ '[' -f 87-packages-nr ']'
++ '[' -f 87-packages ']'
++ '[' -d 87-patches ']'
++ '[' -x 87-run.sh ']'
++ '[' -f 87-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 88-debconf ']'
++ '[' -f 88-packages-nr ']'
++ '[' -f 88-packages ']'
++ '[' -d 88-patches ']'
++ '[' -x 88-run.sh ']'
++ '[' -f 88-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 89-debconf ']'
++ '[' -f 89-packages-nr ']'
++ '[' -f 89-packages ']'
++ '[' -d 89-patches ']'
++ '[' -x 89-run.sh ']'
++ '[' -f 89-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 90-debconf ']'
++ '[' -f 90-packages-nr ']'
++ '[' -f 90-packages ']'
++ '[' -d 90-patches ']'
++ '[' -x 90-run.sh ']'
++ '[' -f 90-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 91-debconf ']'
++ '[' -f 91-packages-nr ']'
++ '[' -f 91-packages ']'
++ '[' -d 91-patches ']'
++ '[' -x 91-run.sh ']'
++ '[' -f 91-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 92-debconf ']'
++ '[' -f 92-packages-nr ']'
++ '[' -f 92-packages ']'
++ '[' -d 92-patches ']'
++ '[' -x 92-run.sh ']'
++ '[' -f 92-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 93-debconf ']'
++ '[' -f 93-packages-nr ']'
++ '[' -f 93-packages ']'
++ '[' -d 93-patches ']'
++ '[' -x 93-run.sh ']'
++ '[' -f 93-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 94-debconf ']'
++ '[' -f 94-packages-nr ']'
++ '[' -f 94-packages ']'
++ '[' -d 94-patches ']'
++ '[' -x 94-run.sh ']'
++ '[' -f 94-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 95-debconf ']'
++ '[' -f 95-packages-nr ']'
++ '[' -f 95-packages ']'
++ '[' -d 95-patches ']'
++ '[' -x 95-run.sh ']'
++ '[' -f 95-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 96-debconf ']'
++ '[' -f 96-packages-nr ']'
++ '[' -f 96-packages ']'
++ '[' -d 96-patches ']'
++ '[' -x 96-run.sh ']'
++ '[' -f 96-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 97-debconf ']'
++ '[' -f 97-packages-nr ']'
++ '[' -f 97-packages ']'
++ '[' -d 97-patches ']'
++ '[' -x 97-run.sh ']'
++ '[' -f 97-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 98-debconf ']'
++ '[' -f 98-packages-nr ']'
++ '[' -f 98-packages ']'
++ '[' -d 98-patches ']'
++ '[' -x 98-run.sh ']'
++ '[' -f 98-run-chroot ']'
++ for i in '{00..99}'
++ '[' -f 99-debconf ']'
++ '[' -f 99-packages-nr ']'
++ '[' -f 99-packages ']'
++ '[' -d 99-patches ']'
++ '[' -x 99-run.sh ']'
++ '[' -f 99-run-chroot ']'
++ popd
++ log 'End /home/adampie/pi-gen/stage0/02-firmware'
++ date '+[%T] End /home/adampie/pi-gen/stage0/02-firmware'
++ tee -a /home/adampie/pi-gen/work/2016-10-08-Raspbian/build.log
+[15:23:23] End /home/adampie/pi-gen/stage0/02-firmware
++ for SUB_STAGE_DIR in '${STAGE_DIR}/*'
++ '[' -d /home/adampie/pi-gen/stage0/prerun.sh ']'
++ unmount /home/adampie/pi-gen/work/2016-10-08-Raspbian/stage0
++ '[' -z /home/adampie/pi-gen/work/2016-10-08-Raspbian/stage0 ']'
++ DIR=/home/adampie/pi-gen/work/2016-10-08-Raspbian/stage0
++ mount
++ grep -q /home/adampie/pi-gen/work/2016-10-08-Raspbian/stage0
+++ mount
+++ grep /home/adampie/pi-gen/work/2016-10-08-Raspbian/stage0
+++ cut -f 3 -d ' '
+++ sort -r
++ local 'LOCS=/home/adampie/pi-gen/work/2016-10-08-Raspbian/stage0/rootfs/sys
+/home/adampie/pi-gen/work/2016-10-08-Raspbian/stage0/rootfs/proc
+/home/adampie/pi-gen/work/2016-10-08-Raspbian/stage0/rootfs/dev/pts
+/home/adampie/pi-gen/work/2016-10-08-Raspbian/stage0/rootfs/dev'
++ for loc in '$LOCS'
++ umount /home/adampie/pi-gen/work/2016-10-08-Raspbian/stage0/rootfs/sys
++ for loc in '$LOCS'
++ umount /home/adampie/pi-gen/work/2016-10-08-Raspbian/stage0/rootfs/proc
++ for loc in '$LOCS'
++ umount /home/adampie/pi-gen/work/2016-10-08-Raspbian/stage0/rootfs/dev/pts
++ for loc in '$LOCS'
++ umount /home/adampie/pi-gen/work/2016-10-08-Raspbian/stage0/rootfs/dev
++ mount
++ grep -q /home/adampie/pi-gen/work/2016-10-08-Raspbian/stage0
++ PREV_STAGE=stage0
++ PREV_STAGE_DIR=/home/adampie/pi-gen/stage0
++ PREV_ROOTFS_DIR=/home/adampie/pi-gen/work/2016-10-08-Raspbian/stage0/rootfs
++ popd
++ log 'End /home/adampie/pi-gen/stage0'
++ date '+[%T] End /home/adampie/pi-gen/stage0'
++ tee -a /home/adampie/pi-gen/work/2016-10-08-Raspbian/build.log
+[15:23:23] End /home/adampie/pi-gen/stage0
