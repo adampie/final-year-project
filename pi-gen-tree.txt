@@ -1,0 +1,217 @@
+[adampie:~/Desktop]$ tree -a pi-gen
+pi-gen
+├── .git
+│   ├── FETCH_HEAD
+│   ├── HEAD
+│   ├── ORIG_HEAD
+│   ├── branches
+│   ├── config
+│   ├── description
+│   ├── hooks
+│   │   ├── applypatch-msg.sample
+│   │   ├── commit-msg.sample
+│   │   ├── post-update.sample
+│   │   ├── pre-applypatch.sample
+│   │   ├── pre-commit.sample
+│   │   ├── pre-push.sample
+│   │   ├── pre-rebase.sample
+│   │   ├── prepare-commit-msg.sample
+│   │   └── update.sample
+│   ├── index
+│   ├── info
+│   │   └── exclude
+│   ├── logs
+│   │   ├── HEAD
+│   │   └── refs
+│   │       ├── heads
+│   │       │   └── dev
+│   │       └── remotes
+│   │           └── origin
+│   │               ├── HEAD
+│   │               └── dev
+│   ├── objects
+│   │   ├── 1d
+│   │   │   └── 18e27f9c8e8416e5d00366fc8e7da1dcd97052
+│   │   ├── 33
+│   │   │   └── 187392ce4875154d2c70e85240600915d5be9d
+│   │   ├── e3
+│   │   │   └── c04825e663d3e43b8893a31e0e31a6b18ebf3c
+│   │   ├── info
+│   │   └── pack
+│   │       ├── pack-a99214624c17a6c49913a06488935206070613b8.idx
+│   │       └── pack-a99214624c17a6c49913a06488935206070613b8.pack
+│   ├── packed-refs
+│   └── refs
+│       ├── heads
+│       │   └── dev
+│       ├── remotes
+│       │   └── origin
+│       │       ├── HEAD
+│       │       └── dev
+│       └── tags
+├── .gitignore
+├── License.md
+├── README.md
+├── build.sh
+├── depends
+├── export-image
+│   ├── 00-allow-rerun
+│   │   ├── 00-run.sh
+│   │   └── files
+│   │       └── policy-rc.d
+│   ├── 01-set-sources
+│   │   ├── 00-patches
+│   │   │   ├── 0-sources.diff
+│   │   │   └── series
+│   │   └── 01-run.sh
+│   ├── 02-network
+│   │   ├── 01-run.sh
+│   │   └── files
+│   │       └── resolv.conf
+│   ├── 03-finalise
+│   │   ├── 01-run.sh
+│   │   └── files
+│   │       └── LICENSE.oracle
+│   └── prerun.sh
+├── export-noobs
+│   ├── 00-release
+│   │   ├── 00-run.sh
+│   │   └── files
+│   │       ├── Raspbian.png
+│   │       ├── marketing
+│   │       │   └── slides_vga
+│   │       │       ├── A.png
+│   │       │       ├── B.png
+│   │       │       ├── C.png
+│   │       │       ├── D.png
+│   │       │       ├── E.png
+│   │       │       ├── F.png
+│   │       │       └── G.png
+│   │       ├── os.json
+│   │       ├── partition_setup.sh
+│   │       ├── partitions.json
+│   │       └── release_notes.txt
+│   └── prerun.sh
+├── scripts
+│   ├── check_deps.sh
+│   ├── common
+│   ├── dependencies_check
+│   ├── release.sh
+│   └── remove-comments.sed
+├── stage0
+│   ├── 01-configure-apt
+│   │   ├── 00-run.sh
+│   │   └── files
+│   │       ├── 51cache
+│   │       ├── raspberrypi.gpg.key
+│   │       ├── raspi.list
+│   │       └── sources.list
+│   ├── 02-firmware
+│   │   └── 01-packages
+│   └── prerun.sh
+├── stage1
+│   ├── 00-boot-files
+│   │   ├── 00-run.sh
+│   │   └── files
+│   │       ├── cmdline.txt
+│   │       └── config.txt
+│   ├── 01-sys-tweaks
+│   │   ├── 00-patches
+│   │   │   ├── 01-bashrc.diff
+│   │   │   └── series
+│   │   ├── 00-run.sh
+│   │   └── files
+│   │       ├── fstab
+│   │       ├── noclear.conf
+│   │       └── policy-rc.d
+│   ├── 02-net-tweaks
+│   │   ├── 00-patches
+│   │   │   ├── 01-hosts.diff
+│   │   │   ├── 02-persistant-net.diff
+│   │   │   └── series
+│   │   ├── 00-run.sh
+│   │   └── files
+│   │       ├── hostname
+│   │       ├── interfaces
+│   │       └── ipv6.conf
+│   ├── 03-install-packages
+│   │   └── 00-packages
+│   └── prerun.sh
+├── stage2
+│   ├── 00-copies-and-fills
+│   │   ├── 00-run.sh
+│   │   ├── 01-packages
+│   │   └── 02-run.sh
+│   ├── 01-sys-tweaks
+│   │   ├── 00-debconf
+│   │   ├── 00-packages
+│   │   ├── 00-packages-nr
+│   │   ├── 00-patches
+│   │   │   ├── 00-sudoers.diff
+│   │   │   ├── 01-useradd.diff
+│   │   │   ├── 02-swap.diff
+│   │   │   ├── 03-console-setup.diff
+│   │   │   ├── 04-inputrc.diff
+│   │   │   ├── 05-path.diff
+│   │   │   ├── 06-rc_local.diff
+│   │   │   ├── 07-resize-init.diff
+│   │   │   └── series
+│   │   ├── 01-run.sh
+│   │   └── files
+│   │       ├── 50raspi
+│   │       ├── apply_noobs_os_config
+│   │       ├── regenerate_ssh_host_keys
+│   │       ├── resize2fs_once
+│   │       └── ttyoutput.conf
+│   ├── 02-net-tweaks
+│   │   ├── 00-packages
+│   │   ├── 00-patches
+│   │   │   ├── 00-interfaces.diff
+│   │   │   └── series
+│   │   ├── 01-run.sh
+│   │   └── files
+│   │       ├── wait.conf
+│   │       └── wpa_supplicant.conf
+│   ├── 03-cleanup
+│   │   └── 00-run.sh
+│   ├── EXPORT_IMAGE
+│   ├── EXPORT_NOOBS
+│   └── prerun.sh
+├── stage3
+│   ├── 00-install-packages
+│   │   ├── 00-packages
+│   │   ├── 00-packages-nr
+│   │   └── 01-run.sh
+│   ├── 01-tweaks
+│   │   ├── 00-patches
+│   │   │   ├── 01-lightdm.diff
+│   │   │   └── series
+│   │   ├── 00-run.sh
+│   │   └── files
+│   │       ├── 55-storage.pkla
+│   │       └── 75source-profile
+│   └── prerun.sh
+└── stage4
+    ├── 00-install-packages
+    │   ├── 00-debconf
+    │   ├── 00-packages
+    │   ├── 00-packages-nr
+    │   └── 01-run.sh
+    ├── 01-tweaks
+    │   ├── 00-run.sh
+    │   └── files
+    │       └── 40-scratch.rules
+    ├── 02-extras
+    │   ├── 00-patches
+    │   │   ├── 0-autologin.diff
+    │   │   └── series
+    │   ├── 00-run.sh
+    │   └── files
+    │       └── .gitignore
+    ├── 03-cleanup
+    │   └── 00-run.sh
+    ├── EXPORT_IMAGE
+    ├── EXPORT_NOOBS
+    └── prerun.sh
+
+71 directories, 142 files
