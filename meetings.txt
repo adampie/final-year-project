@@ -7,3 +7,17 @@ Meeting 1 (6th October)
 	- Set up plan/schedule
 
 Meeting 2 (13th October)
+	- Anything you want marked bring in on paper
+	- Use scrum to set up cards for workflow, cards should take an hour
+	- User time command
+	- Start working
+	- Write impersonal
+	- Look at papers and see how they did things
+	- Write up
+		- Introduction
+		- 6-8 pages background work
+		- Conclusion
+		- Technical chapters (similar to waterfall stages = good story)
+	- First show proof-of-concept then ship it out.
+	- SET A PROPER SCHEDULE 
+	- Get stage 4 done!
