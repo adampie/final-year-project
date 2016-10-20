@@ -8,8 +8,8 @@
 [X] - Get build times for whole stage
 
 13/10/16 - Week 2
-[] - Finish writing doc for uni (19th DL)
-[] - Start Stage 4 
+[X] - Finish writing doc for uni (19th DL)
+[X] - Start Stage 4 
 
 20/10/16 - Week 3
 [] - Finish Stage 4
