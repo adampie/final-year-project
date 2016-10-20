@@ -17,7 +17,9 @@
 \\
 The problem with the current way Raspbian images are generated for the Raspberry Pi is that it takes a long time, around 74 minutes on average for the full build. This can become a nuisance especially if your productivity is hindered by the build time.
 \\\\
-A different approach can be taken using Ansible to generate the Raspbian images, this could potentially speed up the generation process and at the same time bring other benefits without sacrificing much from the current method. With Ansible you would be able to add more features; for example run tasks asynchronously given that what is being run does not get process locked on the Linux system, automate offloading the image generation to a different host and even adding in your own tasks to be run during the builds. This could be a huge benefit to many companies working with Raspberry Pi's and 'Internet of Things,' as you can create custom images with your own scripts pre-installed. After setting up the Pi with the SD Card your pre-configured system is all up and running without any further configuration changes being required.        
+A different approach can be taken using Ansible to generate the Raspbian images, this could potentially speed up the generation process and at the same time bring other benefits without sacrificing much from the current method. With Ansible you would be able to add more features; for example run tasks asynchronously given that what is being run does not get process locked on the Linux system, automate offloading the image generation to a different host and even adding in your own tasks to be run during the builds. This could be a huge benefit to many companies working with Raspberry Pi's and 'Internet of Things,' as you can create custom images with your own scripts pre-installed. After setting up the Pi with the SD Card your pre-configured system is all up and running without any further configuration changes being required.  
+\\\\
+The final deliverable for this project is a codebase that utilizes Ansible to generate the Raspbian images.      
 \\\\
 The success criteria for this project is if the build time for my approach generating Raspbian images is faster than the current way it is being done. 
 \\\\
@@ -31,10 +33,9 @@ Schedule (more in depth in GitHub repo):
 Links:
 \begin{itemize}
   \item Original pi-gen - \url{https://github.com/RPi-Distro/pi-gen}
-  \item My pi-gen - \url{https://github.com/adampie/pi-gen}
-  \item Private repo for storing work - \url{https://github.com/adampie/final-year-project}
   \item Ansible - \url{https://www.ansible.com/}
   \item Raspberry Pi - \url{https://www.raspberrypi.org/}
+  \item LISA - \url{https://www.usenix.org/conference/lisa16}
 \end{itemize}
 }
 \end{document}
