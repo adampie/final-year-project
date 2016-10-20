@@ -21,3 +21,13 @@ Meeting 2 (13th October)
 	- First show proof-of-concept then ship it out.
 	- SET A PROPER SCHEDULE 
 	- Get stage 4 done!
+
+Meeting 3 (20th October)
+	- Check module compatibility 1.7
+	- Get phase 4 done
+	- LISA -> Large Installation System Administration Conference
+		- https://www.usenix.org/conference/lisa16
+	- Vitalise arm on x86 instead of building on raspberry pi itself papers 
+	- Configuration management papers
+	- Add documentation to ansible stuff?
+	- Start background research
