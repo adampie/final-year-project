@@ -1,0 +1,24 @@
+START TIME - 19H-59M-16S
+Running stage
+/home/adampie/pi-gen-timings/stage0  - 505
+Running stage
+/home/adampie/pi-gen-timings/stage1  - 27
+Running stage
+/home/adampie/pi-gen-timings/stage2  - 590
+Running stage
+/home/adampie/pi-gen-timings/stage3  - 628
+Running stage
+
+
+-----
+
+
+[20:57:23] Begin /home/adampie/pi-gen-timings/stage4/02-extras
+[20:57:23] Begin /home/adampie/pi-gen-timings/stage4/02-extras/00-patches
+Converting meta-data to version 2
+Applying patch /home/adampie/pi-gen-timings/stage4/02-extras/00-patches/0-autologin.diff
+patching file rootfs/etc/lightdm/lightdm.conf
+Hunk #1 FAILED at 114.
+1 out of 1 hunk FAILED -- rejects in file rootfs/etc/lightdm/lightdm.conf
+Patch /home/adampie/pi-gen-timings/stage4/02-extras/00-patches/0-autologin.diff can be reverse-applied
+root@pigen:/home/adampie/pi-gen-timings#
