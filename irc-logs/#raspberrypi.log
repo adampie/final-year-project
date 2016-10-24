@@ -1,1347 +1,154 @@
-**** BEGIN LOGGING AT Sat Oct 22 08:40:23 2016
+#raspbianpi @ irc.freenode.net
 
-Oct 22 08:40:23 *	Now talking on #raspberrypi
-Oct 22 08:40:23 *	Topic for #raspberrypi is: Unofficial RaspberryPi IRC channel but "Blessed" by the Foundation as the ONE channel. | Logs: http://srv.datagutt1.com | Rules: https://goo.gl/h5qPhz
-Oct 22 08:40:23 *	Topic for #raspberrypi set by gordonDrogon!~gordon@2001:4d48:ad51:8901::2 (Mon Mar  7 17:07:35 2016)
-Oct 22 08:41:54 *	Envil (~envil@x55b273a4.dyn.telefonica.de) has joined
-Oct 22 08:42:15 *	Disconnected (Connection reset by peer)
-**** ENDING LOGGING AT Sat Oct 22 08:42:15 2016
-
-**** BEGIN LOGGING AT Sat Oct 22 15:45:39 2016
-
-Oct 22 15:45:39 *	Now talking on #raspberrypi
-Oct 22 15:45:39 *	Topic for #raspberrypi is: Unofficial RaspberryPi IRC channel but "Blessed" by the Foundation as the ONE channel. | Logs: http://srv.datagutt1.com | Rules: https://goo.gl/h5qPhz
-Oct 22 15:45:39 *	Topic for #raspberrypi set by gordonDrogon!~gordon@2001:4d48:ad51:8901::2 (Mon Mar  7 17:07:35 2016)
-Oct 22 15:45:45 *	Uber (~UberSMPL@bouncer.host) has joined
-Oct 22 15:47:30 *	Madatnek has quit (Ping timeout: 260 seconds)
-Oct 22 15:47:58 *	joebobjoe has quit (Ping timeout: 250 seconds)
-Oct 22 15:48:12 *	Madatnek (~Madatnek@c-fba7db54.046-15-7673745.cust.bredbandsbolaget.se) has joined
-Oct 22 15:51:26 *	pintman has quit (Ping timeout: 252 seconds)
-**** BEGIN LOGGING AT Sat Oct 22 15:57:15 2016
-
-Oct 22 15:57:15 *	Now talking on #raspberrypi
-Oct 22 15:57:15 *	Topic for #raspberrypi is: Unofficial RaspberryPi IRC channel but "Blessed" by the Foundation as the ONE channel. | Logs: http://srv.datagutt1.com | Rules: https://goo.gl/h5qPhz
-Oct 22 15:57:15 *	Topic for #raspberrypi set by gordonDrogon!~gordon@2001:4d48:ad51:8901::2 (Mon Mar  7 17:07:35 2016)
-Oct 22 15:57:22 *	shantorn has quit (Remote host closed the connection)
-Oct 22 15:57:22 *	shantorn has quit (Remote host closed the connection)
-**** ENDING LOGGING AT Sat Oct 22 15:57:26 2016
-
-Oct 22 15:58:07 <Zeno`>	gordonDrogon, the naan bread turned out pretty nice! I decided to put some panch phoron (ground in mortar and pestle first) into the dough because I had no nigella -- I think it turned out fine
-Oct 22 15:58:47 *	shantorn (~tornstrik@97-120-204-253.ptld.qwest.net) has joined
-Oct 22 15:58:52 <Zeno`>	the panch phoron has nigella seeds in it anyway and the flavour was pretty close to what I expected from naan
-Oct 22 15:58:55 *	romerocesar (~cesar@rrcs-173-198-73-254.west.biz.rr.com) has joined
-Oct 22 16:01:42 *	Dmr8 (~Damir@82-169-64-179.ip.telfort.nl) has joined
-Oct 22 16:03:37 *	romerocesar has quit (Ping timeout: 244 seconds)
-Oct 22 16:04:15 *	sKyZ (~sKyZ@unaffiliated/skyz) has joined
-Oct 22 16:04:17 *	seeit (~seeit@50-204-190-131-static.hfc.comcastbusiness.net) has joined
-Oct 22 16:05:29 *	elsevero has quit (Quit: elsevero)
-Oct 22 16:06:01 *	arkangel (~arkangel@c-73-156-41-58.hsd1.fl.comcast.net) has joined
-Oct 22 16:07:41 *	gruetzkopf (gruetzkopf@captured-elf.dont-follow-me.eu) has joined
-Oct 22 16:11:28 *	my123_ is now known as my123
-Oct 22 16:13:07 *	stiv (~steve@blender/coder/stivs) has joined
-Oct 22 16:15:52 *	my123 has quit (Ping timeout: 250 seconds)
-Oct 22 16:16:41 *	Indeaux (~Indeaux@2600:8807:5581:9200:7587:661b:3e1b:e18f) has joined
-Oct 22 16:16:49 <_sfiguser>	Zeno`,  what is wrong with arudino ide function prototypes ?
-Oct 22 16:17:05 *	GenteelBen (~GenteelBe@cpc70133-lutn12-2-0-cust324.9-3.cable.virginm.net) has joined
-Oct 22 16:24:08 *	_sfiguser has quit (Remote host closed the connection)
-Oct 22 16:33:16 *	Norbin (~Norbin@178.62.84.53) has left ("WeeChat 1.4")
-Oct 22 16:33:52 *	seeit has quit (Remote host closed the connection)
-Oct 22 16:34:33 *	cyborg-one (~cyborg-on@188-115-178-39.broadband.tenet.odessa.ua) has joined
-Oct 22 16:36:41 *	Sonar_Guy has quit (Ping timeout: 244 seconds)
-Oct 22 16:36:57 *	jeramyRR (~jeramyRR@2605:6001:e003:4300:5d11:3d7b:8ccc:158d) has joined
-Oct 22 16:37:18 *	Indeaux has quit (Quit: Leaving)
-Oct 22 16:37:45 *	elsevero (~elsevero@79.117.74.182) has joined
-Oct 22 16:39:01 *	Indeaux (~Indeaux@2600:8807:5581:9200:7587:661b:3e1b:e18f) has joined
-Oct 22 16:41:55 *	Sonar_Guy (~Who@fedora/sonarguy) has joined
-Oct 22 16:42:17 *	drewx0r (~drewx0r@unaffiliated/drewx0r) has joined
-Oct 22 16:43:00 *	NXS818 (4d2ad6f5@gateway/web/freenode/ip.77.42.214.245) has joined
-Oct 22 16:44:20 *	joebobjoe (~joebobjoe@104-136-31-251.res.bhn.net) has joined
-Oct 22 16:47:19 *	elsevero has quit (Quit: elsevero)
-Oct 22 16:48:59 *	joebobjoe has quit (Ping timeout: 252 seconds)
-Oct 22 16:49:41 *	NecessaryEvil (~Necessary@188.189.75.203) has joined
-Oct 22 16:50:29 *	_Trullo (~guff33@h-53-230.a357.priv.bahnhof.se) has joined
-Oct 22 16:53:14 *	Disconnected (Connection reset by peer)
-**** ENDING LOGGING AT Sat Oct 22 16:53:14 2016
-
-**** BEGIN LOGGING AT Sat Oct 22 16:55:23 2016
-
-Oct 22 16:55:23 *	Now talking on #raspberrypi
-Oct 22 16:55:23 *	Topic for #raspberrypi is: Unofficial RaspberryPi IRC channel but "Blessed" by the Foundation as the ONE channel. | Logs: http://srv.datagutt1.com | Rules: https://goo.gl/h5qPhz
-Oct 22 16:55:23 *	Topic for #raspberrypi set by gordonDrogon!~gordon@2001:4d48:ad51:8901::2 (Mon Mar  7 17:07:35 2016)
-Oct 22 16:57:51 *	srai (~chatzilla@p3E9E57F1.dip0.t-ipconnect.de) has joined
-Oct 22 16:58:34 *	Indeaux has quit (Quit: Leaving)
-Oct 22 16:58:54 *	divx118 has quit (Ping timeout: 244 seconds)
-Oct 22 16:59:09 *	Indeaux (~Indeaux@2600:8807:5581:9200:7587:661b:3e1b:e18f) has joined
-Oct 22 16:59:10 *	Indeaux has quit (Max SendQ exceeded)
-Oct 22 16:59:38 *	Indeaux (~Indeaux@2600:8807:5581:9200:7587:661b:3e1b:e18f) has joined
-Oct 22 17:00:33 *	Indeaux has quit (Remote host closed the connection)
-Oct 22 17:01:20 *	romerocesar (~cesar@rrcs-173-198-73-254.west.biz.rr.com) has joined
-Oct 22 17:01:23 *	NecessaryEvil has quit (Quit: Colloquy for iPhone - http://colloquy.mobi)
-Oct 22 17:03:53 *	oracularmoufflon (~Resu@105.35.88.91.rev.sfr.net) has joined
-Oct 22 17:04:48 <oracularmoufflon>	Hello, cam anyone help me with this? I want to append a single line in a html file from a python script, but I'm not sure how
-Oct 22 17:04:53 <oracularmoufflon>	can*
-Oct 22 17:05:21 *	divx118 (~divx118@5ED66EB7.cm-7-7b.dynamic.ziggo.nl) has joined
-Oct 22 17:05:37 *	romerocesar has quit (Ping timeout: 244 seconds)
-Oct 22 17:06:39 *	shantorn has quit (Ping timeout: 244 seconds)
-Oct 22 17:07:14 <DWKnight>	open the file, seek to the end, add the line, close the file, done
-Oct 22 17:08:04 <oracularmoufflon>	I'm very new to python, could you show me an example?
-Oct 22 17:08:05 <Zeno`>	open it with mode a of course
-Oct 22 17:08:11 <oracularmoufflon>	Yeah
-Oct 22 17:09:25 *	Disconnected (Connection reset by peer)
-**** ENDING LOGGING AT Sat Oct 22 17:09:25 2016
-
-**** BEGIN LOGGING AT Sat Oct 22 17:10:12 2016
-
-Oct 22 17:10:12 *	Now talking on #raspberrypi
-Oct 22 17:10:12 *	Topic for #raspberrypi is: Unofficial RaspberryPi IRC channel but "Blessed" by the Foundation as the ONE channel. | Logs: http://srv.datagutt1.com | Rules: https://goo.gl/h5qPhz
-Oct 22 17:10:12 *	Topic for #raspberrypi set by gordonDrogon!~gordon@2001:4d48:ad51:8901::2 (Mon Mar  7 17:07:35 2016)
-Oct 22 17:10:28 <Zeno`>	it would be a disservice towards you, IMO, if we gave code to do that
-Oct 22 17:10:47 <oracularmoufflon>	Zeno, very fair of you. See you in a minute or two
-Oct 22 17:10:53 *	Indeaux (~Indeaux@2600:8807:5581:9200:7587:661b:3e1b:e18f) has joined
-Oct 22 17:12:26 *	[ill]will has quit (Ping timeout: 258 seconds)
-Oct 22 17:12:48 <ali1234>	seeking to the end of the html file and adding more text is a good way to make sure your html file isn't valid html
-Oct 22 17:13:07 <Zeno`>	ali1234, good point!
-Oct 22 17:13:49 <oracularmoufflon>	I don't follow?
-Oct 22 17:15:13 <Zeno`>	well... you have open/close thingies
-Oct 22 17:15:39 <Zeno`>	like <p> and </p> so you just can't append to the end of it
-Oct 22 17:16:16 <oracularmoufflon>	Ah right, I wasn't aiming to append to the end of it in the first place
-Oct 22 17:16:34 <oracularmoufflon>	That's what I'm struggling with
-Oct 22 17:17:03 *	Flynnn (~textual@unaffiliated/flynnn) has joined
-Oct 22 17:19:10 <oracularmoufflon>	Zeno: I can't figure this out as seek can't go to a specific line can it?
-Oct 22 17:19:43 <SpeedEvil>	just read the whole thing
-Oct 22 17:19:49 *	jeramyRR has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
-Oct 22 17:19:53 <SpeedEvil>	Or use a html parser library
-Oct 22 17:20:16 *	eikood has quit (Ping timeout: 250 seconds)
-Oct 22 17:20:50 <oracularmoufflon>	SpeedEvil: But how would reading the whole thing let me append to a specific place? Also I dont know what a parser lib is, I'll look it up
-Oct 22 17:21:35 *	ptx0 has quit (Ping timeout: 276 seconds)
-Oct 22 17:21:40 <SpeedEvil>	read, write copy of file, write new bit of file, write rest of file
-Oct 22 17:22:03 *	romerocesar (~cesar@rrcs-173-198-73-254.west.biz.rr.com) has joined
-Oct 22 17:23:00 *	TyrfingMjolnir has quit (Ping timeout: 245 seconds)
-Oct 22 17:23:08 <oracularmoufflon>	How...? (sorry)
-Oct 22 17:23:15 *	nasuga (~nasuga@unaffiliated/nasuga) has joined
-Oct 22 17:24:02 *	sKyZ has quit (Quit: Bye.)
-Oct 22 17:25:00 *	TyrfingMjolnir (~Tyrfing@62.92.82.250) has joined
-Oct 22 17:25:19 *	r4fz8y has quit (Ping timeout: 260 seconds)
-Oct 22 17:25:19 *	jeramyRR (~jeramyRR@2605:6001:e003:4300:5d11:3d7b:8ccc:158d) has joined
-Oct 22 17:26:48 *	romerocesar has quit (Ping timeout: 244 seconds)
-Oct 22 17:26:59 *	joebobjoe (~joebobjoe@104-136-31-251.res.bhn.net) has joined
-Oct 22 17:28:39 <Zeno`>	open file for reading and another for output; read input and while not at place for insertion write the data to the output file; when at the place of insertion, write the new data to the output file; once done, continue reading the input file and writing the data to the output file. close both files. Delete the input file and rename the output file
-Oct 22 17:29:00 <Zeno`>	probably the easiest (but not most efficient necessarily) way
-Oct 22 17:30:10 *	jakent has quit (Quit: jakent)
-Oct 22 17:30:24 <Zeno`>	I don't know how you'll determine where the correct insertion point is without putting some thought into it
-Oct 22 17:30:25 <oracularmoufflon>	Jesus, right. I've had roughly 3 days experience with python so xD
-Oct 22 17:32:01 *	joebobjoe has quit (Ping timeout: 256 seconds)
-Oct 22 17:32:03 <Zeno`>	I don't know python at all :)
-Oct 22 17:33:31 <oracularmoufflon>	Haha fair enough. Maybe it can be done in the html?
-Oct 22 17:33:38 <oracularmoufflon>	Oh wait
-Oct 22 17:33:48 <oracularmoufflon>	Sorry I didn't specify the end goal
-Oct 22 17:34:30 *	Bilz (~Billy@unaffiliated/bilz) has joined
-Oct 22 17:34:40 <oracularmoufflon>	The end goal is to change to a colour of a button once it has been clicked, and back again when it is clicked another time, and so on
-Oct 22 17:35:31 *	nfk (~nfk@unaffiliated/nfk) has joined
-Oct 22 17:35:49 *	InfoTest (~Thunderbi@tgn.149.21.40.dts.mg) has joined
-Oct 22 17:35:59 *	Indeaux has quit (Quit: Leaving)
-Oct 22 17:36:36 <srai>	why don't just use Javascript for that?
-Oct 22 17:36:55 *	InverseRhombus (~InverseRh@2a02:c7d:da57:a400:8417:4825:c192:ef3e) has joined
-Oct 22 17:37:08 *	insmodppa has quit (Ping timeout: 244 seconds)
-Oct 22 17:37:17 <oracularmoufflon>	I know no java,
-Oct 22 17:37:21 <oracularmoufflon>	script
-Oct 22 17:37:23 <oracularmoufflon>	xD
-Oct 22 17:38:26 <Zeno`>	modifying html is probably a silly way anyhow... you'd have to refresh the page every time the button colour changed
-Oct 22 17:38:53 <oracularmoufflon>	The page refreshes after the button is pressed anyway.
-Oct 22 17:39:08 <oracularmoufflon>	There's only 8 buttons on the whole thing
-Oct 22 17:39:14 *	rk0n (~rkon@94.242.243.82) has joined
-Oct 22 17:39:18 <Zeno`>	what kind of button?
-Oct 22 17:40:01 <srai>	sounds like you could just change the colour attribute then
-Oct 22 17:40:03 <Zeno`>	a button on the "web page"?
-Oct 22 17:41:00 <Zeno`>	or a button connected to the raspberry pi via the gpio?
-Oct 22 17:41:15 <oracularmoufflon>	http://pastebin.com/QAPf7NTY
-Oct 22 17:41:32 *	jeramyRR has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
-Oct 22 17:41:47 <oracularmoufflon>	The button is on a webpage (flask) that controls a script that turn on a relay from the rpi using gpio
-Oct 22 17:42:05 *	nid0 (~nidO@82-69-13-250.dsl.in-addr.zen.co.uk) has joined
-Oct 22 17:42:26 <oracularmoufflon>	Changing the colour attribute is exactly what I want to do
-Oct 22 17:42:28 *	jeramyRR (~jeramyRR@2605:6001:e003:4300:5d11:3d7b:8ccc:158d) has joined
-Oct 22 17:42:49 *	joebobjoe (~joebobjoe@104-136-31-251.res.bhn.net) has joined
-Oct 22 17:42:50 *	romerocesar (~cesar@rrcs-173-198-73-254.west.biz.rr.com) has joined
-Oct 22 17:42:58 <rk0n>	I'm trying to deploy and run a JavaFX Application on my pi, running raspbian, using 'Embedded Linux JVM' Plugin for IntelliJ, but I alway get the Error 'Could not find or load main class sample.Main'. Running a CLI Java program works perfect. Anyone has a clue?
-Oct 22 17:43:00 *	rcowie (02dd9a68@gateway/web/cgi-irc/kiwiirc.com/ip.2.221.154.104) has joined
-Oct 22 17:43:37 <rcowie>	sup lads, wondering how you guys go about backing up an Rpi server
-Oct 22 17:44:02 <rcowie>	I understand that DD'ing the image is very precarious - as if system changes, it's bad
-Oct 22 17:44:05 <srai>	you could open the file with python, search the string, replace it and then save it
-Oct 22 17:44:41 <oracularmoufflon>	srai, That's all I want to do, I just have no clue how
-Oct 22 17:46:04 *	ptx0 (~cheesus_c@unaffiliated/ptx0) has joined
-Oct 22 17:46:05 <DWKnight>	rcowie: live backup, rsync the root filesystem to a remote device
-Oct 22 17:46:13 <DWKnight>	offline backup you can just dd the image
-Oct 22 17:46:43 <srai>	just have a look at the documentation, the first thing you need to know is how to read a file
-Oct 22 17:46:55 <srai>	after that you want to know how to search and replace a string
-Oct 22 17:46:57 <rcowie>	thanks dw!
-Oct 22 17:47:17 *	joebobjoe has quit (Ping timeout: 252 seconds)
-Oct 22 17:47:28 *	romerocesar has quit (Ping timeout: 244 seconds)
-Oct 22 17:48:05 <oracularmoufflon>	srai: The problem is there is 8 of the same button in the html template, the omly differ in value (text on the button)
-Oct 22 17:48:57 <oracularmoufflon>	only*
-Oct 22 17:48:58 <srai>	yeah, so you already have 8 different substrings
-Oct 22 17:49:27 <oracularmoufflon>	I'll pastebin the html
-Oct 22 17:50:20 <oracularmoufflon>	http://pastebin.com/Q1kXUSKk
-Oct 22 17:55:49 *	Strife89 has quit (Ping timeout: 256 seconds)
-Oct 22 17:57:12 *	int3nz0r (~int3nz0r@541A8E1B.cm-5-3c.dynamic.ziggo.nl) has joined
-Oct 22 18:00:52 *	scutulatium (~scutulati@24.171.236.143) has joined
-Oct 22 18:03:39 *	romerocesar (~cesar@rrcs-173-198-73-254.west.biz.rr.com) has joined
-Oct 22 18:04:00 *	arkangel has quit (Quit: Leaving)
-Oct 22 18:05:02 <ali1234>	oracularmoufflon: use javascript, jquery, REST, and bootstrap
-Oct 22 18:05:20 *	scutulatium has quit (Ping timeout: 256 seconds)
-Oct 22 18:05:43 *	Zeno` is now known as ZenoTyler
-Oct 22 18:06:04 *	rigel3 (~rigel3@c-24-18-45-253.hsd1.wa.comcast.net) has joined
-Oct 22 18:06:33 *	insmodppa (~insmod@unaffiliated/insmodppa) has joined
-Oct 22 18:08:08 *	romerocesar has quit (Ping timeout: 244 seconds)
-Oct 22 18:13:12 *	srai has quit (Ping timeout: 265 seconds)
-Oct 22 18:14:15 *	cave has quit (Ping timeout: 276 seconds)
-Oct 22 18:14:46 *	cave (~various@178.112.14.114.wireless.dyn.drei.com) has joined
-Oct 22 18:15:49 *	int3nz0r has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
-Oct 22 18:18:05 *	ZenoTyler is now known as Zeno`
-Oct 22 18:18:19 *	idoit (~IceChat9@d199-74-178-37.try.wideopenwest.com) has joined
-Oct 22 18:19:15 *	whiteteepoison (~whiteteep@162.220.221.43) has joined
-Oct 22 18:23:14 *	qdk (~qdk@x1-6-a0-63-91-fb-46-ea.cpe.webspeed.dk) has joined
-Oct 22 18:23:15 *	jeramyRR has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
-Oct 22 18:24:31 *	romerocesar (~cesar@rrcs-173-198-73-254.west.biz.rr.com) has joined
-Oct 22 18:25:14 *	KaiserAres (~KaiserAre@unaffiliated/kaiserares) has joined
-Oct 22 18:25:44 *	lemonzest has quit (Quit: Leaving)
-Oct 22 18:26:45 *	whiteteepoison has quit (Quit: Lost terminal)
-Oct 22 18:27:00 *	jeramyRR (~jeramyRR@2605:6001:e003:4300:5d11:3d7b:8ccc:158d) has joined
-Oct 22 18:27:52 *	joebobjoe (~joebobjoe@104-136-31-251.res.bhn.net) has joined
-Oct 22 18:28:17 *	CygniX (~CygniX@unaffiliated/twois10) has left ("Konversation terminated!")
-Oct 22 18:28:48 *	romerocesar has quit (Ping timeout: 244 seconds)
-Oct 22 18:28:54 <rcowie>	Anyone doing anything interesting with their PI other than linux and kodi?
-Oct 22 18:30:39 *	CygniX (~CygniX@unaffiliated/twois10) has joined
-Oct 22 18:32:25 *	joebobjoe has quit (Ping timeout: 244 seconds)
-Oct 22 18:34:02 *	drewx0r has quit (Quit: So long, and thanks for all the fish.)
-Oct 22 18:34:25 *	whiteteepoison (~whiteteep@162.220.221.43) has joined
-Oct 22 18:36:03 <SirLagz>	rcowie: I'm playing around with Exagear...does that count?
-Oct 22 18:36:34 *	brainzap (~brainzap@46-126-143-230.dynamic.hispeed.ch) has joined
-Oct 22 18:37:58 <SirLagz>	anyone know if there's much difference between catting /sys/class/thermal/thermal_zone0/temp and using vcgencmd measure_temp besides the permissions ?
-Oct 22 18:41:06 <SirLagz>	oh and I guess precision is higher when catting...but anything else I'm missing?
-Oct 22 18:43:46 *	joebobjoe (~joebobjoe@104-136-31-251.res.bhn.net) has joined
-Oct 22 18:44:51 *	SpeedEvil has quit (Ping timeout: 252 seconds)
-Oct 22 18:45:12 *	romerocesar (~cesar@rrcs-173-198-73-254.west.biz.rr.com) has joined
-Oct 22 18:47:24 *	cyborg-one has quit (Ping timeout: 276 seconds)
-Oct 22 18:48:00 *	joebobjoe has quit (Ping timeout: 245 seconds)
-Oct 22 18:48:30 *	shantorn has quit (Ping timeout: 260 seconds)
-Oct 22 18:48:59 *	shantorn (~shantorn@97-120-204-253.ptld.qwest.net) has joined
-Oct 22 18:49:27 *	SpeedEvil (~quassel@tor/regular/SpeedEvil) has joined
-Oct 22 18:49:58 *	romerocesar has quit (Ping timeout: 250 seconds)
-Oct 22 18:56:15 *	walle303 (~walle303@pisg/dev/walle303) has joined
-Oct 22 19:05:02 <rcowie>	SirLagz: yes! what are you trying to run?
-Oct 22 19:11:35 *	scutulatium (~scutulati@24.171.236.143) has joined
-Oct 22 19:12:32 *	Sadale has quit (Quit: Ĝis revido)
-Oct 22 19:14:22 *	oxhak (~OxHaK@unaffiliated/oxhak) has joined
-Oct 22 19:15:01 *	LAN_Lord (~LAN_Lord@2602:306:308b:5500:a9de:252a:7f9d:ae9c) has joined
-Oct 22 19:15:43 *	Viper168 has quit (Ping timeout: 256 seconds)
-Oct 22 19:16:27 *	andor2007 has quit (Read error: Connection reset by peer)
-Oct 22 19:16:29 *	netzfisch (~Thunderbi@x55b065c7.dyn.telefonica.de) has joined
-Oct 22 19:18:46 *	pitastrudl has quit (Remote host closed the connection)
-Oct 22 19:19:18 *	andor2007 (~andor2007@cpc72039-pete10-2-0-cust165.4-4.cable.virginm.net) has joined
-Oct 22 19:19:58 *	int3nz0r (~int3nz0r@541A8E1B.cm-5-3c.dynamic.ziggo.nl) has joined
-Oct 22 19:20:12 *	whiteteepoison has quit (Quit: leaving)
-Oct 22 19:20:15 *	shantorn has quit (Ping timeout: 256 seconds)
-Oct 22 19:20:30 *	netzfisch has quit (Ping timeout: 245 seconds)
-Oct 22 19:20:33 *	oxhak has quit (Ping timeout: 276 seconds)
-Oct 22 19:20:51 *	pitastrudl (~quassel@unaffiliated/pitastrudl) has joined
-Oct 22 19:21:03 *	scutulatium has quit (Ping timeout: 260 seconds)
-Oct 22 19:23:15 *	Viper168 (~Viper@unaffiliated/viper168) has joined
-Oct 22 19:25:46 *	yohnnyjoe (~yohnnyjoe@pool-96-255-29-250.washdc.fios.verizon.net) has joined
-Oct 22 19:26:42 *	joebobjoe (~joebobjoe@104-136-31-251.res.bhn.net) has joined
-Oct 22 19:31:59 *	joebobjoe has quit (Ping timeout: 265 seconds)
-Oct 22 19:32:01 *	sKyZ (~sKyZ@unaffiliated/skyz) has joined
-Oct 22 19:36:48 *	KaiserAres has quit (Ping timeout: 276 seconds)
-Oct 22 19:39:12 *	KaiserAres (~KaiserAre@unaffiliated/kaiserares) has joined
-Oct 22 19:41:07 *	joebobjoe (~joebobjoe@104-136-31-251.res.bhn.net) has joined
-Oct 22 19:43:41 *	dlech has quit (Remote host closed the connection)
-Oct 22 19:44:11 *	GenteelBen has quit (Read error: Connection reset by peer)
-Oct 22 19:45:03 *	nid0 has quit (Read error: Connection reset by peer)
-Oct 22 19:45:08 *	srai (~chatzilla@p3E9E57F1.dip0.t-ipconnect.de) has joined
-Oct 22 19:45:34 *	m4ggus has quit (Ping timeout: 268 seconds)
-Oct 22 19:45:55 *	joebobjoe has quit (Ping timeout: 245 seconds)
-Oct 22 19:49:33 *	niston` is now known as niston
-Oct 22 19:50:53 *	spechter (~spechter@x4e30420c.dyn.telefonica.de) has joined
-Oct 22 19:52:19 *	KaiserAres has quit (Ping timeout: 252 seconds)
-Oct 22 19:52:37 *	oracularmoufflon (~Resu@105.35.88.91.rev.sfr.net) has left
-Oct 22 19:52:48 *	tommy`` has quit (Ping timeout: 250 seconds)
-Oct 22 19:53:02 *	tommy`` (tommy@host164-35-dynamic.49-82-r.retail.telecomitalia.it) has joined
-Oct 22 19:53:57 *	willy23123 (~willy2312@51-171-151-33-dynamic.agg2.lky.bge-rtd.eircom.net) has joined
-Oct 22 19:55:10 <spechter>	hello everyone, i want to automount a davfs2 filesystem on my stock rpi2. mounting manually works flawlessly with the credentials beeing stored in /etc/davfs2/secrets and the server certificate in /etc/davfs2/certsxyz.pem. when mounting the filesystem manually it mounts it just fine without asking for credentials or complaining about a missmatching certificate, but it won't mount it automatically on
-Oct 22 19:55:16 <spechter>	boot. journalctl doesn't provide any information of an unsuccessfull try and i whonder where i might find some usefulls logs to figure out why it fails
-Oct 22 19:58:14 <mgottschlag>	spechter: automatic mounting via fstab?
-Oct 22 19:59:39 *	InverseRhombus has quit (Quit: Leaving)
-Oct 22 19:59:39 *	tommy`` has quit (Ping timeout: 252 seconds)
-Oct 22 20:00:15 *	tommy`` (tommy@host223-64-dynamic.22-79-r.retail.telecomitalia.it) has joined
-Oct 22 20:00:49 <spechter>	mgottschlag: i just checked it again and noticed that i might have followed some instructions i found online without spending a single thought on what exactly i used there... changing parameter noauto to auto makes it mount automatically... sorry for wasting your time there S
-**** ENDING LOGGING AT Sat Oct 22 20:01:41 2016
-
-**** BEGIN LOGGING AT Sun Oct 23 09:03:22 2016
-
-Oct 23 09:03:22 *	Now talking on #raspberrypi
-Oct 23 09:03:22 *	Topic for #raspberrypi is: Unofficial RaspberryPi IRC channel but "Blessed" by the Foundation as the ONE channel. | Logs: http://srv.datagutt1.com | Rules: https://goo.gl/h5qPhz
-Oct 23 09:03:22 *	Topic for #raspberrypi set by gordonDrogon!~gordon@2001:4d48:ad51:8901::2 (Mon Mar  7 17:07:35 2016)
-Oct 23 08:06:35 <jaggz>	channel I've tried.. etc.
-Oct 23 08:06:53 <jaggz>	after changing the transmission rate, then I could connect (and get an IP)
-Oct 23 08:07:23 <SirLagz>	jaggz: did you try rebooting the router earlier?
-Oct 23 08:08:01 <jaggz>	yeah
-Oct 23 08:08:57 <jaggz>	I thought all these settings I'd done a longer time ago (been using the rpi since).. but I guess I fixated the trnamission rate setting more recently :/
-Oct 23 08:09:24 <jaggz>	I wonder why the dhcp takes several attempts to get an ip
-Oct 23 08:11:41 <jaggz>	 2; ifup wlan0; }
-Oct 23 08:11:47 <jaggz>	oops
-Oct 23 08:11:56 <jaggz>	 /sbin/ifconfig wlan0 | /bin/grep -q inet.addr || { echo Resetting wlan0; ifdown wlan0; sleep 2; ifup wlan0; }
-Oct 23 08:12:01 <jaggz>	I have that in my cron
-Oct 23 08:12:16 <jaggz>	(not related to the dhcp delay)
-Oct 23 08:12:32 <jaggz>	just so my rpi will retry a connection if it sees the interface down
-Oct 23 08:12:42 <jaggz>	not sure if that's the most reliable check (for an ip in ifconfig output)
-Oct 23 08:13:28 <SirLagz>	jaggz: eh, I had something similiar for my Pi
-Oct 23 08:14:09 <jaggz>	why eh?
-Oct 23 08:14:13 <jaggz>	did you switch to something better?
-Oct 23 08:14:20 <jaggz>	someone mentioned wicd-console or something
-Oct 23 08:14:21 <SirLagz>	jaggz: I'm trying to remember what I had lol
-Oct 23 08:14:26 <jaggz>	now that my network's working I can install stuff :)
-Oct 23 08:14:37 <SirLagz>	jaggz: nope, I had pretty much exactly what you had lol
-Oct 23 08:14:49 <jaggz>	heh
-Oct 23 08:15:38 *	SirLagz wonders if he can play Diablo 1 on his Pi
-Oct 23 08:16:56 <jaggz>	:)
-Oct 23 08:19:09 *	jaggz wonders what his password was for his livingroom pi
-Oct 23 08:19:17 <jaggz>	this one I have hooked up as an audio reminder system
-Oct 23 08:19:32 <jaggz>	runs to a mixer on which we have our two computers as well
-Oct 23 08:19:48 <jaggz>	mp3's in crontab :)
-Oct 23 08:19:51 <SirLagz>	It's been a while since I've played with my Pis
-Oct 23 08:20:05 <SirLagz>	should really get back into it
-Oct 23 08:20:06 <jaggz>	got it.. yay
-Oct 23 08:21:09 <SirLagz>	jaggz: you should make your sprinker system Pi broadcast an AP if it can't connect to your home network, then at least you can still control it :D
-Oct 23 08:22:34 <SirLagz>	hmm I wonder what the Pixel desktop is based on
-Oct 23 08:25:27 <Sonny_Jim>	Erm it's
-Oct 23 08:25:32 <Sonny_Jim>	XFCE I think
-Oct 23 08:26:54 <SirLagz>	that would mean I would need to install XFCE too then
-Oct 23 08:27:32 <SirLagz>	Sonny_Jim: looks like it's LXDE actually
-Oct 23 08:28:07 <Sonny_Jim>	Ah yeah, I knew it was one of the 4 letter ones ;)
-Oct 23 08:28:36 <SirLagz>	Sonny_Jim: just going by the comments from the pixel intro blog post on the rpi.org blog
-Oct 23 08:28:52 <jaggz>	SirLagz, wait what?
-Oct 23 08:28:58 <jaggz>	broadcast an IP?
-Oct 23 08:29:05 <jaggz>	meaning it acts as an access point?
-Oct 23 08:29:18 <SirLagz>	jaggz: yeah
-Oct 23 08:29:24 <jaggz>	never done that :)
-Oct 23 08:29:47 <SirLagz>	jaggz: I did that for a while
-Oct 23 08:29:49 <jaggz>	I just put this on it though: https://www.amazon.com/gp/product/B0045IIZKU
-Oct 23 08:30:57 <jaggz>	(note: That doesn't come with a power supply)
-Oct 23 08:31:31 <jaggz>	thankfully the 3rd wallwart I picked up was 12v 1a, center positive, with the proper sized connector
-Oct 23 08:32:08 <SirLagz>	jaggz: lol
-Oct 23 08:32:22 <SirLagz>	I haven't done the self-broadcasting AP in a while though, might have to try it out with updated stuff to make sure it still works
-Oct 23 08:33:09 <jaggz>	(for audio reminders, I find a youtube video with a suitable phrase in it, capture it with audacity and save myself an mp3)
-Oct 23 09:03:22 *	pitelpan (~panagioti@unaffiliated/pitelpan) has joined
-Oct 23 09:03:50 *	pintman (~Marco@p4FE2F4D8.dip0.t-ipconnect.de) has joined
-Oct 23 09:07:13 *	RoBo_V has quit (Quit: Later)
-Oct 23 09:10:54 *	sameee (~sameee@163.47.184.241) has joined
-Oct 23 09:13:48 *	fredp has quit (Ping timeout: 245 seconds)
-Oct 23 09:14:15 *	fengshaun (~fengshaun@unaffiliated/fengshaun) has joined
-Oct 23 09:15:07 *	purplex88 has quit (Read error: Connection reset by peer)
-Oct 23 09:15:28 *	purplex88 (~purplex88@unaffiliated/purplex88) has joined
-Oct 23 09:18:57 *	_ami_ (~ami@203.189.254.84) has joined
-Oct 23 09:21:05 *	fredp (~fredp@unaffiliated/fredp) has joined
-Oct 23 09:24:38 *	wuseman (~wuziduzi@unaffiliated/wuseman) has joined
-Oct 23 09:27:10 *	romerocesar (~cesar@rrcs-173-198-73-254.west.biz.rr.com) has joined
-Oct 23 09:31:52 *	romerocesar has quit (Ping timeout: 260 seconds)
-Oct 23 09:40:41 *	SirLagz has quit (Ping timeout: 265 seconds)
-Oct 23 09:42:14 *	esas (~esas@unaffiliated/esas) has joined
-Oct 23 09:43:07 *	rcowie (02dd9a68@gateway/web/cgi-irc/kiwiirc.com/ip.2.221.154.104) has joined
-Oct 23 09:44:51 *	rcowie has quit (Client Quit)
-Oct 23 09:45:00 *	mgottschlag (~quassel@reactos/tester/phoenix64) has joined
-Oct 23 09:46:55 *	sameee has quit (Remote host closed the connection)
-Oct 23 09:47:46 *	duckinja has quit (Remote host closed the connection)
-Oct 23 09:47:55 *	romerocesar (~cesar@rrcs-173-198-73-254.west.biz.rr.com) has joined
-Oct 23 09:48:16 *	_ami_ has quit (Ping timeout: 276 seconds)
-Oct 23 09:49:23 *	cccyRegeaneWolfe has quit (Quit: Ping Timeout)
-Oct 23 09:50:28 *	Longhorn_ has quit (Ping timeout: 245 seconds)
-Oct 23 09:51:38 *	normalra (~normal@unaffiliated/normalra) has joined
-Oct 23 09:52:52 *	romerocesar has quit (Ping timeout: 260 seconds)
-Oct 23 09:53:06 *	mount_misery (~Adium@p5DD9D4DF.dip0.t-ipconnect.de) has joined
-Oct 23 09:53:13 *	mount_misery (~Adium@p5DD9D4DF.dip0.t-ipconnect.de) has left
-Oct 23 09:55:43 *	waveform (~waveform@waveform.plus.com) has joined
-Oct 23 09:56:02 *	Voop1 (~Voop@2601:87:8301:3703:f0db:48e4:858e:986e) has joined
-Oct 23 09:57:03 *	Voop has quit (Disconnected by services)
-Oct 23 09:57:10 *	Voop1 is now known as Voop
-Oct 23 09:59:04 *	damex (~damex@funtoo/dev/damex) has joined
-Oct 23 10:01:01 *	_ami_ (~ami@203.189.254.84) has joined
-Oct 23 10:01:08 *	ircuser-1 has quit (Quit: because)
-Oct 23 10:07:36 <SuperSeriousCat>	Anyone got the command to remount sd card as rw?
-Oct 23 10:08:41 *	romerocesar (~cesar@rrcs-173-198-73-254.west.biz.rr.com) has joined
-Oct 23 10:08:46 <mgottschlag>	I am sure that google does :)
-Oct 23 10:10:12 <mfa298>	 '-o remount' is the bit for mounting an already mounted device
-Oct 23 10:10:53 <mfa298>	although you might want to question first why its ro (is that how you mounted it originally or did it go ro for some other reason)
-Oct 23 10:11:05 *	fredp has quit (Read error: Connection reset by peer)
-Oct 23 10:11:22 *	fredp (~fredp@unaffiliated/fredp) has joined
-Oct 23 10:12:44 *	RoBo_V (~robo@27.255.215.102) has joined
-Oct 23 10:13:11 <SuperSeriousCat>	I tried 'mount -o remount,rw /' and it did not work
-Oct 23 10:13:24 *	romerocesar has quit (Ping timeout: 260 seconds)
-Oct 23 10:13:29 <SuperSeriousCat>	It is just temporarely on RasPlex as I change standard sshd_conf
-Oct 23 10:13:40 <mgottschlag>	what does dmesg say?
-Oct 23 10:13:53 *	joebobjoe (~joebobjoe@104-136-31-251.res.bhn.net) has joined
-Oct 23 10:14:25 <SuperSeriousCat>	No change
-Oct 23 10:14:26 <mfa298>	did you do that as root (i.e. stick sudo in front or su -)
-Oct 23 10:15:01 <SuperSeriousCat>	Logged in as root
-Oct 23 10:17:05 <BurtyB>	doesn't work as in you can't alter the filesystem or as in it doesn't show up as rw in "mount" ?
-Oct 23 10:17:47 *	LADataJunkie has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
-Oct 23 10:18:30 <SuperSeriousCat>	Tested this: 'mount / -o remount,rw' after this link https://sourceforge.net/p/rasplex/wiki/SD%20TV%20Output/ and still cant save a updated /etc/ssh/sshd_config
-Oct 23 10:18:36 *	joebobjoe has quit (Ping timeout: 260 seconds)
-Oct 23 10:18:53 <mgottschlag>	did the mount command say anything?
-Oct 23 10:18:57 <mgottschlag>	is there anything suspicious in dmesg?
-Oct 23 10:19:01 *	heller_ has quit (Read error: Connection reset by peer)
-Oct 23 10:19:18 <BurtyB>	I assume you've checked the perms on the file?
-Oct 23 10:19:25 <mgottschlag>	maybe paste the output of your commands and the output of dmesg somewhere
-Oct 23 10:20:20 <SuperSeriousCat>	dmesg dont change after I type any remount command
-Oct 23 10:20:43 <SuperSeriousCat>	rw-r-r root root on the file
-Oct 23 10:22:04 *	Foxandxss (~textual@angularjs/member/foxandxss) has joined
-Oct 23 10:23:53 <mgottschlag>	SuperSeriousCat: are there any other messages about that partition in dmesg?
-Oct 23 10:24:18 *	joebobjoe (~joebobjoe@104-136-31-251.res.bhn.net) has joined
-Oct 23 10:26:35 <SuperSeriousCat>	Not really. dmesg | grep / is 15ish lines with non related stuff
-Oct 23 10:27:36 <mgottschlag>	okay, then I think you'd need to show all your terminal output and the whole dmesg :D
-Oct 23 10:29:13 *	joebobjoe has quit (Ping timeout: 245 seconds)
-Oct 23 10:29:39 *	romerocesar (~cesar@rrcs-173-198-73-254.west.biz.rr.com) has joined
-Oct 23 10:31:42 <ShorTie>	doesn't mount need a device for the 1st argument, / is not a device
-Oct 23 10:32:32 *	brainzap (~brainzap@46-126-143-230.dynamic.hispeed.ch) has joined
-Oct 23 10:32:52 *	dh1tw (~dh1tw@15.red-83-46-61.dynamicip.rima-tde.net) has joined
-Oct 23 10:33:34 *	pintman has quit (Ping timeout: 256 seconds)
-Oct 23 10:33:46 <mgottschlag>	ShorTie: I don't think all mount commands do
-Oct 23 10:33:55 <mgottschlag>	remounting should work on mount points as well
-Oct 23 10:34:24 *	romerocesar has quit (Ping timeout: 260 seconds)
-Oct 23 10:34:27 *	joebobjoe (~joebobjoe@104-136-31-251.res.bhn.net) has joined
-Oct 23 10:34:28 <mgottschlag>	but there might be differences between different core util implementations (e.g. busybox vs gnu coreutils)
-Oct 23 10:36:13 *	Envil (~envil@x4e370b49.dyn.telefonica.de) has joined
-Oct 23 10:36:22 *	fredp has quit (Ping timeout: 276 seconds)
-Oct 23 10:37:32 *	defsdoor (~andy@cpc35-sutt4-2-0-cust184.19-1.cable.virginm.net) has joined
-Oct 23 10:39:06 *	joebobjoe has quit (Ping timeout: 250 seconds)
-Oct 23 10:40:29 *	srai (~chatzilla@p3E9E4892.dip0.t-ipconnect.de) has joined
-Oct 23 10:41:16 *	qdk has quit (Ping timeout: 250 seconds)
-Oct 23 10:42:01 <SuperSeriousCat>	There was a way to disable password and enable keys on the UI, so mounting stuff is no problem anymore
-Oct 23 10:42:37 <SuperSeriousCat>	Problem is coping id_rsa.pub line into .ssh/authorized_keys dont let me logon
-Oct 23 10:42:54 *	damme (~damme@166.212.164.82.customer.cdi.no) has joined
-Oct 23 10:45:41 <SuperSeriousCat>	nvm, its fixed :D Mousepad wich I copyed from had it in 3 different lines instead of 1 long. :)
-Oct 23 10:47:34 *	Soaked (~Soaked@unaffiliated/soaked) has joined
-Oct 23 10:48:59 *	GerhardSchr__ has quit (Ping timeout: 256 seconds)
-Oct 23 10:50:15 *	romerocesar (~cesar@rrcs-173-198-73-254.west.biz.rr.com) has joined
-Oct 23 10:50:15 *	cave has quit (Read error: Connection reset by peer)
-Oct 23 10:50:26 *	cave (~various@178.112.14.114.wireless.dyn.drei.com) has joined
-Oct 23 10:51:54 *	Soaked has quit (Client Quit)
-Oct 23 10:54:56 *	romerocesar has quit (Ping timeout: 260 seconds)
-Oct 23 11:03:12 *	chithead has quit (Ping timeout: 250 seconds)
-Oct 23 11:03:30 *	chithead (~chithead@gentoo/developer/chithanh) has joined
-Oct 23 11:07:25 *	damme has quit (Ping timeout: 260 seconds)
-Oct 23 11:08:07 *	mgottschlag2 (~quassel@reactos/tester/phoenix64) has joined
-Oct 23 11:09:21 *	Disconnected (Connection reset by peer)
-**** ENDING LOGGING AT Sun Oct 23 11:09:21 2016
-
-**** BEGIN LOGGING AT Sun Oct 23 11:10:08 2016
-
-Oct 23 11:10:08 *	Now talking on #raspberrypi
-Oct 23 11:10:09 *	Topic for #raspberrypi is: Unofficial RaspberryPi IRC channel but "Blessed" by the Foundation as the ONE channel. | Logs: http://srv.datagutt1.com | Rules: https://goo.gl/h5qPhz
-Oct 23 11:10:09 *	Topic for #raspberrypi set by gordonDrogon!~gordon@2001:4d48:ad51:8901::2 (Mon Mar  7 17:07:35 2016)
-Oct 23 11:10:44 *	mgottschlag has quit (Ping timeout: 250 seconds)
-Oct 23 11:11:02 *	romerocesar (~cesar@rrcs-173-198-73-254.west.biz.rr.com) has joined
-Oct 23 11:12:31 *	qdk (~qdk@0190102301.0.fullrate.ninja) has joined
-Oct 23 11:13:47 *	Zparx (~Fox@dslb-088-071-003-203.088.071.pools.vodafone-ip.de) has joined
-Oct 23 11:15:56 *	romerocesar has quit (Ping timeout: 260 seconds)
-Oct 23 11:23:44 *	srai has quit (Ping timeout: 250 seconds)
-Oct 23 11:25:43 *	sgflt (~sgflt@p54B21CC7.dip0.t-ipconnect.de) has joined
-Oct 23 11:28:46 *	bedah (~bedah@host-091-097-174-156.ewe-ip-backbone.de) has joined
-Oct 23 11:29:30 *	spybert has quit (Ping timeout: 252 seconds)
-Oct 23 11:30:34 *	sandeepkr (~sandeepkr@103.255.234.251) has joined
-Oct 23 11:31:51 *	romerocesar (~cesar@rrcs-173-198-73-254.west.biz.rr.com) has joined
-Oct 23 11:33:00 *	ams__ (uid48118@gateway/web/irccloud.com/x-tzwgthwuomdxihhg) has joined
-Oct 23 11:35:25 *	Foxandxss has quit (Read error: Connection reset by peer)
-Oct 23 11:36:28 *	romerocesar has quit (Ping timeout: 260 seconds)
-Oct 23 11:43:51 *	rcowie (02dd9a68@gateway/web/cgi-irc/kiwiirc.com/ip.2.221.154.104) has joined
-Oct 23 11:45:47 *	rcowie has quit (Client Quit)
-Oct 23 11:52:40 *	romerocesar (~cesar@rrcs-173-198-73-254.west.biz.rr.com) has joined
-Oct 23 11:53:04 *	cave has quit (Ping timeout: 276 seconds)
-Oct 23 11:53:28 *	cave (~various@178.112.14.114.wireless.dyn.drei.com) has joined
-Oct 23 11:55:56 *	sgflt has quit (Quit: sgflt)
-Oct 23 11:57:28 *	romerocesar has quit (Ping timeout: 260 seconds)
-Oct 23 12:03:55 *	robb_nl (~robb_nl@ip-80-236-252-29.dsl.scarlet.be) has joined
-Oct 23 12:11:21 *	SopaXorzTaker has quit (Quit: Leaving)
-Oct 23 12:12:40 *	Feedz (~Feedz@unaffiliated/feedz) has joined
-Oct 23 12:13:23 *	romerocesar (~cesar@rrcs-173-198-73-254.west.biz.rr.com) has joined
-Oct 23 12:15:03 *	purplex88 has quit (Read error: Connection reset by peer)
-Oct 23 12:15:03 *	dmr has quit (Ping timeout: 245 seconds)
-Oct 23 12:15:25 *	purplex88 (~purplex88@unaffiliated/purplex88) has joined
-Oct 23 12:16:06 *	vrmxm (~weechat@pool-96-252-112-221.bstnma.fios.verizon.net) has joined
-Oct 23 12:18:00 *	romerocesar has quit (Ping timeout: 260 seconds)
-Oct 23 12:29:14 *	TheCubeLord (~darkness@unaffiliated/thecubelord) has joined
-Oct 23 12:29:25 *	dmr (~dmr@fsf/member/dmr) has joined
-Oct 23 12:29:39 <TheCubeLord>	is there a tor-browser on raspberrypi?
-Oct 23 12:30:08 *	robb_nl has quit (Ping timeout: 260 seconds)
-Oct 23 12:31:29 *	admiralspark_ has quit (Read error: Connection reset by peer)
-Oct 23 12:34:09 *	romerocesar (~cesar@rrcs-173-198-73-254.west.biz.rr.com) has joined
-Oct 23 12:39:00 *	romerocesar has quit (Ping timeout: 260 seconds)
-Oct 23 12:39:35 <TheCubeLord>	anyone?
-Oct 23 12:39:55 *	joebobjoe (~joebobjoe@104-136-31-251.res.bhn.net) has joined
-Oct 23 12:40:30 *	_ami_ has quit (Remote host closed the connection)
-Oct 23 12:44:37 *	joebobjoe has quit (Ping timeout: 244 seconds)
-Oct 23 12:47:23 *	teepee_ (~teepee@unaffiliated/teepee) has joined
-Oct 23 12:49:16 *	teepee has quit (Ping timeout: 260 seconds)
-Oct 23 12:49:16 *	teepee_ is now known as teepee
-Oct 23 12:50:08 <DWKnight>	TheCubeLord: https://trac.torproject.org/projects/tor/ticket/12631
-Oct 23 12:50:50 *	genmort (~genmort@89-27-86-241.bb.dnainternet.fi) has joined
-Oct 23 12:52:13 *	Hix (~hix@97e0a657.skybroadband.com) has joined
-Oct 23 12:53:20 *	srai (~chatzilla@p3E9E4892.dip0.t-ipconnect.de) has joined
-Oct 23 12:54:30 *	jediraster (~jediraste@cpc94276-ward11-2-0-cust323.10-2.cable.virginm.net) has joined
-Oct 23 12:55:57 *	lok0 has quit (Ping timeout: 265 seconds)
-Oct 23 12:56:14 *	TheCubeLord has quit (Quit: F*** This S*** Im out!)
-Oct 23 12:57:01 *	Zeno` (~Zeno````@unaffiliated/z3n0) has joined
-Oct 23 12:58:30 *	Keanu73 (~Keanu73@unaffiliated/keanu73) has joined
-Oct 23 13:01:41 *	ThePendulum (~ThePendul@541990DC.cm-5-2c.dynamic.ziggo.nl) has joined
-Oct 23 13:01:55 *	mgottschlag2 has quit (Read error: Connection reset by peer)
-Oct 23 13:02:26 *	mgottschlag (~quassel@reactos/tester/phoenix64) has joined
-Oct 23 13:04:39 *	robb_nl (~robb_nl@ip-80-236-252-29.dsl.scarlet.be) has joined
-Oct 23 13:04:49 *	Hix has quit (Read error: No route to host)
-Oct 23 13:04:56 *	Feedz has quit (Remote host closed the connection)
-Oct 23 13:06:06 *	ThePendulum (~ThePendul@541990DC.cm-5-2c.dynamic.ziggo.nl) has left
-Oct 23 13:06:38 *	my123_ (~my123@unaffiliated/kill--9-1/x-8776976) has joined
-Oct 23 13:07:02 *	my123 has quit (Ping timeout: 252 seconds)
-Oct 23 13:10:20 *	Taylor has quit (Ping timeout: 252 seconds)
-Oct 23 13:11:23 *	ThePendulum (~ThePendul@541990DC.cm-5-2c.dynamic.ziggo.nl) has joined
-Oct 23 13:12:09 *	my123_ is now known as my123
-Oct 23 13:12:49 *	rcowie (02dd9a68@gateway/web/cgi-irc/kiwiirc.com/ip.2.221.154.104) has joined
-Oct 23 13:13:44 *	phinxy (~tehhhd@unaffiliated/phinxy) has joined
-Oct 23 13:15:45 *	romerocesar (~cesar@rrcs-173-198-73-254.west.biz.rr.com) has joined
-Oct 23 13:15:49 *	rcowie has quit (Client Quit)
-Oct 23 13:18:22 *	Wolfie has quit (Quit: ZNC 1.7.x - http://znc.in)
-Oct 23 13:18:37 *	DrCode has quit (Read error: Connection reset by peer)
-Oct 23 13:18:52 *	Wolfie (wolfie@wolfietech.ca) has joined
-Oct 23 13:20:32 *	romerocesar has quit (Ping timeout: 260 seconds)
-Oct 23 13:22:52 *	SopaXorzTaker (~SopaXorzT@unaffiliated/sopaxorztaker) has joined
-Oct 23 13:23:24 *	mgottschlag2 (~quassel@reactos/tester/phoenix64) has joined
-Oct 23 13:23:54 *	joebobjoe (~joebobjoe@104-136-31-251.res.bhn.net) has joined
-Oct 23 13:25:24 *	mgottschlag has quit (Ping timeout: 256 seconds)
-Oct 23 13:29:01 *	joebobjoe has quit (Ping timeout: 260 seconds)
-Oct 23 13:29:52 *	Gathis (~TheBlack@unaffiliated/gathis) has joined
-Oct 23 13:30:30 *	Viper168 has quit (Ping timeout: 252 seconds)
-Oct 23 13:33:27 *	Hix (~hix@97e0a657.skybroadband.com) has joined
-Oct 23 13:34:51 *	lohfu (~lohfu@37.139.15.18) has joined
-Oct 23 13:37:07 *	DrCode (~DrCode@5.28.134.3) has joined
-Oct 23 13:38:07 *	Viper168 (~Viper@unaffiliated/viper168) has joined
-Oct 23 13:38:12 *	Hix has quit (Ping timeout: 252 seconds)
-Oct 23 13:52:25 *	darksim (~quassel@78-70-247-31-no186.tbcn.telia.com) has joined
-Oct 23 13:54:51 *	sdothum (~sdothum@108.63.186.29) has joined
-Oct 23 13:57:03 *	romerocesar (~cesar@rrcs-173-198-73-254.west.biz.rr.com) has joined
-Oct 23 14:00:20 *	steri has quit (Read error: Connection reset by peer)
-Oct 23 14:00:34 *	g105b (uid148156@gateway/web/irccloud.com/x-zlnlmrtoihlphydv) has joined
-**** BEGIN LOGGING AT Mon Oct 24 12:41:58 2016
-
-Oct 24 12:41:58 *	Now talking on #raspberrypi
-Oct 24 12:41:58 *	Topic for #raspberrypi is: Unofficial RaspberryPi IRC channel but "Blessed" by the Foundation as the ONE channel. | Logs: http://srv.datagutt1.com | Rules: https://goo.gl/h5qPhz
-Oct 24 12:41:58 *	Topic for #raspberrypi set by gordonDrogon!~gordon@2001:4d48:ad51:8901::2 (Mon Mar  7 17:07:35 2016)
-Oct 24 09:30:13 <Habbie>	does anyone know why there is no pulseview package in raspbian?
-Oct 24 10:47:21 <thearduinoguy>	Raspberry Jam - 10th December - Sittingbourne
-Oct 24 10:50:04 <gordonDrogon>	a bit far...
-Oct 24 10:54:32 <Drzacek>	anywhere near western germany??
-Oct 24 10:56:00 <Drzacek>	hmmm over the sea, not gonna make it
-Oct 24 10:57:00 <thearduinoguy>	Nah Finland is one of our closest neighbours.
-Oct 24 10:57:24 <thearduinoguy>	So is France.
-Oct 24 10:57:31 <thearduinoguy>	You could easily pop over ;)
-Oct 24 11:01:11 <Drzacek>	nah
-Oct 24 11:01:27 <Drzacek>	I'll just get strawberry jam and stay home
-Oct 24 11:06:28 <jamesaxl>	for controlling 4 DC motors, should I use 2 L293D or just one ? or something better?
-Oct 24 11:18:36 <pksato>	jamesaxl: you need rotation inversion?
-Oct 24 11:19:15 <Lonefish>	http://imgur.com/a/ZI8wy That's... different..
-Oct 24 11:20:57 <Drzacek>	will the next version be 0.8?
-Oct 24 11:21:13 <Lonefish>	I sure hope so!
-Oct 24 11:22:54 <Lonefish>	http://imgur.com/a/an3Sq
-Oct 24 11:23:02 <Lonefish>	That's also an option
-Oct 24 11:38:52 <brainzap>	hello humans
-Oct 24 11:38:56 <oq>	hi
-Oct 24 11:39:21 <Armand>	#notallhumans
-Oct 24 11:41:47 <Lonefish>	RACISM! DISCRIMINATION!
-Oct 24 11:43:07 <brainzap>	what are these barcodes and scars on your arm?
-Oct 24 11:43:47 <Drzacek>	brainzap, you don't ask such questions, you antisemite!
-Oct 24 11:43:56 <oq>	brainzap: on the SoC?
-Oct 24 11:44:12 <Armand>	Lonefish: /j ##safespace
-Oct 24 11:45:17 <Drzacek>	theres no such thing
-Oct 24 11:46:49 <Armand>	Indeed.
-Oct 24 11:48:55 <Lonefish>	liar :(
-Oct 24 11:50:13 <Armand>	muhahaha?
-Oct 24 11:50:35 <Lonefish>	Armand not nice. (trying my best battery imitation)
-Oct 24 11:51:20 <Armand>	hehe
-Oct 24 11:51:30 <Armand>	I never asserted that I was "nice".
-Oct 24 11:52:52 <Lonefish>	:(
-Oct 24 11:52:56 <Lonefish>	me sad panda now
-Oct 24 12:18:52 <jamesaxl>	pksato, yep
-Oct 24 12:19:09 <jamesaxl>	I  you need rotation inversion
-Oct 24 12:22:15 <pksato>	jamesaxl: you need two L293D.
-Oct 24 12:25:19 <jamesaxl>	pksato, I think for drone with 4 brushful motors, they use also two  L293D
-Oct 24 12:32:21 <RoBo_V>	i want to configure rpi as wireless ap and wifi client at same time, do i have to look for speicifc wifi dongle.
-Oct 24 12:34:31 <Armand>	RoBo_V: I believe you'd need two adapters..
-Oct 24 12:34:56 <RoBo_V>	Armand: im planning on using one and do routing.
-Oct 24 12:35:12 <Armand>	Yeah, it's doable.. like a bridge mode..
-Oct 24 12:35:17 <Armand>	But, I have no idea how. :P
-Oct 24 12:36:08 <RoBo_V>	because as I read they say there are only some wifi chips that actually support virtual interface.
-Oct 24 12:38:56 <Drzacek>	now who is this peer guy and why is he resetting my connections! :[
-Oct 24 12:39:51 <Armand>	He's Santa.. and he does it because you touch yourself at night
-Oct 24 12:40:13 <binaryhermit-chi>	that's not really appropriate :P (not that I care)
-Oct 24 12:40:24 <Armand>	Couldn't be helped. :P
-Oct 24 12:40:37 <Armand>	I'll keep it as PG as I can though.. lol
-Oct 24 12:41:00 <binaryhermit-chi>	lol
-Oct 24 12:44:06 <SirLagz>	RoBo_V: find one that does 2.4ghz and 5ghz and use one for ap and one for client
-Oct 24 12:45:04 <RoBo_V>	SirLagz: if i use 2.4ghz only, bandwidth gets half. Thats it right ?
-Oct 24 12:45:28 <SirLagz>	RoBo_V: depends on the wifi adapter. I haven't found one that will do AP and client both on the 2.4ghz band
-Oct 24 12:48:51 *	TheSin has quit (Quit: Client exiting)
-Oct 24 12:51:05 *	Hydrogen (~hydrogen@amarok/developer/hydrogen) has joined
-Oct 24 12:51:35 *	normalra (~normal@unaffiliated/normalra) has joined
-Oct 24 12:52:03 <Drzacek>	:(
-Oct 24 12:54:49 *	Voop (~Voop@2601:87:8301:3703:f0db:48e4:858e:986e) has joined
-Oct 24 12:56:10 *	Voop has quit (Read error: Connection reset by peer)
-Oct 24 12:56:36 *	Voop (~Voop@2601:87:8301:3703:f0db:48e4:858e:986e) has joined
-Oct 24 12:56:55 *	mike_t has quit (Remote host closed the connection)
-Oct 24 12:57:10 *	Voop has quit (Read error: Connection reset by peer)
-Oct 24 12:57:36 *	Voop (~Voop@2601:87:8301:3703:f0db:48e4:858e:986e) has joined
-Oct 24 12:57:58 *	Voop has quit (Read error: Connection reset by peer)
-Oct 24 12:58:45 *	Voop (~Voop@2601:87:8301:3703:f0db:48e4:858e:986e) has joined
-Oct 24 13:08:21 *	ScrumpyJack has quit (Quit: leaving)
-Oct 24 13:09:17 *	ScrumpyJack (~ScrumpyJa@st.ilet.to) has joined
-Oct 24 13:13:20 *	jamesaxl has quit (Remote host closed the connection)
-Oct 24 13:13:39 *	Hydrogen has quit (Remote host closed the connection)
-Oct 24 13:17:11 *	romerocesar (~cesar@rrcs-173-198-73-254.west.biz.rr.com) has joined
-Oct 24 13:17:21 *	mpmc has quit (Ping timeout: 256 seconds)
-Oct 24 13:18:13 *	joebobjoe (~joebobjoe@104-136-31-251.res.bhn.net) has joined
-Oct 24 13:18:20 *	SopaXorzTaker has quit (Remote host closed the connection)
-Oct 24 13:22:04 *	romerocesar has quit (Ping timeout: 260 seconds)
-Oct 24 13:23:04 *	joebobjoe has quit (Ping timeout: 260 seconds)
-Oct 24 13:23:27 *	Lorduncan (~Thunderbi@193.125.143.99) has joined
-Oct 24 13:23:40 *	mpmc (~mpmc@unaffiliated/mpmc) has joined
-Oct 24 13:23:48 *	NedScott has quit (Quit: quit)
-Oct 24 13:24:58 *	NedScott (~NedScott@unaffiliated/nedscott) has joined
-Oct 24 13:26:07 *	SopaXorzTaker (~SopaXorzT@unaffiliated/sopaxorztaker) has joined
-Oct 24 13:28:21 *	joebobjoe (~joebobjoe@104-136-31-251.res.bhn.net) has joined
-Oct 24 13:28:28 *	seeit has quit (Remote host closed the connection)
-Oct 24 13:28:29 *	mythos has quit (Ping timeout: 244 seconds)
-Oct 24 13:29:03 *	seeit (~seeit@cpe-67-11-185-211.satx.res.rr.com) has joined
-Oct 24 13:31:44 *	sdothum (~sdothum@108.63.186.29) has joined
-Oct 24 13:31:58 <oq>	RoBo_V: 2.4ghz and 5ghz are the frequencies, it's nothing to do with bandwidth
-Oct 24 13:32:25 <oq>	both have their downfalls and merits
-Oct 24 13:33:16 *	joebobjoe has quit (Ping timeout: 260 seconds)
-Oct 24 13:33:22 <RoBo_V>	I mean to say that if on 2.4ghz single freq we do both received and transmit, bw will be halved.
-Oct 24 13:33:23 *	seeit has quit (Ping timeout: 245 seconds)
-Oct 24 13:33:25 <oq>	2.4ghz is better at penetrating walls and has more device support, but its super popular it so there's a lot of noise and there's less channels available
-Oct 24 13:33:44 *	duckinja has quit (Ping timeout: 260 seconds)
-Oct 24 13:33:50 <Kryczek>	oq: he's referring to some WiFi modes where both bands are used for double the bandwidth
-Oct 24 13:34:31 <RoBo_V>	for ex as wrieless repeater mode.
-Oct 24 13:35:21 <DWKnight>	and with the pi, you very quickly hit USB root hub bandwidth limits if you use one that is both compatible with the pi and capable of that function
-Oct 24 13:36:12 *	nx5_off (~nap@unaffiliated/nx5off/x-000000001) has joined
-Oct 24 13:36:24 <DWKnight>	and it's pretty tricky to use a single wireless adapter as a repeater, even if it's a dual band one
-Oct 24 13:36:42 *	Mr_Sheesh has quit (Disconnected by services)
-Oct 24 13:36:49 *	ozzzy__ (~ozzzy@unaffiliated/ozzzy) has joined
-Oct 24 13:37:15 *	seosepa (~sepa@aperture.GLaDOS.info) has joined
-Oct 24 13:37:19 *	Mr_Sheesh (~mr_s@unaffiliated/mr-sheesh/x-0757054) has joined
-Oct 24 13:37:26 <RoBo_V>	DWKnight: what im trying to do is not as repeater but using single 2.4Ghz wifi dongle to use as wirless AP and wifi client at same time.
-Oct 24 13:38:09 *	monsieur_h2 (~Thunderbi@194.125-14-84.ripe.coltfrance.com) has joined
-Oct 24 13:39:03 <DWKnight>	that's a repeater
-Oct 24 13:39:20 <pwillard>	^^
-Oct 24 13:40:15 *	CoJaBo_ (~aztec@unaffiliated/cojabo) has joined
-Oct 24 13:40:49 *	AM has quit (Disconnected by services)
-Oct 24 13:41:24 *	Beberg2 (~Beberg@c-76-102-102-189.hsd1.ca.comcast.net) has joined
-Oct 24 13:42:04 *	pitastrudl_ (~quassel@unaffiliated/pitastrudl) has joined
-Oct 24 13:42:35 *	fengshaun_ (~fengshaun@unaffiliated/fengshaun) has joined
-Oct 24 13:42:50 <SirLagz>	DWKnight: not neccesarily...you could have a AP as a firewalled off network by itself while still using the wifi client to do something else
-Oct 24 13:43:40 *	Jangal (~Janhouse@torch.id.lv) has joined
-Oct 24 13:43:43 *	Deruyter_ (~Deruyter@unaffiliated/deruyter) has joined
-Oct 24 13:43:48 *	ghostlight has quit (Ping timeout: 245 seconds)
-Oct 24 13:44:02 *	nickd25_ (~nickd25@unaffiliated/nickd25) has joined
-Oct 24 13:44:24 *	phreakocious_ (~phreakoci@irreverent.phreakocious.net) has joined
-Oct 24 13:44:41 *	lus_ (~lus@unaffiliated/lus) has joined
-Oct 24 13:44:49 *	b4x (~b4x@keksec.org) has joined
-Oct 24 13:45:20 *	tommy`` has quit (*.net *.split)
-Oct 24 13:45:21 *	grummund has quit (*.net *.split)
-Oct 24 13:45:21 *	Deruyter has quit (*.net *.split)
-Oct 24 13:45:21 *	pm001 has quit (*.net *.split)
-Oct 24 13:45:21 *	turtlehat has quit (*.net *.split)
-Oct 24 13:45:21 *	Kryczek has quit (*.net *.split)
-Oct 24 13:45:21 *	xSon1q has quit (*.net *.split)
-Oct 24 13:45:21 *	monsieur_h has quit (*.net *.split)
-Oct 24 13:45:21 *	KaliLinuxGR has quit (*.net *.split)
-Oct 24 13:45:21 *	cerbmuc has quit (*.net *.split)
-Oct 24 13:45:21 *	oldtopman has quit (*.net *.split)
-Oct 24 13:45:21 *	sepa has quit (*.net *.split)
-Oct 24 13:45:21 *	fengshaun has quit (*.net *.split)
-Oct 24 13:45:22 *	Albori has quit (*.net *.split)
-Oct 24 13:45:22 *	nid0 has quit (*.net *.split)
-Oct 24 13:45:22 *	pitastrudl has quit (*.net *.split)
-Oct 24 13:45:22 *	djhworld has quit (*.net *.split)
-Oct 24 13:45:22 *	blahdodo has quit (*.net *.split)
-Oct 24 13:45:22 *	Janhouse has quit (*.net *.split)
-Oct 24 13:45:22 *	arunpyasi has quit (*.net *.split)
-Oct 24 13:45:22 *	tapout has quit (*.net *.split)
-Oct 24 13:45:22 *	up2late has quit (*.net *.split)
-Oct 24 13:45:22 *	nyt has quit (*.net *.split)
-Oct 24 13:45:22 *	nerdboy has quit (*.net *.split)
-Oct 24 13:45:22 *	nx5 has quit (*.net *.split)
-Oct 24 13:45:22 *	CoJaBo has quit (*.net *.split)
-Oct 24 13:45:22 *	Beberg has quit (*.net *.split)
-Oct 24 13:45:22 *	lus has quit (*.net *.split)
-Oct 24 13:45:22 *	ozzzy_ has quit (*.net *.split)
-Oct 24 13:45:22 *	djazz has quit (*.net *.split)
-Oct 24 13:45:23 *	Quindo has quit (*.net *.split)
-Oct 24 13:45:23 *	Xark has quit (*.net *.split)
-Oct 24 13:45:24 *	roger` has quit (*.net *.split)
-Oct 24 13:45:24 *	_nexxus_ has quit (*.net *.split)
-Oct 24 13:45:24 *	nickd25 has quit (*.net *.split)
-Oct 24 13:45:24 *	Dave_MMP has quit (*.net *.split)
-Oct 24 13:45:24 *	TReK has quit (*.net *.split)
-Oct 24 13:45:25 *	phreakocious has quit (*.net *.split)
-Oct 24 13:45:25 *	Stanto has quit (*.net *.split)
-Oct 24 13:45:25 *	Bryanstein has quit (*.net *.split)
-Oct 24 13:45:25 *	gardar has quit (*.net *.split)
-Oct 24 13:45:25 *	Ben64 has quit (*.net *.split)
-Oct 24 13:45:25 *	acfrazier has quit (*.net *.split)
-Oct 24 13:45:26 *	parazyd has quit (*.net *.split)
-Oct 24 13:45:26 *	Jangal is now known as Janhouse
-Oct 24 13:45:26 *	lus_ is now known as lus
-Oct 24 13:45:28 *	Deruyter_ is now known as Deruyter
-Oct 24 13:45:28 *	monsieur_h2 is now known as monsieur_h1
-Oct 24 13:45:35 *	_nexxus_ (~bwg@leon.generalamalgamated.com) has joined
-Oct 24 13:45:47 *	djazz (~djazz@h-155-218.a444.priv.bahnhof.se) has joined
-Oct 24 13:45:47 *	blahdodo (~blahdodo@69.172.164.248) has joined
-Oct 24 13:45:50 *	tommy`` (tommy@95.232.3.73) has joined
-Oct 24 13:45:52 <DWKnight>	perhaps, but I'm pretty sure that in order to do that properly on a pi, you'd need to drop the extra $10 on the second adapter
-Oct 24 13:46:04 *	acfrazier (~acfrazier@opensn0w/developer/acfrazier) has joined
-Oct 24 13:46:06 *	nx5_off is now known as nx5
-Oct 24 13:46:16 <RoBo_V>	SirLagz: exactly
-Oct 24 13:47:13 *	Kryczek (~kryczek@about/security/staff/Kryczek) has joined
-Oct 24 13:47:24 <RoBo_V>	there is inbuilt, why extra $10
-Oct 24 13:47:34 *	arunpyasi (arun@gateway/shell/hiyabnc/x-rztvorsoutakirsy) has joined
-Oct 24 13:47:36 <pksato>	rpi3 wifi is capable for do client and ap at same time.
-Oct 24 13:48:50 *	ghostlight (~ghostligh@ec2-54-187-97-144.us-west-2.compute.amazonaws.com) has joined
-Oct 24 13:49:18 *	devster31 has quit (Ping timeout: 250 seconds)
-Oct 24 13:49:31 *	Stanto_ (~Stanto@li285-77.members.linode.com) has joined
-Oct 24 13:49:32 *	Stanto_ is now known as Stanto
-Oct 24 13:49:41 *	nid0 (~nidO@82-69-13-250.dsl.in-addr.zen.co.uk) has joined
-Oct 24 13:49:44 *	funnel has quit (Ping timeout: 250 seconds)
-Oct 24 13:50:25 <oq>	RoBo_V: the bit in wifi is crap
-Oct 24 13:50:35 <oq>	it's 72mbit n, and there's no aerial
-Oct 24 13:50:44 <oq>	*built in
-Oct 24 13:50:47 *	ozzzy__ is now known as ozzzy
-Oct 24 13:51:01 *	teclo- has quit (Ping timeout: 260 seconds)
-Oct 24 13:51:15 *	Bryanstein (~Bryanstei@shellium/admin/bryanstein) has joined
-Oct 24 13:51:33 *	funnel (~funnel@unaffiliated/espiral) has joined
-Oct 24 13:51:41 *	harish (~harish@103.252.200.237) has joined
-Oct 24 13:51:48 *	oldtopman (~oldtopman@unaffiliated/oldtopman) has joined
-Oct 24 13:51:49 *	cerbmuc (~pi@ipbcc3d003.dynamic.kabel-deutschland.de) has joined
-Oct 24 13:51:59 *	KaliLinuxGR (~alexandro@unaffiliated/kalilinuxgr) has joined
-Oct 24 13:52:04 *	Milhouse (~Milhouse@kodi/staff/milhouse) has joined
-Oct 24 13:52:21 *	xSon1q (~xSon1q@c-73-179-161-145.hsd1.fl.comcast.net) has joined
-Oct 24 13:52:24 *	Albori (~Albori@67-43-245-188.fidnet.com) has joined
-Oct 24 13:52:27 *	teclo- (42@unaffiliated/teclo) has joined
-Oct 24 13:52:53 *	Ben64 (~Ben64@unaffiliated/ben64) has joined
-Oct 24 13:53:22 *	romerocesar (~cesar@rrcs-173-198-73-254.west.biz.rr.com) has joined
-Oct 24 13:55:44 *	devster31 (~devsterkn@2001:41d0:1:a3af::1) has joined
-Oct 24 13:56:23 *	Wolfie has quit (Quit: ZNC 1.7.x - http://znc.in)
-Oct 24 13:56:39 *	utack has quit (Read error: Connection reset by peer)
-Oct 24 13:56:48 *	TReK (~UnFaQ@unaffiliated/trek) has joined
-Oct 24 13:56:51 *	utack (~utack@2a02:810a:8380:8e50:d63d:7eff:fedb:b2eb) has joined
-Oct 24 13:56:59 *	nyt (nyt@countercultured.net) has joined
-Oct 24 13:57:01 <RoBo_V>	oq: hmm ok, can try and see if it solves the purpose or not.
-Oct 24 13:57:15 <RoBo_V>	otherwise will buy external one.
-Oct 24 13:57:21 *	tapout (~tapout@unaffiliated/tapout) has joined
-Oct 24 13:57:22 *	NedScott has quit (Quit: quit)
-Oct 24 13:57:34 *	nyt is now known as Guest84386
-Oct 24 13:57:43 *	mythos (~mythos@unaffiliated/mythos) has joined
-Oct 24 13:57:49 *	Wolfie (wolfie@wolfietech.ca) has joined
-Oct 24 13:58:00 *	romerocesar has quit (Ping timeout: 260 seconds)
-Oct 24 13:58:25 *	NedScott (~NedScott@unaffiliated/nedscott) has joined
-Oct 24 13:59:56 *	jakent (~john@62.sub-174-205-7.myvzw.com) has joined
-Oct 24 14:00:28 *	Lorduncan has quit (Quit: Lorduncan)
-Oct 24 14:00:43 <pwillard>	well, to be fair... I've not found wifi to be horrible on the rpi3, but then I'm only 3 Meters from the AP.
-Oct 24 14:04:05 <RoBo_V>	is that so, never tried that and my rpi is sitting right next to router (<1m)
-Oct 24 14:04:36 *	robb_nl (~robb_nl@ip-80-236-252-43.dsl.scarlet.be) has joined
-Oct 24 14:04:39 <DWKnight>	I've recently gone what some would call a bit overboard when it comes to APs in my house
-Oct 24 14:04:41 <SirLagz>	I've never even used the Pi3's wifi
-Oct 24 14:04:53 <SirLagz>	I've done the whole Pi as an AP thing back when the Pi first came out though
-Oct 24 14:05:13 <DWKnight>	I did openwrt on a pi for giggles earlier the year
-Oct 24 14:05:24 <SirLagz>	I just built my own Pi Router
-Oct 24 14:05:44 <SirLagz>	worked well until I tried to torrent over the Pi Router...that would crash the Pi lol
-Oct 24 14:05:59 *	jakent has quit (Ping timeout: 256 seconds)
-Oct 24 14:06:33 *	teclo- has quit (Ping timeout: 256 seconds)
-Oct 24 14:06:47 <Voop>	my pi2 is set up to take a wifi signal than rebroadcast it under a different ssid
-Oct 24 14:06:51 *	Viper168 has quit (Ping timeout: 265 seconds)
-Oct 24 14:07:10 *	cultavix (~cultavix@unaffiliated/cultavix) has joined
-Oct 24 14:07:12 *	sphenxes01 (~sphenxes@91-115-168-151.adsl.highway.telekom.at) has joined
-Oct 24 14:07:15 <SirLagz>	Voop: with a single wifi adapter?
-Oct 24 14:07:23 <Voop>	yes
-Oct 24 14:07:34 <SirLagz>	Voop: what adapter?
-Oct 24 14:07:42 <Voop>	i dont think it can be done with the pi3s internal wifi
-Oct 24 14:07:44 *	cultavix has quit (Max SendQ exceeded)
-Oct 24 14:07:45 <Voop>	one sec ill google it
-Oct 24 14:07:54 *	cultavix (~cultavix@unaffiliated/cultavix) has joined
-Oct 24 14:08:02 *	teclo- (42@unaffiliated/teclo) has joined
-Oct 24 14:08:08 *	Voovode has quit (Read error: Connection reset by peer)
-Oct 24 14:08:46 <Voop>	https://www.amazon.com/TP-Link-Wireless-External-Supports-TL-WN722N/dp/B002SZEOLG/ref=sr_1_12?s=pc&ie=UTF8&qid=1477314508&sr=1-12&keywords=wifi+adapter
-Oct 24 14:09:17 <SirLagz>	Voop: ah cool. Might have to pick up one of these for myself
-Oct 24 14:10:57 *	sphenxes has quit (Ping timeout: 260 seconds)
-Oct 24 14:12:37 <Drzacek>	uuuu expensive
-Oct 24 14:13:33 <DWKnight>	not really
-Oct 24 14:13:45 <SirLagz>	it's not cheap either though lol
-Oct 24 14:13:59 <shiftplusone>	You generally get what you pay for. Cheap wifi dongles can have worse range and eat up CPU cycles.
-Oct 24 14:14:10 *	Viper168 (~Viper@unaffiliated/viper168) has joined
-Oct 24 14:14:19 <DWKnight>	the edimax EW-7811Un is one of the major go-to dongles
-Oct 24 14:14:47 <DWKnight>	https://amzn.com/B003MTTJOY
-Oct 24 14:15:25 <shiftplusone>	It's pretty good
-Oct 24 14:15:52 <DWKnight>	the tp-link one gains a good chunk of value with the antenna
-Oct 24 14:16:24 <SirLagz>	DWKnight: there are cheaper ones with an antenna though
-Oct 24 14:17:17 <ozzzy>	 $12 is expensive???
-Oct 24 14:17:48 *	pintman (~Marco@p4FE2E06B.dip0.t-ipconnect.de) has joined
-Oct 24 14:17:53 *	robb_nl has quit (Ping timeout: 256 seconds)
-Oct 24 14:17:58 *	sdothum has quit (Ping timeout: 265 seconds)
-Oct 24 14:18:26 *	rigel3 has quit (Ping timeout: 252 seconds)
-Oct 24 14:18:34 <SirLagz>	ozzzy: depends on where you are :P
-Oct 24 14:19:23 <ozzzy>	if you have internet... you're nowhere where $12 is expensive
-Oct 24 14:20:16 *	shantorn has quit (Ping timeout: 252 seconds)
-Oct 24 14:20:47 *	TheSin (~TheSin@gateway.bluefalls.ca) has joined
-Oct 24 14:21:31 *	AiGreek (~AiGreek@2a01:e35:8a47:c480:dde3:c834:2b04:af2) has joined
-Oct 24 14:21:38 *	shantorn (~tornstrik@97-120-106-87.ptld.qwest.net) has joined
-Oct 24 14:21:40 *	Ben_1 (~ben@2001:1438:4010:702:f815:dc1a:6a22:1f49) has joined
-Oct 24 14:21:52 <shiftplusone>	Well, many countries where poverty is an issue have better internet than in the first world.
-Oct 24 14:21:57 *	harish has quit (Quit: Leaving)
-Oct 24 14:22:16 *	harish (~harish@103.252.200.237) has joined
-Oct 24 14:24:04 <Drzacek>	ozzzy, I'm used to some more budget-friendly prices, but I was spoiled by aliexpress
-Oct 24 14:25:12 *	mac_ified (~mac_ified@66.192.139.82) has joined
-Oct 24 14:25:35 <SirLagz>	shiftplusone: ohhai there
-Oct 24 14:25:35 <Drzacek>	shiftplusone, I live in germany, got 16mbit connection (fastest available, I live in medium-sized city, no desert or something), while I know people in south africa that get waaay faster internet
-Oct 24 14:26:01 <Lonefish>	and some people get a pi from a friend and don't get any money to buy a new sd card or they get hit by their mom (Battery reference for people who don't get it)
-Oct 24 14:26:14 <SirLagz>	my country's internet is the 60th fastest in the world...that's pretty low lol
-Oct 24 14:26:40 <RoBo_V>	SirLagz: crash when tried to use transmission-deamon ?
-Oct 24 14:26:43 <Lonefish>	Drzacek: South africa doesn't mean bad internet/poor people
-Oct 24 14:26:58 <SirLagz>	RoBo_V: no, crashed when a different device was using the Pi-Router to torrent through
-Oct 24 14:27:04 <Drzacek>	Lonefish, dunno, I see "africa" I see desert
-Oct 24 14:27:26 <pwillard>	Drzacek: Its worse in the USA... where average "rural" speeds are 3mb
-Oct 24 14:27:28 <Drzacek>	not being racist, barely passed geography back in my school days
-Oct 24 14:27:37 <Lonefish>	http://www.timeforkids.com/files/styles/tfk_rect_large/public/2011-07/southafrica_ss4.jpg?itok=Y8148_Nr
-Oct 24 14:27:57 *	jakent (~john@62.sub-174-205-7.myvzw.com) has joined
-Oct 24 14:28:02 *	Waldo is now known as anothernickforno
-Oct 24 14:28:28 <Drzacek>	Lonefish, nice
-Oct 24 14:28:42 <shiftplusone>	SirLagz: Ahoy there. Still stuck in Perth?
-Oct 24 14:29:00 *	anothernickforno is now known as waldo
-Oct 24 14:29:04 <Lonefish>	googled it, so I hope it's SA :p, but it's not desert AFAIK
-Oct 24 14:29:05 <SirLagz>	shiftplusone: indeedy.
-Oct 24 14:29:14 <SirLagz>	shiftplusone: are you still over in the UK?
-Oct 24 14:29:16 <shiftplusone>	SirLagz: I am sorry
-Oct 24 14:29:31 <shiftplusone>	In UK again. Was in Brisbane for a few months while my UK visa was getting sorted.
-Oct 24 14:29:37 <SirLagz>	shiftplusone: ah cool
-Oct 24 14:29:43 <SirLagz>	shiftplusone: hows life over there? All used to it now?
-Oct 24 14:29:44 *	jakent has quit (Client Quit)
-Oct 24 14:30:23 <shiftplusone>	Still settling in somewhat. Currently living in a shared house and looking for to rent a place of my own.
-Oct 24 14:30:28 *	pksato has quit (Quit: Problem Exists Between Keyboard And Chair)
-Oct 24 14:30:42 <SirLagz>	shiftplusone: how long have you been over there now?
-Oct 24 14:30:48 <SirLagz>	shiftplusone: I recall you moving over like a couple of years ago?
-Oct 24 14:31:02 <RoBo_V>	Voop: so u using it as wireles ap right ?
-Oct 24 14:31:48 *	aballier (~alexis@gentoo/developer/aballier) has joined
-Oct 24 14:31:52 <shiftplusone>	yeah, initial visa was for 2 years. But since I had no idea how long I'd be here for, I avoided buying furniture ans such.
-Oct 24 14:32:21 <shiftplusone>	Now that I have a path to citizenship, I don't think I'll be deported again any time soon >.>
-Oct 24 14:32:41 <SirLagz>	shiftplusone: that's good
-Oct 24 14:32:43 <shiftplusone>	So I can steal their jobs for a while.
-Oct 24 14:32:45 <SirLagz>	haha
-Oct 24 14:32:51 <SirLagz>	shiftplusone: still working for the same place?
-Oct 24 14:32:51 *	Hix (~hix@97e0a657.skybroadband.com) has joined
-Oct 24 14:32:54 *	BurtyB gives shiftplusone the evils ;)
-Oct 24 14:33:20 <shiftplusone>	the evils?
-Oct 24 14:33:36 <BurtyB>	shiftplusone, re stealing jobs
-Oct 24 14:34:03 <shiftplusone>	hey, I am eastern european... it's my job to steal your jobs.
-Oct 24 14:34:28 *	Ben_1 (~ben@2001:1438:4010:702:f815:dc1a:6a22:1f49) has left
-Oct 24 14:35:09 *	pintman has quit (Ping timeout: 244 seconds)
-Oct 24 14:35:18 <shiftplusone>	And there's not much going on in Australia outside of the large global corporations for some reason.
-Oct 24 14:35:57 <Voop>	RoBo_V, yeah
-Oct 24 14:36:18 <RoBo_V>	Voop: are you using as wifi client too at same time ?
-Oct 24 14:36:31 *	busybox42 has quit (Quit: WeeChat 1.6)
-Oct 24 14:36:40 <Voop>	that dongle is one of like... 2 that has 2 channels
-Oct 24 14:36:45 <Voop>	and thus can send/recive
-Oct 24 14:36:47 *	busybox42 (~alan@balerion.evil-admin.com) has joined
-Oct 24 14:36:49 <Voop>	AND work on the pi
-Oct 24 14:37:24 <Voop>	RoBo_V, it connects to a network then creates an AP
-Oct 24 14:37:34 *	Hix has quit (Ping timeout: 245 seconds)
-Oct 24 14:37:56 <RoBo_V>	I got it, but are you using pi as wifi client too at same time or just using it as wireless AP
-Oct 24 14:38:10 <Voop>	just as an AP
-Oct 24 14:38:16 <RoBo_V>	ok
-Oct 24 14:38:20 <Voop>	it can be used as a client i believe
-Oct 24 14:39:20 *	Lonefish has quit (Quit: Page closed)
-Oct 24 14:39:26 <Voop>	DWKnight, the edimax one wont work for that
-Oct 24 14:39:37 <Voop>	it will work as an AP though
-Oct 24 14:40:17 *	NicoHood (~arch@ip-95-222-122-98.hsi15.unitymediagroup.de) has joined
-Oct 24 14:41:37 *	Lorduncan (~Thunderbi@193.125.143.99) has joined
-Oct 24 14:43:52 <DWKnight>	the edimax is an either/or and not both simultaneously thing
-Oct 24 14:44:05 *	redlob has quit (Ping timeout: 248 seconds)
-Oct 24 14:44:17 *	romerocesar (~cesar@rrcs-173-198-73-254.west.biz.rr.com) has joined
-Oct 24 14:44:25 <RoBo_V>	Voop: yes but im curious if it can do both at same time.
-Oct 24 14:45:38 *	cyclux (~cyclux@HSI-KBW-095-208-059-043.hsi5.kabel-badenwuerttemberg.de) has joined
-Oct 24 14:46:17 <Voop>	could you define what you mean by 'client'?
-Oct 24 14:46:44 *	pwndpineappler has quit (Ping timeout: 245 seconds)
-Oct 24 14:48:47 *	oneirosFade (~vrmxm@161.84.225.15) has joined
-Oct 24 14:48:52 *	romerocesar has quit (Ping timeout: 260 seconds)
-Oct 24 14:50:26 *	Lorduncan has quit (Quit: Lorduncan)
-Oct 24 14:55:20 <Sonny_Jim>	I assume RoBo_V means "Can I act as an access point whilst connecting to another access point"
-Oct 24 14:57:04 *	Bricker (~Bricker@2601:154:c100:10b5:cd2c:5fba:6400:61) has joined
-Oct 24 14:59:22 <SirLagz>	that's always the big question...
-Oct 24 14:59:44 <SirLagz>	ah ha! worked out how to install the Pixel desktop onto Raspbian Lite I think
-Oct 24 15:00:12 *	stiv (~steve@blender/coder/stivs) has joined
-Oct 24 15:00:18 *	AiGreek has quit (Quit: Textual IRC Client: www.textualapp.com)
-Oct 24 15:00:26 *	Lorduncan (~Thunderbi@193.125.143.99) has joined
-Oct 24 15:00:29 <shiftplusone>	SirLagz: apt-get install --no-install-recommends libgksu2-0 gvfs xserver-xorg-video-fbturbo raspberrypi-ui-mods
-Oct 24 15:00:47 <SirLagz>	hmm nope...damn
-Oct 24 15:00:49 <oneirosFade>	Isn't Pixel just LXDE though?
-Oct 24 15:00:57 <SirLagz>	oneirosFade: LXDE with some modifications
-Oct 24 15:01:03 <SirLagz>	shiftplusone: you're missing a package there :P
-Oct 24 15:01:05 <shiftplusone>	oneirosFade: LXDE with lots of patches and a custom theme.
-Oct 24 15:01:17 <shiftplusone>	SirLagz: what am I missing?
-Oct 24 15:01:18 <oneirosFade>	Hm...
-Oct 24 15:02:31 <SirLagz>	shiftplusone: raspberry-ui-mods
-Oct 24 15:02:34 <SirLagz>	oh wait
-Oct 24 15:02:43 <SirLagz>	shiftplusone: lxde I meant lol
-Oct 24 15:02:51 <shiftplusone>	lxde will be pulled in
-Oct 24 15:02:56 <SirLagz>	ah
-Oct 24 15:02:57 <shiftplusone>	the parts of it which are needed anyway
-Oct 24 15:03:08 <SirLagz>	shiftplusone: I must have done something odd then before.
-Oct 24 15:03:22 <shiftplusone>	the --no-install-recommends is to avoid installing 100 things that aren't really needed.
-Oct 24 15:03:25 <SirLagz>	heh
-Oct 24 15:03:55 <SirLagz>	shiftplusone: I've installed Pixel and set the right things but looks like it's still missing a few settings before it really *becomes* pixel
-Oct 24 15:04:07 <SirLagz>	shiftplusone: stuff like panel configs n stuff apparently
-Oct 24 15:04:48 <shiftplusone>	if you stop lightdm, go in and remove the old files in .config, it will be replaced when you restart lightdm
-Oct 24 15:04:49 <hue>	What is /var/backups/alternatives.tar.0 and why is it filling up my sd card every day
-Oct 24 15:05:12 <shiftplusone>	you can look at startlxde-pi to see which file to delete.
-Oct 24 15:06:02 <SirLagz>	shiftplusone: I might start from scratch and see if doing it from scratch gets Pixel into the same state as if I downloaded the Pixel Raspbian
-Oct 24 15:06:20 <shiftplusone>	SirLagz: I've been working on making sure that it does.
-Oct 24 15:06:58 <SirLagz>	shiftplusone: ah nice...are you one of the magical Pi workers now?
-Oct 24 15:08:18 <shiftplusone>	yes, I break things and get complained at full time here. That was why I came to UK in the first place.
-Oct 24 15:08:39 <SirLagz>	shiftplusone: oohhhh....can I PM you?
-Oct 24 15:08:44 <shiftplusone>	sure
-Oct 24 15:08:55 *	OneM_Industries (~OneMatthi@unaffiliated/onematthias) has joined
-Oct 24 15:08:56 *	shantorn has quit (Ping timeout: 260 seconds)
-Oct 24 15:10:25 *	Lonefish (5152d240@gateway/web/freenode/ip.81.82.210.64) has joined
-Oct 24 15:12:07 <RoBo_V>	Voop: thats right what Sonny_Jim referring
-Oct 24 15:12:23 <pwillard>	"nobody notices me..."  "let me push this change"   "bummer, now everybody knows my name...  if I had changed my name to 'jerk'"   ;-P
-Oct 24 15:12:38 *	methuzla (~methuzla@dsl254-017-117.sea1.dsl.speakeasy.net) has joined
-Oct 24 15:12:57 *	kronsbe has quit (Ping timeout: 250 seconds)
-Oct 24 15:13:52 <Voop>	i still dont really get it RoBo_V
-Oct 24 15:13:57 <Voop>	i connect to an AP
-Oct 24 15:14:11 <Voop>	then create an AP from that connection
-Oct 24 15:14:20 <Voop>	just as you would do with ethernet to wifi
-Oct 24 15:14:24 <Voop>	but wifi to wifi
-Oct 24 15:14:42 <DWKnight>	he wants it to work in a single adapter and not need a second adapter to make it work
-Oct 24 15:14:56 <Voop>	yes thats what i do
-Oct 24 15:15:09 *	AaronMT (~textual@2607:fea8:3ca0:2:f479:9fed:690a:ffe6) has joined
-Oct 24 15:15:22 <Voop>	the adapter needs to support the atheros chipset
-Oct 24 15:16:20 *	qt-x has quit (Quit: qt-x)
-Oct 24 15:16:28 <DWKnight>	not all chipsets are capable of said activity
-Oct 24 15:16:45 <Voop>	i believe atheros is the only one
-Oct 24 15:17:12 <oneirosFade>	That's actually a thing, though? Connnecting to SSID_A and re-broadcasting it as SSID_B ?
-Oct 24 15:17:55 <oneirosFade>	From a single NIC, I mean
-Oct 24 15:17:55 <RoBo_V>	Voop: I see, so you created two wlans in intefaces one for AP (hostapd) and other as client (wpa_supplicant)
-Oct 24 15:17:56 <RoBo_V>	right
-Oct 24 15:18:00 <RoBo_V>	?
-Oct 24 15:18:08 <oq>	oneirosFade: I think you would need two modems
-Oct 24 15:18:30 *	Cryterion has quit (Quit: Ex-Chat)
-Oct 24 15:18:50 <Voop>	exactly RoBo_V
-Oct 24 15:19:04 *	sdothum (~sdothum@dsl-173-206-67-231.tor.primus.ca) has joined
-Oct 24 15:19:05 <Voop>	oneirosFade, yup
-Oct 24 15:19:26 <SirLagz>	oneirosFade: yes, it's a thing, but very few Wifi sticks can do it, at least it seems that way
-Oct 24 15:19:39 <RoBo_V>	and you said only etheros chip support it, is that right ?
-Oct 24 15:19:39 *	kronsbe (~chatzilla@62.48.72.147) has joined
-Oct 24 15:19:50 <Voop>	yes i believe so
-Oct 24 15:20:01 <Voop>	the one i linked does for sure
-Oct 24 15:20:08 <Voop>	the edimax doesnt
-Oct 24 15:20:08 <RoBo_V>	I think the chip must capability to do virtual interafce in their drivers.
-Oct 24 15:20:10 *	romerocesar (~cesar@rrcs-173-198-73-254.west.biz.rr.com) has joined
-Oct 24 15:20:43 *	Syliss (~Syliss@dpncorp1.digitalpath.net) has joined
-Oct 24 15:21:16 <hue>	anyone?
-Oct 24 15:21:28 <oneirosFade>	Erryone!
-Oct 24 15:21:31 *	shantorn (~tornstrik@97-120-218-142.ptld.qwest.net) has joined
-Oct 24 15:21:40 <RoBo_V>	IDK but some people have succeded with cheap 8188 chips also
-Oct 24 15:22:19 <Lonefish>	hue is a value between 0 and 359° defining a color along with saturation and brightness?
-Oct 24 15:22:25 *	joebobjoe (~joebobjoe@104-136-31-251.res.bhn.net) has joined
-Oct 24 15:22:33 <hue>	hue
-Oct 24 15:23:13 <oneirosFade>	It's also an internet slang laughing noise
-Oct 24 15:23:18 <hue>	huehuehuehue
-Oct 24 15:23:20 <oneirosFade>	ie "hue hue hue
-Oct 24 15:23:22 <oneirosFade>	Yeah
-Oct 24 15:23:39 <Armand>	I hate that.. makes me want to ban people. :P
-Oct 24 15:23:51 <Lonefish>	isn't that hurr?
-Oct 24 15:23:53 <oneirosFade>	Do... you have that capability?
-Oct 24 15:24:06 <Armand>	oneirosFade: In certain places, yes.
-Oct 24 15:24:14 <Lonefish>	oneirosFade: Do you want to find out?
-Oct 24 15:24:15 <oneirosFade>	Is this one of them, by any chance?
-Oct 24 15:24:15 <Lonefish>	:p
-Oct 24 15:24:21 <Armand>	Might be.......
-Oct 24 15:24:28 <oneirosFade>	Only via question and answer, if you don't mind
-Oct 24 15:24:33 <RoBo_V>	Voop: what about range, that that good with that chip ?
-Oct 24 15:24:48 *	romerocesar has quit (Ping timeout: 260 seconds)
-Oct 24 15:24:49 <Lonefish>	hue, all craziness aside, what was your question?
-Oct 24 15:25:00 <hue>	[15:04:50] <hue> What is /var/backups/alternatives.tar.0 and why is it filling up my sd card every day
-Oct 24 15:25:08 <Armand>	oneirosFade: Nah, just messin'. I have no power here
-Oct 24 15:25:31 <oneirosFade>	And you'd be obligated to tell us if you did, right? Like police have to admit to being police if asked directly?
-Oct 24 15:25:33 <Voop>	RoBo_V, the throughput is horrid
-Oct 24 15:25:44 <Armand>	oneirosFade: No.
-Oct 24 15:25:52 <Voop>	since its doing both at once, its divided in half
-Oct 24 15:25:55 <oneirosFade>	Hmm. This is a bit of a pickle then, innit
-Oct 24 15:26:01 <Armand>	;)
-Oct 24 15:26:08 <Lonefish>	hue, I'm going out on a limb, but i'm suspecting a backup :p don't know which one tho
-Oct 24 15:26:11 <SirLagz>	Voop: a quarter really since Wifi is a half-duplex connection
-Oct 24 15:26:17 <Armand>	Thing is, oneirosFade.. is that ops can command ChanServ to do things anyway.
-Oct 24 15:26:31 <Voop>	SirLagz, true
-Oct 24 15:26:36 <hue>	how do i turn it off? o:
-Oct 24 15:26:36 <Armand>	So, one could, in practice, hide behind ChanServ. ;)
-Oct 24 15:26:36 <SirLagz>	well, at least on these small devices
-Oct 24 15:26:49 *	shantorn has quit (Quit: Leaving)
-Oct 24 15:26:56 <oneirosFade>	Turning my pickles into relish
-Oct 24 15:27:15 <Armand>	Ohh my!
-Oct 24 15:27:20 <Armand>	</takei>
-Oct 24 15:27:28 *	Drzacek has quit (Quit: Leaving)
-Oct 24 15:27:37 *	shantorn (~Shane@97-120-218-142.ptld.qwest.net) has joined
-Oct 24 15:28:22 *	GeekOfflineNL (~Geek@195-241-146-224.ip.telfort.nl) has joined
-Oct 24 15:34:45 *	Noldorin has quit (Quit: Textual IRC Client: www.textualapp.com)
-Oct 24 15:36:10 *	Noldorin (~noldorin@unaffiliated/noldorin) has joined
-Oct 24 15:36:17 *	pdgwien (~pdg@static.88-198-194-86.clients.your-server.de) has joined
-Oct 24 15:36:59 *	mmazing (~mmazing@unaffiliated/mmazing) has joined
-Oct 24 15:37:19 *	Lorduncan has quit (Quit: Lorduncan)
-Oct 24 15:38:13 *	shantorn has quit (Quit: Leaving)
-Oct 24 15:40:12 *	r00twrh has quit (Quit: Leaving)
-Oct 24 15:41:09 <RoBo_V>	Voop: how about range
-Oct 24 15:42:04 *	r00twrh (~r00tWears@73.44.33.86) has joined
-Oct 24 15:42:30 *	CoOolBreeze (~CoOolBree@ip54542ab4.speed.planet.nl) has joined
-Oct 24 15:43:08 <Voop>	it works well
-Oct 24 15:43:18 <Voop>	but only half as well
-Oct 24 15:43:24 <Voop>	which is... not too well
-Oct 24 15:43:33 *	pintman (~Marco@p4FE2E06B.dip0.t-ipconnect.de) has joined
-Oct 24 15:44:10 <RoBo_V>	dongle is 300mbps right ?
-Oct 24 15:44:35 <DWKnight>	the tplink one he linked earlier is 150
-Oct 24 15:45:40 *	BlackVenom (~textual@cpc91508-pres19-2-0-cust938.18-3.cable.virginm.net) has joined
-Oct 24 15:45:50 *	teclo- has quit (Ping timeout: 256 seconds)
-Oct 24 15:46:13 <Voop>	150
-Oct 24 15:46:14 <Voop>	yeah
-Oct 24 15:46:40 <Voop>	half duplex, and since its an AP on one channel / client on the other... its devided in half
-Oct 24 15:46:47 <Voop>	divided
-Oct 24 15:47:08 *	teclo- (42@unaffiliated/teclo) has joined
-Oct 24 15:47:08 *	redlob (~redlob@unaffiliated/redlob) has joined
-Oct 24 15:47:09 *	liefer (~liefer@3e6b4ca3.rev.stofanet.dk) has joined
-Oct 24 15:47:29 <RoBo_V>	oh bad! have good long antena but not delivering much there are chinese dongles wi5thout any antena has 4dbi gains
-Oct 24 15:47:47 <RoBo_V>	will try them!
-Oct 24 15:48:07 <DWKnight>	that adapter is still decent for the pringles cantenna setup though
-Oct 24 15:48:31 *	mythos has quit (Read error: Connection reset by peer)
-Oct 24 15:49:25 *	cyclux has quit (Ping timeout: 276 seconds)
-Oct 24 15:50:03 *	mythos (~mythos@unaffiliated/mythos) has joined
-Oct 24 15:50:49 *	Kryczek has quit (Ping timeout: 260 seconds)
-Oct 24 15:51:25 <GeekOfflineNL>	DWKnight, does that pringles antenna really works? What is the extension in range?
-Oct 24 15:52:13 <DWKnight>	tested by people with more time than I do, 12mi directional assuming pringles cantenna on both ends
-Oct 24 15:52:33 <GeekOfflineNL>	ah oke
-Oct 24 15:52:37 *	KaiserAres (~KaiserAre@unaffiliated/kaiserares) has joined
-Oct 24 15:53:06 <GeekOfflineNL>	so no use if you do not have any control over one site of the connection. (let's say a public wifi point)
-Oct 24 15:53:14 *	Guest33450 (crazyed@wrongplanet/CrazyEddy) has joined
-Oct 24 15:53:36 <DWKnight>	not quite so much
-Oct 24 15:53:55 <DWKnight>	the more traditional panel style antenna that big names build would probably serve better
-Oct 24 15:54:56 <GeekOfflineNL>	oke thnx
-Oct 24 15:56:20 <RoBo_V>	what is pringle antennas
-Oct 24 15:57:17 *	troulouliou_div2 (~troulouli@unaffiliated/troulouliou-div2/x-0271439) has joined
-Oct 24 15:57:21 <Lonefish>	directional antenna by using a pringles can and putting an antenna in it I presume
-Oct 24 15:57:31 *	oxhak (~OxHaK@unaffiliated/oxhak) has joined
-Oct 24 15:57:38 <DWKnight>	pretty much
-Oct 24 15:57:52 *	mreznik has quit (Remote host closed the connection)
-Oct 24 15:59:43 <DWKnight>	https://en.wikipedia.org/wiki/Cantenna
-Oct 24 16:01:36 *	moffz0r has quit (Quit: Leaving)
-Oct 24 16:02:03 *	GeekOfflineNL has quit (Quit: Leaving)
-Oct 24 16:03:32 *	defsdoor (~andy@cpc35-sutt4-2-0-cust184.19-1.cable.virginm.net) has joined
-Oct 24 16:05:28 <SirLagz>	heh. I'm playing Diablo 1 on my Pi
-Oct 24 16:06:19 *	_nexxus_ has quit (Ping timeout: 276 seconds)
-Oct 24 16:06:26 <shiftplusone>	in glorious 0.1 FPS?
-Oct 24 16:06:39 <SirLagz>	shiftplusone: probably about 3 FPS
-Oct 24 16:07:18 *	Cryterion (~cryterion@unaffiliated/cryterion) has joined
-Oct 24 16:08:04 <SirLagz>	oh boy this brings back memories
-Oct 24 16:08:47 <SirLagz>	I'm playing Diablo 1 on a device the size of the mouse I used to play Diablo 1 with.
-Oct 24 16:08:48 *	_nexxus_ (~bwg@leon.generalamalgamated.com) has joined
-Oct 24 16:11:49 <RoBo_V>	cantenna can be comnected through ufl connector ?
-Oct 24 16:12:06 *	wuseman (~wuziduzi@unaffiliated/wuseman) has joined
-Oct 24 16:12:07 <pwillard>	Diablo 1 was so ahead of its time too
-Oct 24 16:14:12 *	knob (~knob@209.91.218.190) has joined
-Oct 24 16:14:24 <SirLagz>	yeah, I still love Diablo 1
-Oct 24 16:14:26 <SirLagz>	awesome game
-Oct 24 16:15:11 <pwillard>	realtime RPG... oh yeah...  adrenaline rush... "oops... I ded... I so ded"
-Oct 24 16:15:54 <DWKnight>	a cantenna can be connected with anything you can get a connector compatible with your wireless card
-Oct 24 16:16:19 *	BlackVenom has quit (Ping timeout: 256 seconds)
-Oct 24 16:16:24 <RoBo_V>	hmm sounds good
-Oct 24 16:19:17 <Voop>	do any of you have a solution for recieving *and* transmitting RF
-Oct 24 16:19:22 <Voop>	on a wide range of the band?
-Oct 24 16:21:03 <Voop>	an RTL-SDR can be modified to transmit, but only from like 2ghz and up or something
-Oct 24 16:21:37 <RoBo_V>	i saw one video with nrf24l01 with 》2mi range with onboard antenna, will be morw witjlh ext
-Oct 24 16:22:09 <RoBo_V>	oh u looking to inc range on pocsag
-Oct 24 16:23:51 *	Guest33450 is now known as CrazEd
-Oct 24 16:24:24 *	CrazEd is now known as Guest4542
-Oct 24 16:24:25 *	KaiserAres has quit (Ping timeout: 260 seconds)
-Oct 24 16:24:50 <lee>	SirLagz: embed a Pi Zero into a mouse, and make it the same device entirely
-Oct 24 16:24:59 <SirLagz>	lee: haha
-Oct 24 16:25:08 <SirLagz>	lee: pity I don't have that mouse anymore :P
-Oct 24 16:26:19 *	tdy1 has quit (Ping timeout: 245 seconds)
-Oct 24 16:27:02 *	Conino (~Conino_@149.6.187.130) has joined
-Oct 24 16:27:19 *	Conino has quit (Client Quit)
-Oct 24 16:28:02 *	Conino (~Conino_@149.6.187.130) has joined
-Oct 24 16:28:46 *	Rickta59 has quit (Remote host closed the connection)
-Oct 24 16:29:24 *	Conino has quit (Read error: Connection reset by peer)
-Oct 24 16:29:47 *	Conino (~Conino_@149.6.187.130) has joined
-Oct 24 16:30:04 *	lankanmon has quit (Ping timeout: 245 seconds)
-Oct 24 16:30:45 <pwillard>	I had one of the early haptic feedback mice... was creepy big
-Oct 24 16:31:46 *	damme has quit (Remote host closed the connection)
-Oct 24 16:31:50 *	romerocesar (~cesar@rrcs-173-198-73-254.west.biz.rr.com) has joined
-Oct 24 16:31:52 *	Cy-GorWork (0fdba3fe@gateway/web/freenode/ip.15.219.163.254) has joined
-Oct 24 16:32:32 *	utack has quit (Remote host closed the connection)
-Oct 24 16:32:36 *	barajasfab (~fabian@2606:6000:6115:d900:ad9e:bc5f:71aa:703b) has joined
-Oct 24 16:33:31 *	kronsbe has quit (Quit: ChatZilla 0.9.92 [Firefox 49.0.1/20160922113459])
-Oct 24 16:34:03 *	utack (~utack@2a02:810a:8380:8e50:d63d:7eff:fedb:b2eb) has joined
-Oct 24 16:35:03 *	Tenkawa (~arakeen@unaffiliated/tenkawa) has joined
-Oct 24 16:35:42 *	damme (~damme@2001:16d8:cc75::802) has joined
-Oct 24 16:36:04 *	TyrfingMjolnir has quit (Remote host closed the connection)
-Oct 24 16:36:40 *	romerocesar has quit (Ping timeout: 260 seconds)
-Oct 24 16:37:36 *	mythos has quit (Ping timeout: 244 seconds)
-Oct 24 16:39:59 *	NecessaryEvil (~Necessary@188.189.92.135) has joined
-Oct 24 16:44:09 *	pitelpan has quit (Ping timeout: 260 seconds)
-Oct 24 16:44:19 *	FeersumEndjinn (~textual@82.71.236.253) has joined
-Oct 24 16:45:15 *	pitelpan (~panagioti@unaffiliated/pitelpan) has joined
-Oct 24 16:46:33 *	pintman has quit (Ping timeout: 260 seconds)
-Oct 24 16:48:52 *	TyrfingMjolnir (~Tyrfing@62.92.82.250) has joined
-Oct 24 16:49:26 *	damme_ (~damme@h-203-16.a216.priv.bahnhof.se) has joined
-Oct 24 16:49:46 *	damme has quit (Read error: No route to host)
-Oct 24 16:51:09 *	Cryterion has quit (Ping timeout: 260 seconds)
-Oct 24 16:52:27 *	qdk has quit (Ping timeout: 250 seconds)
-Oct 24 16:53:11 *	phinxy (~tehhhd@unaffiliated/phinxy) has joined
-Oct 24 16:53:45 *	brainzap has quit (Quit: The system is overheating and needs to go to sleep now.)
-Oct 24 16:54:56 *	pppingme has quit (Read error: Connection reset by peer)
-Oct 24 16:54:56 *	arubislander has quit (Quit: Leaving.)
-Oct 24 16:55:41 *	purplex88 has quit (Ping timeout: 244 seconds)
-Oct 24 16:56:46 *	IT_Sean (~quassel@applefritter/IRCStaff) has joined
-Oct 24 16:57:44 *	NecessaryEvil has quit (Quit: Colloquy for iPhone - http://colloquy.mobi)
-Oct 24 16:57:45 *	tdy1 (~tdy@unaffiliated/tdy) has joined
-Oct 24 16:58:12 *	aural_ has quit (Quit: Leaving)
-Oct 24 16:58:32 *	aural_ (~aural@unaffiliated/necrodearia) has joined
-Oct 24 16:58:41 *	purplex88 (~purplex88@unaffiliated/purplex88) has joined
-Oct 24 16:59:32 *	Tenkawa has quit (Quit: leaving)
-Oct 24 16:59:53 *	monsieur_h1 has quit (Quit: monsieur_h1)
-Oct 24 17:02:05 *	Lonefish has quit (Quit: Page closed)
-Oct 24 17:05:46 *	mythos (~mythos@unaffiliated/mythos) has joined
-Oct 24 17:06:59 *	sKyZ (~sKyZ@unaffiliated/skyz) has joined
-Oct 24 17:07:47 *	romerocesar (~cesar@rrcs-173-198-73-254.west.biz.rr.com) has joined
-Oct 24 17:08:13 *	netzfisch has quit (Ping timeout: 250 seconds)
-Oct 24 17:09:31 *	Coldblackice (~anonz@unaffiliated/coldblackice) has joined
-Oct 24 17:11:30 *	Envil (~envil@x55b5bfdb.dyn.telefonica.de) has joined
-Oct 24 17:12:37 *	romerocesar has quit (Ping timeout: 260 seconds)
-Oct 24 17:13:19 *	pppingme (~pppingme@unaffiliated/pppingme) has joined
-Oct 24 17:15:46 *	dreamon_ has quit (Ping timeout: 260 seconds)
-Oct 24 17:17:56 *	damex (~damex@funtoo/dev/damex) has joined
-Oct 24 17:18:05 *	Ceber (~cerberus@dslb-188-107-249-083.188.107.pools.vodafone-ip.de) has joined
-Oct 24 17:18:36 *	[Butch] (~butch@169.145.89.207) has joined
-Oct 24 17:22:07 *	Armand has quit (Quit: stoned: I'm a little junkie, short and stout.. watch me get silenced and see me pout!)
-Oct 24 17:23:04 *	vdamewood (~vdamewood@unaffiliated/vdamewood) has joined
-Oct 24 17:24:03 *	k\o\w has quit (Read error: Connection reset by peer)
-Oct 24 17:24:45 *	vdamewood has quit (Read error: Connection reset by peer)
-Oct 24 17:24:48 *	Guest4542 is now known as CrazEd
-Oct 24 17:25:03 *	vinleod (~vdamewood@unaffiliated/vdamewood) has joined
-Oct 24 17:25:14 *	Bricker has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
-Oct 24 17:25:17 *	CrazEd is now known as Guest58359
-Oct 24 17:27:25 *	vinleod is now known as vdamewood
-Oct 24 17:28:58 *	hepukt4e (~hep@91.198.140.16) has joined
-Oct 24 17:30:09 *	SopaXorzTaker has quit (Ping timeout: 251 seconds)
-Oct 24 17:33:35 *	dmr (~dmr@fsf/member/dmr) has joined
-Oct 24 17:34:03 *	SopaXorzTaker (~SopaXorzT@unaffiliated/sopaxorztaker) has joined
-Oct 24 17:35:03 *	k\o\w (~fffffff@CPE003159bfab4c-CM00fc8db094f0.cpe.net.cable.rogers.com) has joined
-Oct 24 17:35:11 *	k\o\w has quit (Remote host closed the connection)
-Oct 24 17:35:25 *	nerdboy (~sarnold@gentoo/developer/nerdboy) has joined
-Oct 24 17:35:38 *	k\o\w (~fffffff@CPE003159bfab4c-CM00fc8db094f0.cpe.net.cable.rogers.com) has joined
-Oct 24 17:39:29 *	jamesaxl (~jamesaxl@176.98.129.195) has joined
-Oct 24 17:40:48 *	mgottschlag (~quassel@reactos/tester/phoenix64) has joined
-Oct 24 17:41:35 *	bhez has quit (Quit: brb)
-Oct 24 17:43:35 *	romerocesar (~cesar@rrcs-173-198-73-254.west.biz.rr.com) has joined
-Oct 24 17:45:25 *	bhez (~bhez@unaffiliated/drivelights) has joined
-Oct 24 17:48:05 *	romerocesar has quit (Ping timeout: 260 seconds)
-Oct 24 17:49:42 *	robb_nl (~robb_nl@ip-80-236-252-43.dsl.scarlet.be) has joined
-Oct 24 17:49:55 *	netzfisch (~Thunderbi@x55b06843.dyn.telefonica.de) has joined
-Oct 24 17:52:02 *	FeersumEndjinn has quit (Quit: Textual IRC Client: www.textualapp.com)
-Oct 24 17:56:06 <RoBo_V>	lol i have configure mail on pi and now it sending me every cron job mail, thats strange!
 Oct 24 17:56:33 <adampie>	Can someone explain what this does? -> debconf-set-selections <<SELEOF
 Oct 24 17:56:33 <adampie>	`cat ${i}-debconf`
 Oct 24 17:56:33 <adampie>	SELEOF
-Oct 24 17:56:47 <RoBo_V>	I think it is reading pi@raspberrypi as mail to send to.
+
 Oct 24 17:57:27 <shiftplusone>	adampie: pi-gen stuff ey?
-Oct 24 17:57:35 <pwillard>	RoBo_V: its probably scripted.
 Oct 24 17:57:35 <shiftplusone>	It's pre-seeding answers to debconf questions
+
 Oct 24 17:57:54 <adampie>	Yep. working on something for my final year project at uni
+
 Oct 24 17:58:17 <shiftplusone>	adampie: are you the one porting it to use... some other thing I forget the name of?
+
 Oct 24 17:58:28 <adampie>	Ansible yeah
+
 Oct 24 17:58:28 <shiftplusone>	ansible comes to mind
-Oct 24 17:58:51 <RoBo_V>	pwillard: no, mail command is not there in cron script.
 Oct 24 17:58:57 <shiftplusone>	Ah okay, I had an email about it from your supervisor... cool. Let me know if you have any questions. I am the one responsible for the mess that is pi-gen.
-Oct 24 17:59:16 <pwillard>		(>ლ)   School assignments
 Oct 24 18:00:10 <shiftplusone>	adampie: are you confused by the syntax itself or by what debconf-set-selections does?
-Oct 24 18:01:03 *	Bricker (~Bricker@2601:154:c100:10b5:cd2c:5fba:6400:61) has joined
-Oct 24 18:01:12 <shauno_>	RoBo_V: cron's meant to do that.  if any cronjob has output, it should be mailed to the owner.  but no-one uses local mail-delivery anymore, so you don't see the outcome of that without a working mailstack locally
-Oct 24 18:01:15 *	brainzap (~brainzap@46-126-143-230.dynamic.hispeed.ch) has joined
-Oct 24 18:01:22 *	robb_nl has quit (Ping timeout: 252 seconds)
-Oct 24 18:02:52 *	cave (~various@77.116.230.239.wireless.dyn.drei.com) has joined
-Oct 24 18:03:37 <RoBo_V>	shauno_: ahm, well i configured it thinking that i can call in script ocassionaly when needed via mail -s [subject] [email]
-Oct 24 18:04:08 <RoBo_V>	How can I prevent every cron mail but to mail only when asked.
-Oct 24 18:04:14 <mfa298>	RoBo_V: cron will email any standard out of things it runs by default. Previously is was probably just saving them locally (likely in /var/spool/mail/pi)
-Oct 24 18:05:45 <mfa298>	RoBo_V: best option is fix your scripts in cron to not have output when run norally (then you can get emails only if they break and put something n stdout)
-Oct 24 18:06:03 *	troulouliou_div2 has quit (Quit: Leaving)
+
 Oct 24 18:06:17 <adampie>	shiftplusone Oh ha cool, yeah my supervisor mentioned that he emailed in. I'm just trying to understand what the whole thing does atm (I've made my repos public incase anyone was interested -> https://github.com/adampie) But yeah I tried a build last night and got a weird HUNK failure to do with lightdm when getting the timings per build stage.
+
 Oct 24 18:07:02 <shiftplusone>	I think I know what failed
-Oct 24 18:07:16 *	pintman (~Marco@p4FE2E06B.dip0.t-ipconnect.de) has joined
-Oct 24 18:07:18 <RoBo_V>	mfa298: nothing in /var/spool/mail/ and well I think I lack expertsie in that.
+
 Oct 24 18:07:37 <mgottschlag>	adampie: what is the goal of your project? :)
 Oct 24 18:08:14 <mgottschlag>	nvm, found the proposal :)
-Oct 24 18:08:16 <mfa298>	Voop: for tx and rx I've got a HackRF although not done a huge amount with it. Obviously you need suitable licenses for transmitting (or know what's legal in the license exempt bands)
+
 Oct 24 18:08:31 <shiftplusone>	adampie: raspberrypi-ui-mods has a change to set libgksu-gconf-defaults, but that fails if libgksu is not installed
-Oct 24 18:08:37 <Voop>	mfa298, i was looking at that
-Oct 24 18:08:41 *	VikingHoarder has quit (Remote host closed the connection)
-Oct 24 18:08:42 <Voop>	but its pretty big
-Oct 24 18:08:54 *	GenteelBen (~GenteelBe@cpc70133-lutn12-2-0-cust324.9-3.cable.virginm.net) has joined
-Oct 24 18:09:06 *	waldo is now known as temporarynicknow
-Oct 24 18:09:11 *	temporarynicknow is now known as waldo
-Oct 24 18:09:14 *	waldo is now known as Waldo
-Oct 24 18:09:44 *	vdamewood has quit (Remote host closed the connection)
+
 Oct 24 18:09:49 <adampie>	mgottsclag Ah cool, overall to learn ansible. If it speeds up build phases then it's great. If not then it's not the end of the world
-Oct 24 18:10:04 *	admiralspark (~admiralsp@unaffiliated/admiralspark) has joined
+
 Oct 24 18:10:09 <shiftplusone>	It will be faster if you don't copy each stage like I am doing.
-Oct 24 18:10:22 *	vdamewood (~vdamewood@unaffiliated/vdamewood) has joined
 Oct 24 18:10:26 <shiftplusone>	if you use qcow and branch each stage instead, it will be much faster
-Oct 24 18:10:30 <mfa298>	I think all the tx capable SDRs are of a reasonable size (also look at LimeSDR, BladeRF and USRP) - althoguh I think they all also cost more than the HackRF
 Oct 24 18:10:46 <shiftplusone>	otherwise, most of the bottleneck is installing the packages, which won't be any faster
 Oct 24 18:11:36 <shiftplusone>	You can take a look at spindle to see how it's done with qcow images and how to convert the final qcow image into a raw image.
 Oct 24 18:12:15 <shiftplusone>	I didn't like fiddling with qcow images, so I dropped that. Might be useful to add it back as an option one day.
+
 Oct 24 18:13:09 <adampie>	I was actually thinking depending on what final build you want it would get all the packages at once and do other config stuff simultaneously as it's a feature of ansible. Just need to fully understand what's happening and what can happen at the same time.
-Oct 24 18:14:02 *	SopaXorzTaker has quit (Quit: Leaving)
+
 Oct 24 18:14:57 <shiftplusone>	Not sure you'll trim down the time much that way. The concurrency issues will be fun to work out too.
-Oct 24 18:16:24 <Voop>	mfa298, thanks
-Oct 24 18:16:42 *	GenteelBen has quit ()
-Oct 24 18:16:44 <Voop>	the hackRF is exactly the kind of thing im looking for but i need smaller
-Oct 24 18:16:57 <Voop>	like RTL-SDR size
 Oct 24 18:19:31 <shiftplusone>	adampie: I have a fix for the issue you saw, but am going home soon and would like to test it a little more thoroughly first.
 Oct 24 18:20:03 <shiftplusone>	Have learned my lesson about pushing things out and going home before I am 100% sure it's okay. >.>
-Oct 24 18:20:21 *	robb_nl (~robb_nl@ip-80-236-252-43.dsl.scarlet.be) has joined
-Oct 24 18:20:27 *	AaronMT has quit (Quit: Textual IRC Client: www.textualapp.com)
-Oct 24 18:20:54 <mfa298>	Voop: I'm not sure such a thing exists, even mots of the rx only SDRs are larger than the rtlsdr (i.e. everything actually designed as a sdr rather than something found could be suitably hacked)
-Oct 24 18:21:00 *	dreamon_ (~dreamon@unaffiliated/dreamon) has joined
-Oct 24 18:22:10 <mfa298>	for a sepcific thing you might manage to make somethign that's smaller (if you have suitable design and pcb skills) - There's some good stuff from the HackRF guy on doing RF design
-Oct 24 18:22:49 *	Waldo is now known as vesp3r
-Oct 24 18:22:58 *	vesp3r is now known as Waldo
-Oct 24 18:24:01 *	Waldo is now known as vesp3r
+
 Oct 24 18:24:44 <adampie>	Ahh cool, I will playaround with it more then. Ha dw, I was just confused as it randomly just stopped working for me last night. :)
-Oct 24 18:25:13 *	bizarro_1 (~bizarro_1@59.red-83-47-138.dynamicip.rima-tde.net) has joined
+
 Oct 24 18:25:27 <shiftplusone>	adampie: if you want to work around the issue for now, make sure libgksu2-0 is installed before raspberrypi-ui-mods.
-Oct 24 18:25:36 *	vesp3r is now known as dfdfdfdfd
-Oct 24 18:25:54 *	Guest58359 is now known as CrazEd
-Oct 24 18:26:13 *	dfdfdfdfd is now known as WallabyJenkins_
-Oct 24 18:26:23 *	CrazEd is now known as Guest88646
-Oct 24 18:26:46 *	WallabyJenkins_ is now known as WallabyJenkins
-Oct 24 18:26:50 *	WallabyJenkins is now known as Waldo_
+
 Oct 24 18:26:50 <adampie>	Ok thanks
-Oct 24 18:27:47 *	Waldo_ has quit (Quit: leaving)
-Oct 24 18:27:56 *	Waldo (~Waldo@unaffiliated/wallabyjenkins-/x-8450033) has joined
-Oct 24 18:29:06 *	Waldo is now known as waldo
-Oct 24 18:29:25 *	secondbox (~boxmein@gprs-inet-65-102.elisa.ee) has joined
-Oct 24 18:30:01 <secondbox>	anyone here who's ever used the co2 engine K30 extensively? I want to figure out how to change its device address over the modbus interface
-Oct 24 18:30:03 *	dh1tw (~dh1tw@15.red-83-46-61.dynamicip.rima-tde.net) has joined
-Oct 24 18:30:08 <secondbox>	but nothing documents it except one arduino forum post
-Oct 24 18:31:20 *	waldo is now known as wallabyjenkins_
-Oct 24 18:31:32 *	wallabyjenkins_ is now known as waldo
-Oct 24 18:32:09 *	AaronMT (~textual@2607:fea8:3ca0:2:5057:21:59b1:e8b5) has joined
-Oct 24 18:32:33 *	de_henne has quit (Remote host closed the connection)
-Oct 24 18:35:03 *	Bricker has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
-Oct 24 18:35:43 *	GenteelBen (GenteelBen@cpc70133-lutn12-2-0-cust324.9-3.cable.virginm.net) has joined
+
 Oct 24 18:36:41 <shiftplusone>	adampie: oh, just remembered what the good the good targets to run in parallel are. zipping and tarring thing. Also, an export stage can run at the same time as the next build stage. That will speed things up a lot.
 Oct 24 18:36:52 <shiftplusone>	-1 'the good' <.<
-Oct 24 18:38:37 *	Rickta59 (~Rickta59@107.12.198.216) has joined
+
 Oct 24 18:38:47 <adampie>	Ooo thanks for the pointers, will have to talk to my supervisor to alter my schedule a bit.
-Oct 24 18:40:51 *	Sadale has quit (Quit: Ĝis revido)
-Oct 24 18:42:04 *	zub1n has quit (Ping timeout: 252 seconds)
+
 Oct 24 18:45:18 <ali1234>	shiftplusone: do you know what hardware raspbian is built on?
-Oct 24 18:46:02 *	pintman has quit (Ping timeout: 256 seconds)
 Oct 24 18:47:09 <ali1234>	shiftplusone: also, how big is a pi-gen stage 1 image?
+
 Oct 24 18:48:50 <shiftplusone>	ali1234: Intel(R) Core(TM) i7-4800MQ CPU @ 2.70GHz, 16GB RAM.
 Oct 24 18:49:06 <shiftplusone>	don't know the stage 1 size off the top of my head
+
 Oct 24 18:49:10 <ali1234>	is it built in qemu then?
+
 Oct 24 18:49:21 <shiftplusone>	qemu-user chroot
+
 Oct 24 18:49:34 <ali1234>	fun...
 Oct 24 18:49:42 <ali1234>	pi-gen looks real similar to debirf
+
 Oct 24 18:49:43 <shiftplusone>	building it on a chromebook isn't any faster
+
 Oct 24 18:50:18 <ali1234>	my problem at the moment is i have to do a lot of building on th epi
+
 Oct 24 18:50:28 <shiftplusone>	It's also similar to live-boot.... you kind of end up with similar things when there are common design goals.
+
 Oct 24 18:50:33 <ali1234>	which takes forever, mainly because SD cards are slow
-Oct 24 18:50:33 *	Bricker (~Bricker@2601:154:c100:10b5:cd2c:5fba:6400:61) has joined
-Oct 24 18:50:55 *	dh1tw has quit (Quit: My MacBook Pro has gone to sleep. ZZZzzz…)
 Oct 24 18:51:10 <ali1234>	so what does pi-gen do about this? also qemu?
+
 Oct 24 18:51:15 <shiftplusone>	look into getting a samsung chromebook
+
 Oct 24 18:51:33 <ali1234>	i have a samsung chromebox somewhere but it's x86
+
 Oct 24 18:52:12 <shiftplusone>	yeah, I meant the arm one. I use it to build things like chromium, libreoffice and whatever else takes a week on the pi and then crashes while linking because there is not enough ram
+
 Oct 24 18:52:28 <ali1234>	i've managed to get everything i need cross compiling
+
 Oct 24 18:52:36 <shiftplusone>	ah okay
+
 Oct 24 18:52:37 <ali1234>	the slow point is now building the image
 Oct 24 18:52:51 <ali1234>	running debootstrap takes about 10 minutes
 Oct 24 18:53:13 <ali1234>	specifically it sits on "I: Resolving dependencies of required packages..."
-Oct 24 18:53:15 *	Gathis (~TheBlack@unaffiliated/gathis) has joined
+
 Oct 24 18:53:26 <shiftplusone>	well, you just cache the debootstrap and re-use it.
+
 Oct 24 18:53:44 <ali1234>	hmm... yeah i should do that
-Oct 24 18:54:00 *	Qwertie has quit (Ping timeout: 244 seconds)
+
 Oct 24 18:54:05 <shiftplusone>	live-boot does that, along with all the packages
+
 Oct 24 18:54:26 <ali1234>	i'm using apt-cacher-ng
+
 Oct 24 18:54:34 <shiftplusone>	I use apt-cacher-ng and local mirrors for the packages, but that's not really for speed but to be able to build if raspbian.org goes down.
+
 Oct 24 18:54:51 <ali1234>	it's a big speed increase for me cos my internet sucks
 Oct 24 18:55:08 <ali1234>	also saves huge amounts of bandwidth
-Oct 24 18:55:38 *	secondbox has quit (Ping timeout: 260 seconds)
+
 Oct 24 18:55:39 <shiftplusone>	the pi office has good internet plumbing, as you'd expect. >.>
+
 Oct 24 18:55:59 <ali1234>	so my whole image build takes 25 minutes... how does that shape up to pi-gen and live-image?
+
 Oct 24 18:56:16 <adampie>	Around 74 mins for me
-Oct 24 18:56:22 *	Qwertie (~Qwertie@unaffiliated/qwertie) has joined
+
 Oct 24 18:56:25 <shiftplusone>	comparing apples and oranges here though
+
 Oct 24 18:56:31 <ali1234>	my image is probably a lot simpler than yours of course
+
 Oct 24 18:56:34 <shiftplusone>	yeah
+
 Oct 24 18:56:44 <ali1234>	it's literally a debootstrap and about 10 packages
 Oct 24 18:57:25 <ali1234>	however, about 10 minutes of that is the debootstrap and about another 10 minutes is gzipping the final image, which is about 250MB uncompressed
+
 Oct 24 18:58:09 <shiftplusone>	pigz is a good alternative to gzip
+
 Oct 24 18:58:10 <ali1234>	the trouble is that debirf uses fakeroot which doesn't cooperate with qemu and various other cross-arch techniques
+
 Oct 24 18:58:15 <shiftplusone>	archive in parallel
+
 Oct 24 18:58:20 <ali1234>	i've actually switched to lzop
+
 Oct 24 18:58:27 <shiftplusone>	ah
+
 Oct 24 18:58:34 <DWKnight>	anything that can do multithreaded compression will probably help
 Oct 24 18:58:49 <DWKnight>	although you hit a ceiling on what your hardware is able to handle
+
 Oct 24 18:58:52 <ali1234>	it's faster than pigz even though it,s single threaded, and it uncompresses over twice as fast too
+
 Oct 24 18:58:57 <adampie>	How does apt-get compare to apt-fast?
+
 Oct 24 18:59:14 <ali1234>	it's 10% larger but it decreased my boottime from ~35 seconds to ~15 seconds
+
 Oct 24 18:59:21 <shiftplusone>	apt-fast only downloads in parallel, doesn't it?
-Oct 24 18:59:24 *	MiningInc (~MiningInc@174-29-185-138.hlrn.qwest.net) has joined
+
 Oct 24 19:00:08 <shiftplusone>	would be nice for apt to install in parallel
 Oct 24 19:00:29 <shiftplusone>	and have an option not to md5sum, double handle and sync so much.
+
 Oct 24 19:00:30 <ali1234>	i'd guess that's highly unlikely to ever happen
 Oct 24 19:01:12 <ali1234>	oh btw thanks for fixing the kernel dependency thing
+
 Oct 24 19:01:25 <shiftplusone>	no worries, sorry it took so long
+
 Oct 24 19:01:39 <ali1234>	i won't need to build a fake package with equivs any more, should save a few seconds on the build and a couple kb in the image :)
+
 Oct 24 19:01:45 <shiftplusone>	wanted to be sure I understood the consequences before doing something that could leave people without a kernel
 Oct 24 19:02:28 <shiftplusone>	luckily apt auto-remove only suggests stuff for removal if it's not in recommends of an already installed package.
+
 Oct 24 19:03:07 <ali1234>	well, that seems logical
-Oct 24 19:03:23 *	taza (~taza@unaffiliated/taza) has joined
-Oct 24 19:03:47 *	tdy1 has quit (Ping timeout: 276 seconds)
-Oct 24 19:04:29 *	MiningInc has quit (Quit: Leaving)
+
 Oct 24 19:05:28 <ali1234>	i need to figure out how to make debootstrap use busybox... standard wget introduces a dependency on libicu and pulls in like 50MB of stuff i dont want
-Oct 24 19:06:29 *	damex has quit (Ping timeout: 260 seconds)
-Oct 24 19:07:33 *	damex (~damex@funtoo/dev/damex) has joined
-Oct 24 19:07:51 *	mgottschlag has quit (Remote host closed the connection)
-Oct 24 19:08:02 *	sdothum has quit (Quit: ZNC - 1.6.0 - http://znc.in)
-Oct 24 19:08:59 *	mgottschlag (~quassel@reactos/tester/phoenix64) has joined
-Oct 24 19:09:14 *	oxhak has quit (Ping timeout: 245 seconds)
-Oct 24 19:09:57 *	tdy1 (~tdy@unaffiliated/tdy) has joined
-Oct 24 19:10:04 *	damex has quit (Max SendQ exceeded)
-Oct 24 19:10:49 *	sdothum (~sdothum@dsl-173-206-67-231.tor.primus.ca) has joined
-Oct 24 19:11:40 *	damex (~damex@funtoo/dev/damex) has joined
-Oct 24 19:14:46 *	carver (~affiche@c-73-19-102-211.hsd1.wa.comcast.net) has joined
-Oct 24 19:16:05 *	Bricker has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
-Oct 24 19:18:05 *	damex has quit (Ping timeout: 276 seconds)
-Oct 24 19:18:40 *	_BigWings_ has quit (Read error: Connection reset by peer)
-Oct 24 19:18:58 *	Lorduncan (~Thunderbi@193.125.143.99) has joined
-Oct 24 19:19:27 *	_BigWings_ (~Thunderbi@modemcable090.116-162-184.mc.videotron.ca) has joined
-Oct 24 19:19:45 <Voop>	mfa298, this 'yard stick one' device looks cool
-Oct 24 19:19:46 *	damex (~damex@funtoo/dev/damex) has joined
-Oct 24 19:19:50 <Voop>	only sub 1ghz though
-Oct 24 19:20:24 *	AttieGrande has quit (Quit: Leaving)
-Oct 24 19:20:49 *	fredp has quit (Ping timeout: 250 seconds)
-Oct 24 19:22:44 <RoBo_V>	Talking about chromebook, I'm thinking to get one. Can we add openVPN to it and how can we edit arduino code in that.
-Oct 24 19:22:58 *	up2late (~email@unaffiliated/up2late) has joined
