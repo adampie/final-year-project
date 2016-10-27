@@ -31,3 +31,10 @@ Meeting 3 (20th October)
 	- Configuration management papers
 	- Add documentation to ansible stuff?
 	- Start background research
+
+Meeting 4 (27th October)
+	-	Deliver stage 4
+	-	Documentation deliver stage 4
+	-	THEN DO STAGE 0 DEVIATION
+	- 	Write 2/3 paragraphs on what papers I looked at
+	-	Store ALL links you use to reference them
