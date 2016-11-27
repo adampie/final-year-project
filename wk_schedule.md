@@ -18,9 +18,9 @@
 
 #### 27/10/16 - Week 4
 - ~~[] Start Stage 3~~
-- [] Deliver stage 4 code PoC
-- [] Deliver stage 4 documentation PoC
-- [] Start working from stage 0
+- [X] Deliver stage 4 code PoC
+- [X] Deliver stage 4 documentation PoC
+- ~~[] Start working from stage 0
 
 #### 03/11/16 - Week 5 (ILL)
 - ~~[] Finish Stage 3~~
