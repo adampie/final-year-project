@@ -33,8 +33,27 @@ Meeting 3 (20th October)
 	- Start background research
 
 Meeting 4 (27th October)
-	-	Deliver stage 4
-	-	Documentation deliver stage 4
-	-	THEN DO STAGE 0 DEVIATION
-	- 	Write 2/3 paragraphs on what papers I looked at
-	-	Store ALL links you use to reference them
+	- Deliver stage 4
+	- Documentation deliver stage 4
+	- THEN DO STAGE 0 DEVIATION
+	- Write 2/3 paragraphs on what papers I looked at
+	- Store ALL links you use to reference them
+
+Meeting 5 (3rd November)
+	- ILL
+
+READING WEEK (10th November)
+
+Meeting 6 (17th November)
+	- Graduate job exam
+	
+Meeting 7 (24th November)
+	- Clean up code
+	- Finish stage 2 if have time
+	- Finish interim report!!! DEADLINE 30th November
+	- Focus on documentation
+		- For each stage write along the lines of
+			- Your approach
+			- Any analysis
+			- Everything you do, Everything you think
+	- VIVA in 2-3 weeks, before Christmas break
