@@ -13,4 +13,4 @@ Linux driver to mount QCOW2 virtual disks|[link](https://upcommons.upc.edu/bitst
 |CAPS: What's best for deploying and managing OpenStack? Chef vs. Ansible vs. Puppet vs. Salt|[link](http://www.slideshare.net/DanielKrook/caps-whats-best-for-deploying-and-managing-openstack-chef-vs-ansible-vs-puppet-vs-salt)|
 |Ansible: Up and Running|[link](http://shop.oreilly.com/product/0636920035626.do)|
 |Vagrant: Up and Running|[link](http://shop.oreilly.com/product/0636920026358.do)|
-|UNIX Book Bundle|[link](https://www.humblebundle.com/books/unix-book-bundle)[img](http://imgur.com/aQMlbH8)|
+|UNIX Book Bundle|[link](https://www.humblebundle.com/books/unix-book-bundle)/[img](http://imgur.com/aQMlbH8)|
