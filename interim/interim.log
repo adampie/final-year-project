@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2016.11.21)  27 NOV 2016 14:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2016.11.21)  27 NOV 2016 19:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -660,17 +660,17 @@ e
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<example-image-1x1.png, id=28, 250.9375pt x 250.9375pt>
-File: example-image-1x1.png Graphic file (type png)
+<Brighton-University-logo.png, id=28, 217.81375pt x 201.75375pt>
+File: Brighton-University-logo.png Graphic file (type png)
 
-<use example-image-1x1.png>
-Package pdftex.def Info: example-image-1x1.png used on input line 13.
-(pdftex.def)             Requested size: 64.01608pt x 64.01692pt.
+<use Brighton-University-logo.png>
+Package pdftex.def Info: Brighton-University-logo.png used on input line 13.
+(pdftex.def)             Requested size: 64.01608pt x 59.29518pt.
  [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} </usr/share/texmf-dist/tex/
-latex/mwe/example-image-1x1.png>]pdfTeX warning (ext4): destination with the sa
-me identifier (name{page.1}) has been already used, duplicate ignored
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./Brighton-University-logo
+.png (PNG copy)>]pdfTeX warning (ext4): destination with the same identifier (n
+ame{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.32 \end{abstract}
@@ -722,7 +722,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 56.
  ) 
 Here is how much of TeX's memory you used:
  6721 strings out of 493013
- 93616 string characters out of 6139316
+ 93651 string characters out of 6139316
  185266 words of memory out of 5000000
  10181 multiletter control sequences out of 15000+600000
  11828 words of font info for 44 fonts, out of 8000000 for 9000
@@ -733,7 +733,7 @@ texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texmf-dist/fo
 nts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/
 cmtt12.pfb>
-Output written on interim.pdf (7 pages, 57543 bytes).
+Output written on interim.pdf (7 pages, 96349 bytes).
 PDF statistics:
  97 PDF objects out of 1000 (max. 8388607)
  81 compressed objects within 1 object stream
