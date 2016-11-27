@@ -7,3 +7,10 @@
 |QLOOP
 Linux driver to mount QCOW2 virtual disks|[link](https://upcommons.upc.edu/bitstream/handle/2099.1/9619/65757.pdf?sequence=1&isAllowed=y)|
 |LaTeX/Title Creation|[link](https://en.wikibooks.org/wiki/LaTeX/Title_Creation)|
+|Bento Packer templates for building minimal Vagrant baseboxes|[link](http://chef.github.io/bento/)|
+|Review: Puppet vs. Chef vs. Ansible vs. Salt|[link](http://www.infoworld.com/article/2609482/data-center/data-center-review-puppet-vs-chef-vs-ansible-vs-salt.html)|
+|Deployment Management Tools: Chef vs. Puppet vs. Ansible vs. SaltStack vs. Fabric|[link](http://blog.takipi.com/deployment-management-tools-chef-vs-puppet-vs-ansible-vs-saltstack-vs-fabric/)|
+|CAPS: What's best for deploying and managing OpenStack? Chef vs. Ansible vs. Puppet vs. Salt|[link](http://www.slideshare.net/DanielKrook/caps-whats-best-for-deploying-and-managing-openstack-chef-vs-ansible-vs-puppet-vs-salt)|
+|Ansible: Up and Running|[link](http://shop.oreilly.com/product/0636920035626.do)|
+|Vagrant: Up and Running|[link](http://shop.oreilly.com/product/0636920026358.do)|
+|UNIX Book Bundle|[link](https://www.humblebundle.com/books/unix-book-bundle)/[img](http://imgur.com/aQMlbH8)|
