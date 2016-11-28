@@ -5,6 +5,7 @@
 \usepackage{amssymb}
 \usepackage{hyperref}
 \usepackage{graphicx}
+\usepackage[numbers]{natbib}
 \usepackage[a4paper,top=3cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
 
 \begin{document}
@@ -26,7 +27,7 @@
 \end{titlepage}
 
 \begin{abstract}
-Add abstract here
+As of the 8th September 2016, in a blog post by raspberry pi founder Eben Upton\citep{blog}, mentions that the ten millionth raspberry pi has just been sold. The official operating system for these devices is called Rasbpian, it is a port of Debian which is available as a standalone image or in a 'New Out Of the Box Software' package for beginners. 'NOOBS' is pre-installed on SD cards that can be bought from many retailers, before the images can be burned to the cards they need to be somehow generated. The current method of generating these images can be found on GitHub\citep{pi-gen}, it is a set of shell scripts which from the commits look to be predominantly maintained by a single developer. The problem with this is that if the developer decided to move on and depart from the project it might take some time before someone else understands the code well enough to be able to carry it on; this can be simply described as the 'Bus Factor.'\citep{bus} Since the release of the raspberry pi in February 2012, new tools have been developed and standards decided; so it might be a nice idea to freshen up the current method.      
 \end{abstract}
 
 \pagebreak
@@ -34,6 +35,7 @@ Add abstract here
 \pagebreak
 
 \chapter{Introduction}
+
 What I am planning to develop?
 \section{Aims}
 What is my overall aim?
@@ -41,6 +43,7 @@ What is my overall aim?
 What I aim to get out of the project?
 
 \chapter{Background Research}
+
 \section{Deployment Management Tools}
 Quick description on deployment management tolls
 \subsection{Chef}
@@ -71,6 +74,7 @@ Show research
 Show research
 
 \chapter{Project Planning}
+
 Standards and Quality check
 \section{Methodologies}
 Short comparison of methodologies
@@ -79,11 +83,23 @@ List stakeholders and their interests
 \section{Project schedule}
 Add a graph for stages
 
-\begin{thebibliography}{9}
-\bibitem{a}
- http://www.citethisforme.com/
-\\\url{ cite{}}
+\addcontentsline{toc}{chapter}{Bibliography}
+\bibliographystyle{plainnat}
 
+\begin{thebibliography}{9}
+
+\bibitem{blog}
+Raspberry Pi. (2016). Ten millionth Raspberry Pi, and a new kit.
+\\\url{https://www.raspberrypi.org/blog/ten-millionth-raspberry-pi-new-kit/}
+
+
+\bibitem{pi-gen}
+Raspberry Pi. (2016). RPi-Distro/pi-gen.
+\\\url{https://github.com/RPi-Distro/pi-gen}
+
+\bibitem{bus}
+Wikipedia. (2016). Bus Factor.
+\\\url{https://en.wikipedia.org/wiki/Bus_factor}
 
 \end{thebibliography}
 \end{document}

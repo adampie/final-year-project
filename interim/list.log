@@ -1,0 +1,37 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2016.11.21)  28 NOV 2016 19:10
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**list.tex
+(/usr/share/texmf-dist/tex/plain/base/list.tex
+LaTeX2e <2016/03/31> patch level 3
+Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
+\m=\count79
+\n=\count80
+
+November 28, 2016 at 1910
+! Undefined control sequence.
+l.26 \nopagenumbers
+                   
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+)
+! Emergency stop.
+<*> list.tex
+            
+*** (job aborted, no legal \end found)
+
+ 
+Here is how much of TeX's memory you used:
+ 21 strings out of 493013
+ 344 string characters out of 6139316
+ 53632 words of memory out of 5000000
+ 3661 multiletter control sequences out of 15000+600000
+ 4627 words of font info for 18 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 5i,0n,10p,80b,8s stack positions out of 5000i,500n,10000p,200000b,80000s
+!  ==> Fatal error occurred, no output PDF file produced!
