@@ -6,6 +6,7 @@
 \usepackage{hyperref}
 \usepackage{graphicx}
 \usepackage[numbers]{natbib}
+\usepackage[none]{hyphenat}
 \usepackage[a4paper,top=3cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
 
 \begin{document}
@@ -35,12 +36,24 @@ As of the 8th September 2016, in a blog post by raspberry pi founder Eben Upton\
 \pagebreak
 
 \chapter{Introduction}
-
-What I am planning to develop?
 \section{Aims}
-What is my overall aim?
+The overall aim of the project is to show that the current code base which generates the Rasbpian images can be re-written and re-designed to make use of opensource tools and a 'human friendly data serialization standard,'\citep{yaml} called YAML. 
 \section{Objectives}
-What I aim to get out of the project?
+The objectives can be separated into two different categories; project and personal. These will provide an image of the project structure and will help towards the success of completion. 
+\subsection{Project}
+\begin{itemize}
+\item{Write code that utilizes opensource tools and language standards.}
+\item{Generate Raspbian images at a faster speed.}
+\item{Give options to users for easy image customization.}
+\item{Get feedback from the Raspberry Pi foundation.}
+\end{itemize}  
+\subsection{Personal}
+\begin{itemize}
+\item{Learn shell scripting.}
+\item{Learn a provision management tool.}
+\item{Understand Linux on a more complex level.}
+\item{Expand knowledge of virtualization.}
+\end{itemize}  
 
 \chapter{Background Research}
 
@@ -100,6 +113,11 @@ Raspberry Pi. (2016). RPi-Distro/pi-gen.
 \bibitem{bus}
 Wikipedia. (2016). Bus Factor.
 \\\url{https://en.wikipedia.org/wiki/Bus_factor}
+
+\bibitem{yaml}
+YAML. (2009). \%YAML 1.2.
+\\\url{http://yaml.org/}
+
 
 \end{thebibliography}
 \end{document}
