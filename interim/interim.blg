@@ -5,9 +5,12 @@ The style file: plainnat.bst
 I found no \bibdata command---while reading file interim.aux
 Warning--I didn't find a database entry for "blog"
 Warning--I didn't find a database entry for "pi-gen"
+Warning--I didn't find a database entry for "bus"
+Warning--I didn't find a database entry for "yaml"
+Warning--I didn't find a database entry for "openstack"
 You've used 0 entries,
             2773 wiz_defined-function locations,
-            593 strings with 4836 characters,
+            596 strings with 4852 characters,
 and the built_in function-call counts, 33 in all, are:
 = -- 0
 > -- 0

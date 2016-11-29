@@ -6,10 +6,13 @@
 \usepackage{hyperref}
 \usepackage{graphicx}
 \usepackage[numbers]{natbib}
-\usepackage[none]{hyphenat}
+\usepackage{hyperref}
+\def\UrlBreaks{\do\/\do-}
+\graphicspath{ {images/} }
 \usepackage[a4paper,top=3cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
 
 \begin{document}
+\sloppy
 \begin{titlepage}
 	\centering
 	\includegraphics[width=0.15\textwidth]{Brighton-University-logo.png}\par
@@ -19,7 +22,7 @@
 	\vspace{1.5cm}
 	{\huge\bfseries Generation of Raspbian images\par}
 	\vspace{2cm}
-	{\Large\itshape Adam Pietrzycki\par}
+	{\Large\itshape Adam Pietrzycki\par}14843569
 	\vfill
 	supervised by\par
 	Dr.~Aidan \textsc{Delaney}
@@ -28,7 +31,7 @@
 \end{titlepage}
 
 \begin{abstract}
-As of the 8th September 2016, in a blog post by raspberry pi founder Eben Upton\citep{blog}, mentions that the ten millionth raspberry pi has just been sold. The official operating system for these devices is called Rasbpian, it is a port of Debian which is available as a standalone image or in a 'New Out Of the Box Software' package for beginners. 'NOOBS' is pre-installed on SD cards that can be bought from many retailers, before the images can be burned to the cards they need to be somehow generated. The current method of generating these images can be found on GitHub\citep{pi-gen}, it is a set of shell scripts which from the commits look to be predominantly maintained by a single developer. The problem with this is that if the developer decided to move on and depart from the project it might take some time before someone else understands the code well enough to be able to carry it on; this can be simply described as the 'Bus Factor.'\citep{bus} Since the release of the raspberry pi in February 2012, new tools have been developed and standards decided; so it might be a nice idea to freshen up the current method.      
+As of the 8th September 2016, in a blog post by raspberry pi founder Eben Upton \citep{blog}, mentions that the ten millionth raspberry pi has just been sold. The official operating system for these devices is called Raspbian, it is a port of Debian which is available as a standalone image or in a 'New Out Of the Box Software' package for beginners. 'NOOBS' is pre-installed on SD cards that can be bought from many retailers, before the images can be burned to the cards they need to be somehow generated. The current method of generating these images can be found on GitHub \citep{pi-gen}, it is a set of shell scripts which from the commits look to be predominantly maintained by a single developer. The problem with this is that if the developer decided to move on and depart from the project it might take some time before someone else understands the code well enough to be able to carry it on; this can be simply described as the 'Bus Factor.' \citep{bus} Since the release of the raspberry pi in February 2012, new tools have been developed and standards decided; so it might be a nice idea to freshen up the current method.      
 \end{abstract}
 
 \pagebreak
@@ -37,12 +40,12 @@ As of the 8th September 2016, in a blog post by raspberry pi founder Eben Upton\
 
 \chapter{Introduction}
 \section{Aims}
-The overall aim of the project is to show that the current code base which generates the Rasbpian images can be re-written and re-designed to make use of opensource tools and a 'human friendly data serialization standard,'\citep{yaml} called YAML. 
+The overall aim of the project is to show that the current code base which generates the Raspbian images can be re-written and re-designed to make use of open source tools and a 'human friendly data serialization standard,' \citep{yaml} called YAML. 
 \section{Objectives}
 The objectives can be separated into two different categories; project and personal. These will provide an image of the project structure and will help towards the success of completion. 
 \subsection{Project}
 \begin{itemize}
-\item{Write code that utilizes opensource tools and language standards.}
+\item{Write code that utilizes open source tools and language standards.}
 \item{Generate Raspbian images at a faster speed.}
 \item{Give options to users for easy image customization.}
 \item{Get feedback from the Raspberry Pi foundation.}
@@ -56,29 +59,28 @@ The objectives can be separated into two different categories; project and perso
 \end{itemize}  
 
 \chapter{Background Research}
-
 \section{Deployment Management Tools}
-Quick description on deployment management tolls
+There are many deployment management tools to choose from, all offer different benefits and are backed by various companies. A comparison of tools has been covered in detail at Openstack's Summit \citep{openstack} of which are referenced in the sections below.    	
 \subsection{Chef}
-Chef short
+Chef \citep{chef}
 \subsection{Puppet}
-Puppet short
+Puppet \citep{puppet}
 \subsection{Salt}
-Salt short
+Salt \citep{salt}
 \subsection{Ansible}
-Ansible long
-\section{Virtualization}
+Ansible \citep{ansible}
+\section{Virtualization}2
 Quick description of virtualization
 \subsection{ESXi}
-ESXi short
+ESXi \citep{esxi}
 \subsection{VirtualBox}
-VirtualBox short
+VirtualBox \citep{virtualbox}
 \subsection{Docker}
-Docker short
+Docker \citep{docker}
 \subsection{Vagrant}
-Vagrant long
+Vagrant \citep{vagrant}
 \subsection{QEMU}
-QEMU long
+QEMU \citep{qemu}
 \section{Current generation method}
 Short description
 \subsection{Analysis}
@@ -100,7 +102,6 @@ Add a graph for stages
 \bibliographystyle{plainnat}
 
 \begin{thebibliography}{9}
-
 \bibitem{blog}
 Raspberry Pi. (2016). Ten millionth Raspberry Pi, and a new kit.
 \\\url{https://www.raspberrypi.org/blog/ten-millionth-raspberry-pi-new-kit/}
@@ -118,6 +119,46 @@ Wikipedia. (2016). Bus Factor.
 YAML. (2009). \%YAML 1.2.
 \\\url{http://yaml.org/}
 
+
+\bibitem{openstack}
+Openstack. (2015). Chef vs. Puppet vs. Ansible vs. Salt - What's Best for Deploying and Managing OpenStack?.
+\\\url{https://www.openstack.org/summit/tokyo-2015/videos/presentation/chef-vs-puppet-vs-ansible-vs-salt-whats-best-for-deploying-and-managing-openstack}
+
+\bibitem{chef}
+Chef. (2016). Chef – Automate Your Infrastructure.
+\\\url{https://www.chef.io/chef/}
+
+\bibitem{puppet}
+Puppet. (2016). Puppet - The shortest path to better software.
+\\\url{https://puppet.com/}
+
+\bibitem{salt}
+Glauser, R. (2016). SaltStack automation for CloudOps, ITOps \& DevOps at scale.
+\\\url{https://saltstack.com/}
+
+\bibitem{ansible}
+Red Hat. (2016). Ansible is Simple IT Automation.
+\\\url{https://www.ansible.com/}
+
+\bibitem{esxi}
+VMWare. (2016). vSphere ESXi Bare-Metal Hypervisor.
+\\\url{http://www.vmware.com/products/esxi-and-esx.html}
+
+\bibitem{virtualbox}
+Oracle. (2016). Oracle VM VirtualBox.
+\\\url{https://www.virtualbox.org/}
+
+\bibitem{docker}
+Docker. (2016). Docker.
+\\\url{https://www.docker.com/}
+
+\bibitem{vagrant}
+HashiCorp. (2016). Vagrant by HashiCorp.
+\\\url{https://www.vagrantup.com/}
+
+\bibitem{qemu}
+QEMU. (2016). QEMU - Open source processor emulator.
+\\\url{http://wiki.qemu.org/Main_Page}
 
 \end{thebibliography}
 \end{document}
