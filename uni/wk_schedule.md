@@ -36,12 +36,12 @@
 
 #### 24/11/16 - Week 8
 - ~~[] Start Stage 1~~
-- [] Clean up code, make it presentable
-- [] Integrate with original code
-- [] Email Sven
-- [] Focus on documentation
+- [X] Clean up code, make it presentable
+- ~~[] Integrate with original code
+- ~~[] Email Sven
+- [X] Focus on documentation
 
-#### 01/12/16 - Week 9
+#### 01/12/16 - Week 9 (MISSED)
 - ~~[] Finish Stage 1~~
 - ~~[] Get build times for current stage~~
 
