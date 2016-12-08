@@ -42,7 +42,7 @@ In this document I will be keeping a log of my approach and analysis of this pro
 \pagebreak
 
 \chapter{Original pi-gen}
-\section{Main build files}
+\section{/}
 The build.sh file is the one you run to start generating the Raspbian images. It first sets up a few EXPORTS and SOURCES files from the scripts folder.
 \subsection{config}
 In the config file you can set an IMG\_NAME and an APT\_PROXY. The default file can just contain "IMG\_NAME='Raspbian'". A quick thing you can do to set up this file is: 
@@ -50,10 +50,45 @@ In the config file you can set an IMG\_NAME and an APT\_PROXY. The default file 
 echo "IMG_NAME='Raspbian'" > config
 
 NOTE:
->   is overwrite if present, create if not.
+>  is overwrite if present, create if not.
 >> is add to end of file it present, create if not.
 \end{lstlisting}
-\subsection{SCRIPTS/common}
+
+\subsection{build.sh}
+The stages are initially run by this:
+\begin{lstlisting}[frame=single]
+for STAGE_DIR in ${BASE_DIR}/stage*; do
+	run_stage
+done
+\end{lstlisting}
+For-each loop, runs run\_stage method in each directory. This helps us as we can change the main script that is run in each folder to run our integrated Ansible code.
+\subsubsection{Exports and Source}
+A bunch of EXPORTS, most important ones are the directories:
+\begin{lstlisting}[frame=single]
+export BASE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")"&&pwd)"
+export SCRIPT_DIR="${BASE_DIR}/scripts"
+export WORK_DIR="${BASE_DIR}/work/${IMG_DATE}-${IMG_NAME}"
+export DEPLOY_DIR="${BASE_DIR}/deploy"
+export LOG_FILE="${WORK_DIR}/build.log"
+\end{lstlisting}
+This will let us set up static directories when testing the Ansible code, after that can be changed to use dynamic folders.
+\subsubsection{Stage}
+This seems to \textit{pushd} the previous stage location to /dev/null which clears it? Then assigns new directories. If CLEAN is set to 1 then it will delete the rootfs folder, I presume this is done during the last stage? If there is a prerun.sh in the current working directory then that will run first. Then it will run run\_sub\_stage() in each subdirectory of each stage. Finally it unmounts the stage and assigns a few variables; then \textit{popd} into /dev/null?
+\begin{itemize}
+\item{\url{http://ss64.com/bash/pushd.html}}
+\item{\url{http://ss64.com/bash/popd.html}}
+\end{itemize}
+\subsubsection{Sub-Stage}
+Starts off with \textit{pushd} sub\_stage\_dir again, then a for loop between 00 and 99. First it pre-seeds the \textit{debconf} and after installs packages-nr using \textit{apt-get}, then packages once packages-nr is done. If there are any patches at this point then this is when they are applied. A few things are done with quilt (to do with patches it seems)??? Coming towards the end of sub-stage now any run.sh and run-chroot.sh files are ran. \textit{Popd} is used again.
+\begin{itemize}
+\item{\url{http://man.he.net/man1/debconf-set-selections}}
+\item{\url{https://linux.die.net/man/8/apt-get}}
+\item{\url{https://linux.die.net/man/1/quilt}}
+\end{itemize}
+\subsubsection{Export-images}
+
+\section{scripts/}
+\subsection{common}
 \subsubsection{log}
 Gets current time and uses a pipe with \textit{tee} to write to the log file. 
 \\(\url{http://man7.org/linux/man-pages/man1/tee.1.html)}
@@ -83,16 +118,18 @@ Mounts with bind, uses \textit{realpath and \textit{capsh} again}:
 (\url{http://man7.org/linux/man-pages/man3/realpath.3.html})
 \subsubsection{update\_issue}
 Prints pi-gen version? This is strange; look into it but it does not look like a priority. 
-\subsection{SCRIPTS/dependencies\_check}
+\subsection{dependencies\_check}
 Dependencies\_check, checks if each required tool is installed on the system, the list of packages required can be found in the root directory in  ../DEPENDS file.
-\subsection{build.sh}
-\subsubsection{Exports and Source}
-\subsubsection{Stage}
 
-\subsubsection{Sub-Stage}
+\section{export-image/}
+\section{export-noobs/}
+\section{stage0/}
+\section{stage1/}
+\section{stage2/}
+\section{stage3/}
+\section{stage4/}
 
-
-\subsubsection{log}
+\chapter{Ansible pi-gen}
 
 \chapter{NB}
 \section{Kernel panic when Virtualizing}

@@ -1,19 +1,28 @@
 \contentsline {chapter}{\numberline {1}Original pi-gen}{2}{chapter.1}
-\contentsline {section}{\numberline {1.1}Main build files}{2}{section.1.1}
+\contentsline {section}{\numberline {1.1}/}{2}{section.1.1}
 \contentsline {subsection}{\numberline {1.1.1}config}{2}{subsection.1.1.1}
-\contentsline {subsection}{\numberline {1.1.2}SCRIPTS/common}{2}{subsection.1.1.2}
-\contentsline {subsubsection}{log}{2}{section*.2}
-\contentsline {subsubsection}{bootstrap}{2}{section*.3}
-\contentsline {subsubsection}{copy\_previous}{2}{section*.4}
-\contentsline {subsubsection}{unmount}{3}{section*.5}
-\contentsline {subsubsection}{unmount\_image}{3}{section*.6}
-\contentsline {subsubsection}{onchroot}{3}{section*.7}
-\contentsline {subsubsection}{update\_issue}{3}{section*.8}
-\contentsline {subsection}{\numberline {1.1.3}SCRIPTS/dependencies\_check}{3}{subsection.1.1.3}
-\contentsline {subsection}{\numberline {1.1.4}build.sh}{3}{subsection.1.1.4}
-\contentsline {subsubsection}{Exports and Source}{3}{section*.9}
-\contentsline {subsubsection}{Stage}{3}{section*.10}
-\contentsline {subsubsection}{Sub-Stage}{3}{section*.11}
-\contentsline {subsubsection}{log}{3}{section*.12}
-\contentsline {chapter}{\numberline {2}NB}{4}{chapter.2}
-\contentsline {section}{\numberline {2.1}Kernel panic when Virtualizing}{4}{section.2.1}
+\contentsline {subsection}{\numberline {1.1.2}build.sh}{2}{subsection.1.1.2}
+\contentsline {subsubsection}{Exports and Source}{2}{section*.2}
+\contentsline {subsubsection}{Stage}{3}{section*.3}
+\contentsline {subsubsection}{Sub-Stage}{3}{section*.4}
+\contentsline {subsubsection}{Export-images}{3}{section*.5}
+\contentsline {section}{\numberline {1.2}scripts/}{3}{section.1.2}
+\contentsline {subsection}{\numberline {1.2.1}common}{3}{subsection.1.2.1}
+\contentsline {subsubsection}{log}{3}{section*.6}
+\contentsline {subsubsection}{bootstrap}{3}{section*.7}
+\contentsline {subsubsection}{copy\_previous}{3}{section*.8}
+\contentsline {subsubsection}{unmount}{4}{section*.9}
+\contentsline {subsubsection}{unmount\_image}{4}{section*.10}
+\contentsline {subsubsection}{onchroot}{4}{section*.11}
+\contentsline {subsubsection}{update\_issue}{4}{section*.12}
+\contentsline {subsection}{\numberline {1.2.2}dependencies\_check}{4}{subsection.1.2.2}
+\contentsline {section}{\numberline {1.3}export-image/}{5}{section.1.3}
+\contentsline {section}{\numberline {1.4}export-noobs/}{5}{section.1.4}
+\contentsline {section}{\numberline {1.5}stage0/}{5}{section.1.5}
+\contentsline {section}{\numberline {1.6}stage1/}{5}{section.1.6}
+\contentsline {section}{\numberline {1.7}stage2/}{5}{section.1.7}
+\contentsline {section}{\numberline {1.8}stage3/}{5}{section.1.8}
+\contentsline {section}{\numberline {1.9}stage4/}{5}{section.1.9}
+\contentsline {chapter}{\numberline {2}Ansible pi-gen}{6}{chapter.2}
+\contentsline {chapter}{\numberline {3}NB}{7}{chapter.3}
+\contentsline {section}{\numberline {3.1}Kernel panic when Virtualizing}{7}{section.3.1}
