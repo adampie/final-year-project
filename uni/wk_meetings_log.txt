@@ -62,4 +62,7 @@ Meeting 8 (1st December)
 	- Missed meeting.
 
 Meeting 9 (8th December)
-	-
+	- Do more writing
+	- Integrate Ansible
+	- Test Ansible
+	- Get in touch with RPF

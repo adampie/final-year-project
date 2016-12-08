@@ -12,6 +12,7 @@
 \usepackage{color}
 \def\UrlBreaks{\do\/\do-}
 \graphicspath{ {images/} }
+\lstset{language=bash}
 \usepackage[a4paper,top=3cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
 
 \begin{document}
@@ -56,7 +57,7 @@ NOTE:
 
 \subsection{build.sh}
 The stages are initially run by this:
-\begin{lstlisting}[frame=single]
+\begin{lstlisting}[frame=single, language=bash]
 for STAGE_DIR in ${BASE_DIR}/stage*; do
 	run_stage
 done
@@ -134,6 +135,8 @@ Dependencies\_check, checks if each required tool is installed on the system, th
 \chapter{NB}
 \section{Kernel panic when Virtualizing}
 Different versions of pi-gen would fail at different times, normally in stage 4. This was due to code being reverted thus removing the setting a max build stage functionality. The bento boxes are the safest to use though need to install a few more packages, they come with a 50GB virtual disk where as other Vagrant images came with the standard of 8GB and it was a pain to increase. 
+\section{NR}
+NR is apt-get --
 
 
 
