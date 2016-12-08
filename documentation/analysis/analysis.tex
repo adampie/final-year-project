@@ -1,15 +1,104 @@
-\documentclass[10pt,a4paper]{report}
+\documentclass[12pt,a4paper]{report}
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
-\usepackage{url}
-
-\title{Quantum Hall effect report template}
-\author{Your names and group number}
-\date{\today}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage[numbers]{natbib}
+\usepackage{hyperref}
+\usepackage{float}
+\usepackage{listings}
+\usepackage{color}
+\def\UrlBreaks{\do\/\do-}
+\graphicspath{ {images/} }
+\usepackage[a4paper,top=3cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
 
 \begin{document}
-\maketitle
+\sloppy
+\begin{titlepage}
+	\centering
+	\includegraphics[width=0.15\textwidth]{Brighton-University-logo.png}\par
+	{\scshape\LARGE University of Brighton\par}
+	\vspace{1cm}
+	{\scshape\Large \par}
+	\vspace{1.5cm}
+	{\huge\bfseries Project Analysis\par}
+	\vspace{2cm}
+	{\Large\itshape Adam Pietrzycki\par}
+	\vfill
+	\par
+	\textsc{}
+	\vfill
+	{\large \today\par}
+\end{titlepage}
+
+\begin{abstract}
+In this document I will be keeping a log of my approach and analysis of this project, note that not everything in this will be of any use.     
+\end{abstract}
+
+\pagebreak
+\tableofcontents
+\pagebreak
+
+\chapter{Original pi-gen}
+\section{Main build files}
+The build.sh file is the one you run to start generating the Raspbian images. It first sets up a few EXPORTS and SOURCES files from the scripts folder.
+\subsection{config}
+In the config file you can set an IMG\_NAME and an APT\_PROXY. The default file can just contain "IMG\_NAME='Raspbian'". A quick thing you can do to set up this file is: 
+\begin{lstlisting}[frame=single]
+echo "IMG_NAME='Raspbian'" > config
+
+NOTE:
+>   is overwrite if present, create if not.
+>> is add to end of file it present, create if not.
+\end{lstlisting}
+\subsection{SCRIPTS/common}
+\subsubsection{log}
+Gets current time and uses a pipe with \textit{tee} to write to the log file. 
+\\(\url{http://man7.org/linux/man-pages/man1/tee.1.html)}
+\subsubsection{bootstrap}
+Sets up debootstrap, uses \textit{capsh} to create env I think? 
+\\(\url{http://man7.org/linux/man-pages/man1/capsh.1.html})
+\subsubsection{copy\_previous}
+If rootfs folder doesn't exist it will create one, if it does then it uses \textit{rsync} to copy from previous to current stage. This can be avoided to speed things up?
+\\(\url{http://linuxcommand.org/man_pages/rsync1.html})
+\subsubsection{unmount}
+Does a few checks using \$1, unmouts mounted folders using \textit{umount}.
+\\(\url{http://man7.org/linux/man-pages/man8/umount.8.html})
+\subsubsection{unmount\_image}
+First syncs then get \textit{losetup}, then it does a loop through the directories and uses \textit{unmount()}, finally \textit{kpartx} and then \textit{losetup} again.
+\begin{itemize}
+\item{\url{http://linuxcommand.org/man_pages/losetup8.html}}
+\item{\url{http://www.dsm.fordham.edu/cgi-bin/man-cgi.pl?topic=kpartx&ampsect=8}}
+\end{itemize}
+\subsubsection{onchroot}
+Mounts with bind, uses \textit{realpath and \textit{capsh} again}:
+\begin{itemize}
+\item{\${ROOTFS\_DIR}/proc}
+\item{\${ROOTFS\_DIR}/dev}
+\item{\${ROOTFS\_DIR}/dev/pts}
+\item{\${ROOTFS\_DIR}/sys}
+\end{itemize}
+(\url{http://man7.org/linux/man-pages/man3/realpath.3.html})
+\subsubsection{update\_issue}
+Prints pi-gen version? This is strange; look into it but it does not look like a priority. 
+\subsection{SCRIPTS/dependencies\_check}
+Dependencies\_check, checks if each required tool is installed on the system, the list of packages required can be found in the root directory in  ../DEPENDS file.
+\subsection{build.sh}
+\subsubsection{Exports and Source}
+\subsubsection{Stage}
+
+\subsubsection{Sub-Stage}
+
+
+\subsubsection{log}
+
+\chapter{NB}
+\section{Kernel panic when Virtualizing}
+Different versions of pi-gen would fail at different times, normally in stage 4. This was due to code being reverted thus removing the setting a max build stage functionality. The bento boxes are the safest to use though need to install a few more packages, they come with a 50GB virtual disk where as other Vagrant images came with the standard of 8GB and it was a pain to increase. 
+
+
+
 
 \end{document}
