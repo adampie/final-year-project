@@ -66,3 +66,4 @@ Meeting 9 (8th December)
 	- Integrate Ansible
 	- Test Ansible
 	- Get in touch with RPF
+	- http://biblatex-biber.sourceforge.net/
