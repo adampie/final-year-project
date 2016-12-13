@@ -4,3 +4,4 @@
 - http://docs.ansible.com/ansible/apt_module.html
 - http://docs.ansible.com/ansible/file_module.html
 - http://docs.ansible.com/ansible/playbooks_variables.html#passing-variables-on-the-command-line
+- http://docs.ansible.com/ansible/playbooks_loops.html
