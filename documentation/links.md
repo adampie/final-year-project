@@ -14,3 +14,4 @@ Linux driver to mount QCOW2 virtual disks|[link](https://upcommons.upc.edu/bitst
 |Ansible: Up and Running|[link](http://shop.oreilly.com/product/0636920035626.do)|
 |Vagrant: Up and Running|[link](http://shop.oreilly.com/product/0636920026358.do)|
 |UNIX Book Bundle|[link](https://www.humblebundle.com/books/unix-book-bundle)/[img](http://imgur.com/aQMlbH8)|
+|Docker internals|[link](http://docker-saigon.github.io/post/Docker-Internals/)|
