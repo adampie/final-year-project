@@ -8,3 +8,6 @@
 - http://docs.ansible.com/ansible/alternatives_module.html
 - http://docs.ansible.com/ansible/synchronize_module.html
 - http://docs.ansible.com/ansible/faq.html#how-do-i-handle-different-machines-needing-different-user-accounts-or-ports-to-log-in-with
+- http://docs.ansible.com/ansible/command_module.html
+- http://docs.ansible.com/ansible/group_module.html
+- http://docs.ansible.com/ansible/user_module.html
